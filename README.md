@@ -1,1 +1,0 @@
-# Tatvasoft - Training
