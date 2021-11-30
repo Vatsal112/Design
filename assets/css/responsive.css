@@ -238,14 +238,59 @@
     .footer-line {
         width: auto;
     }
+    
+    /* prices section */
+    .prices-banner-img img {
+        max-width: 100%;
+        margin-top: 3.7rem;
+    }
+    .price-card {
+        width: 320px;
+    }
+    .check-items {
+        margin-left: 40px;
+    }
+    .center-img {
+        display: none;
+    }
+    .cleaning-section {
+        padding-top: 10px;
+    }
+    .cleaning-card .sample-photo {
+        width: 300px;
+        height: 210px;
+        margin-top: 2rem;
+    }
+    .cleaning-section h3 {
+        font-size: 28px;
+    }
+    .cleaning-card {
+        text-align: center;
+    }
+    .cleaning-card-info {
+        margin-left: 1.8rem;
+    }
+    .why-this {
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 2rem;
+    }
+    .left-text h5,
+    .left-text p,
+    .right-text h5,
+    .right-text p {
+        text-align: center;
+        margin-left: 0px;
+    }
+    .left-text h5,
+    .right-text h5 {
+        font-size: 22px;
+        margin-top: 15px;
+    }
+    .prices-timer-icon {
+        margin-right: 0.5rem;
+    }
 }
 
 
-/* @media screen and (min-width: 1600px) {
-    .main-text h1 {
-        font-size: 7rem;
-    }
-    .container {
-        max-width: 1800px !important;
-    }
-} */
