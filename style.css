@@ -632,3 +632,161 @@
         height: 195px;
         width: 100%;
     }
+
+/*---------- Prices Section -----------*/
+    
+    .prices-banner-img img {
+        margin-top: 3.7rem;
+        max-width: 100%;
+    }
+    
+    .price-card {
+        width: 553px;
+        height: 304px;
+        border: 1px solid #B0C9CE;
+        margin: 42px auto;
+    }
+    
+    .onetime-card {
+        background-color: #1D7A8C;
+        line-height: 59px;
+        height: 59px;
+        width: 100%;
+        font-size: 28px;
+        font-weight: bold;
+        color: white;
+    }
+    
+    .check-items {
+        display: flex;
+        align-items: center;
+        margin-left: 152px;
+    }
+    
+    .check-items p {
+        margin: 8px;
+        color: #646464;
+    }
+    
+    .services {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .round {
+        height: 108px;
+        width: 108px;
+        border: 1px solid #B0C9CE;
+        border-radius: 50%;
+        margin: 1.5rem 3.5rem;
+    }
+    
+    .cabinet {
+        background-image: url(assets/images/cabinet.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+    
+    .fridge {
+        background-image: url(assets/images/fridge.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+    
+    .oven {
+        background-image: url(assets/images/oven.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+    
+    .washing-machine {
+        background-image: url(assets/images/washing-machine.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+    
+    .window {
+        background-image: url(assets/images/window.png);
+        background-repeat: no-repeat;
+        background-position: 50% 50%;
+    }
+    
+    .services .outer {
+        text-align: center;
+    }
+    
+    .service-name {
+        font-size: 16px;
+        color: #646464;
+        margin-top: 14px;
+    }
+    
+    .service-time {
+        font-weight: bold;
+        color: #1D7A8C;
+    }
+    
+    .cleaning-section {
+        background-color: #F6F6F6;
+        padding-top: 25px;
+        padding-bottom: 60px;
+        margin-top: 43px;
+    }
+    
+    .cleaning-card .title {
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 20px;
+    }
+    
+    .cleaning-section .clean-content {
+        margin-top: 2.5rem;
+    }
+    
+    .cleaning-card-info {
+        display: flex;
+        align-items: center;
+    }
+    
+    .cleaning-card-info p {
+        margin: 5px 10px;
+    }
+    
+    .why-this {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 3rem;
+    }
+    
+    .left-text h5 {
+        text-align: right;
+    }
+    
+    .left-text p {
+        font-size: 14px;
+        color: #646464;
+        text-align: right;
+        margin-left: 4rem;
+    }
+    
+    .right-text p {
+        text-align: left;
+        color: #646464;
+        font-size: 14px;
+    }
+    
+    .prices-up-timer {
+        display: flex;
+        align-items: center;
+        margin-top: 2rem;
+        width: 100%;
+    }
+    
+    .prices-timer-icon {
+        margin-left: auto;
+        margin-right: 2rem;
+        margin-bottom: 10px;
+    }
