@@ -20,10 +20,10 @@
 
 <body>
     <!--********* Main Screen Banner Section start************-->
-    <section class="main-screen">
+    <section class="main-screen" id="main-screen">
         <header>
             <nav class="navbar navbar-expand-sm fixed-top homepage-nav" id="navbar">
-                <a class="navbar-brand" href="#"><img src="assets/images/white-logo-transparent-background.png" alt="" class="logo" id="logo"></a>
+                <a class="navbar-brand" href="index.html"><img src="assets/images/white-logo-transparent-background.png" alt="" class="logo" id="logo"></a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"> <i class="fa fa-navicon" style="color:#fff; font-size:28px;"></i></span>
                 </button>
@@ -33,7 +33,7 @@
                             <a class="nav-link active " aria-current="page " href="# ">Book a Cleaner</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link " href="# ">Prices</a>
+                            <a class="nav-link " href="Prices.html">Prices</a>
                         </li>
                         <li class="nav-item ">
                             <a class="nav-link " href="# ">Our Guarantee</a>
@@ -42,7 +42,7 @@
                             <a class="nav-link " href="# ">Blog</a>
                         </li>
                         <li class="nav-item ">
-                            <a class="nav-link " href="# ">Contact us</a>
+                            <a class="nav-link " href="contact.html">Contact us</a>
                         </li>
                         <li class="nav-item login-rounded-btn">
                             <a class="nav-link " href="# ">Login</a>
@@ -112,7 +112,7 @@
 
         <div class="down-btn">
             <div class="down-arrow">
-                <img src="assets/images/down-arrow.png" alt="">
+                <a href="#feature-section"><img src="assets/images/down-arrow.png" alt=""></a>
             </div>
         </div>
     </section>
@@ -122,7 +122,7 @@
 
     <!--********* Features Section start************-->
 
-    <section class="section-feature">
+    <section class="section-feature" id="feature-section">
         <div class="container ">
             <h2 class="text-center helperland-txt">Why Helperland</h2>
             <div class="row ms-auto ">
@@ -311,7 +311,7 @@
         <div class="newsletter ">
 
             <div class="up-arrow">
-                <img src="assets/images/up-arrow.png" alt="">
+                <a href="#main-screen"><img src="assets/images/up-arrow.png" alt=""></a>
             </div>
 
             <div class="col-md-8 newsletter-input">
@@ -339,10 +339,10 @@
             <div class="footer-content">
                 <img src="assets/images/footer-logo.png" alt="">
                 <nav class="nav footer-nav justify-content-center">
-                    <a class="nav-link active " href="# ">Home</a>
-                    <a class="nav-link " href="# ">About</a>
-                    <a class="nav-link " href="# ">Testimonials</a>
-                    <a class="nav-link " href="# ">faqs</a>
+                    <a class="nav-link" href="index.html">Home</a>
+                    <a class="nav-link " href="about.html">About</a>
+                    <a class="nav-link " href="#">Testimonials</a>
+                    <a class="nav-link " href="FAQ's.html">faqs</a>
                     <a class="nav-link " href="# ">Insurance Policy</a>
                     <a class="nav-link " href="# ">Impressum</a>
                 </nav>
@@ -355,7 +355,7 @@
 
     <div class="container-fluid privacy-policy-sec">
         <p class="text-center">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ea iste pariatur cumque. <span style="color:#6EABEF; ">Privacy Policy</span></p>
-        <button type="button " class="btn-ok ">OK!</button>
+        <button type="button" class="btn-ok" id="privacy-policy-accept" onclick="privacy_policy_btn()">OK!</button>
     </div>
 
     <!--********* Footer Section end************-->
@@ -378,6 +378,10 @@
 
             }
         })
+
+        function privacy_policy_btn() {
+            $(".privacy-policy-sec").css("display", "none");
+        }
     </script>
 </body>
 
