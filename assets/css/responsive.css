@@ -1,4 +1,50 @@
-@media screen and (max-width:500px) {
+@media screen and (max-width:990px) {
+    .navbar {
+        padding-top: 0px !important;
+    }
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+    }
+    .logo {
+        width: 110px;
+        height: 54px;
+    }
+    .navbar .navbar-toggler:focus {
+        color: white;
+    }
+    .navbar-collapse {
+        background-color: rgba(0, 0, 0);
+        margin-top: 5px;
+        padding-bottom: 5px;
+    }
+    .navbar-collapse .rounded-btn {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .rounded-btn {
+        margin-top: 10px;
+    }
+    .navbar-toggler-icon {
+        color: white;
+        font-size: 28px;
+    }
+    .login-rounded-btn {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10px;
+    }
+    /* become a pro */
+    .graphics .left-bg img,
+    .graphics .right-bg img {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width:600px) {
     html,
     body {
         height: 100%;
@@ -96,7 +142,7 @@
     }
     .left-bg img,
     .right-bg img {
-        display: none;
+        width: 50px;
     }
     .blog-texts h3 {
         font-size: 25px;
@@ -166,13 +212,17 @@
         display: inline;
     }
     .footer-content img {
-        margin-top: 10px;
+        display: block;
+        margin: 0 auto;
+        padding-top: 10px;
     }
     .footer-content i {
         margin-top: 10px;
-        margin-left: 43%;
         font-size: 20px;
         margin-bottom: 10px;
+    }
+    .footer-content .footer-icon {
+        justify-content: center;
     }
     .footer-nav {
         margin-top: 10px;
@@ -241,12 +291,13 @@
     .faq-footer .footer-content img {
         display: block;
         margin: 0 auto;
+        padding-top: 10px;
+    }
+    .faq-footer .footer-content .footer-icon {
+        border-bottom: 1px solid #424242;
     }
     .faq-heading {
         font-size: 30px;
-    }
-    .footer-line {
-        width: auto;
     }
     /* prices section */
     .prices-banner-img img {
@@ -351,5 +402,32 @@
     }
     .paragraphs p {
         text-align: justify;
+    }
+    /* ---------- become a pro ---------*/
+    .sp-reg {
+        max-width: 360px;
+    }
+    .sp1,
+    .readmore {
+        margin-top: 1rem;
+    }
+    .sp-content .content1,
+    .sp-content .content3 {
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+    .sp-content .content2 {
+        justify-content: center;
+        flex-wrap: wrap;
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+    .sp-content .sp-img img,
+    .sp-content2 .sp-img img,
+    .sp-content3 .sp-img img {
+        width: 200px;
+        height: 200px;
     }
 }
