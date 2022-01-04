@@ -65,6 +65,28 @@
     .my-rating .shown-records {
         text-align: left;
     }
+    /* for navbar-notification icon*/
+    .upcoming-service-banner .notification-icon-smallscreen {
+        display: block;
+    }
+    .upcoming-service-banner .notification-icon-smallscreen {
+        border-left: 1px solid #dee2e6;
+        border-right: 1px solid #dee2e6;
+    }
+    .upcoming-service-banner .navbar-brand {
+        padding-top: 0;
+    }
+    .upcoming-service-banner .faq-nav .navbar-nav .notification-icon span {
+        position: absolute;
+        right: 7.5%;
+        top: 3%;
+        color: white;
+        height: 23px;
+        width: 20px;
+        text-align: center;
+        background-color: red;
+        border-radius: 50%;
+    }
 }
 
 @media (min-width:992px) and (max-width: 1199px) {}
@@ -93,9 +115,15 @@
     .dashboard .tab-label,
     .service-history .tab-label,
     .upcoming-service .tab-label,
-    .new-service .tab-label {
+    .new-service .tab-label,
+    .my-rating .tab-label,
+    .block-customer .tab-label {
         display: flex;
         align-items: center;
+    }
+    .my-rating .shown-records,
+    .my-rating .rating-sorting {
+        margin-top: 0.5rem;
     }
     .dashboard .tab-label a,
     .service-history .tab-label a,
