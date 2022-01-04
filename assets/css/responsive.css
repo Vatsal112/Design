@@ -1,4 +1,4 @@
-@media screen and (max-width:990px) {
+@media screen and (max-width:993px) {
     .navbar {
         padding-top: 0px !important;
     }
@@ -41,6 +41,104 @@
     .graphics .left-bg img,
     .graphics .right-bg img {
         width: 100px;
+    }
+    /*upcoming service */
+    .tab-sections .container .v-tabs {
+        display: none;
+        height: auto;
+    }
+    .tab-sections .col-sm-5 {
+        width: 0;
+    }
+    .service-datetime-icons .modal-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .total-records .shown-records {
+        text-align: center;
+    }
+    .modal-content .googleMap {
+        margin-left: 0;
+    }
+    .my-rating .shown-records {
+        text-align: left;
+    }
+}
+
+@media (min-width:992px) and (max-width: 1199px) {}
+
+@media screen and (min-width: 992px) {
+    .upcoming-service-banner .navbar-expand-lg .navbar-nav .dropdown-menu {
+        position: absolute;
+        top: 140%;
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    /* for pagination */
+    .total-records .shown-records {
+        text-align: center;
+        margin-top: 1rem;
+    }
+    .service-history .payment-and-export {
+        display: block;
+        text-align: center;
+    }
+    .service-history .payment-and-export button {
+        margin-top: 1rem;
+    }
+    .dashboard .tab-label,
+    .service-history .tab-label,
+    .upcoming-service .tab-label,
+    .new-service .tab-label {
+        display: flex;
+        align-items: center;
+    }
+    .dashboard .tab-label a,
+    .service-history .tab-label a,
+    .upcoming-service .tab-label a,
+    .new-service .tab-label a {
+        margin-left: auto;
+    }
+    .navigate-page .pagination {
+        justify-content: center;
+        margin-top: 1rem;
+    }
+    /*for display tables for upcoming and new service*/
+    .tab-sections .tab-content .table-header {
+        height: 0;
+        display: none;
+        height: 0;
+    }
+    .upcoming-service-table tbody tr,
+    .tab-sections .new-service tr {
+        margin-bottom: 40px;
+    }
+    .tab-sections table {
+        border-collapse: separate;
+        border-spacing: 0 1rem;
+        margin-top: 1rem;
+    }
+    .tab-sections .upcoming-service-table tr td,
+    .tab-sections .new-service tr td,
+    .tab-sections .service-history-table tr td {
+        display: block;
+        padding: 15px;
+    }
+    .tab-sections .upcoming-service-table tr,
+    .tab-sections .new-service tr,
+    .tab-sections .service-history-table tr {
+        box-shadow: 0 0 6px rgb(0 0 0 / 25%);
+    }
+    .block-customer {
+        display: block;
+    }
+    .block-customer .card {
+        margin: 1rem auto;
+        width: 50%;
     }
 }
 
@@ -270,12 +368,12 @@
     .tabs .nav-item a {
         font-size: 18px;
     }
-    .btn::before {
+    .faq-tab-content .btn::before {
         content: url("../images/down-arrow(1).png");
         float: left;
         margin-right: 10px;
     }
-    .btn.collapsed::before {
+    .faq-tab-content .btn.collapsed::before {
         content: url("../images/right-arrow.png");
         margin-right: 10px;
     }
@@ -429,5 +527,52 @@
     .sp-content3 .sp-img img {
         width: 200px;
         height: 200px;
+    }
+    /* upcoming service start */
+    .tab-sections .container .v-tabs {
+        display: none;
+    }
+    .tab-sections .col-sm-5 {
+        width: 0;
+    }
+    .service-datetime-icons .modal-content {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width:541px) {
+    .tab-sections .tab-content .table-header {
+        height: 0;
+        display: none;
+        height: 0;
+    }
+    .upcoming-service-table tbody tr,
+    .tab-sections .new-service tr {
+        margin-bottom: 35px;
+    }
+    .tab-sections table {
+        border-collapse: separate;
+        border-spacing: 0 1rem;
+    }
+    .tab-sections .upcoming-service-table tr td,
+    .tab-sections .new-service tr td {
+        display: block;
+    }
+    .tab-sections .upcoming-service-table tr,
+    .tab-sections .new-service tr {
+        box-shadow: 0 0 6px rgb(0 0 0 / 25%);
+    }
+    /* my rating tab */
+    .my-rating .rating-card-content {
+        display: block;
+    }
+    .my-rating .rating-card-content .id-name {
+        text-align: center;
+    }
+    .my-rating .rating-card-content .service-info,
+    .my-rating .rating-card-content .rating-star {
+        margin-top: 1rem;
+        margin-left: 0;
+        text-align: center;
     }
 }
