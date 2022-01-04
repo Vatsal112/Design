@@ -1055,7 +1055,8 @@
  }
  /* --------------sp-dashboard---------------- */
  
- .upcoming-service-banner .navbar {
+ .upcoming-service-banner .navbar,
+ .customer-screen-banner .navbar {
      z-index: 11;
  }
  /* .upcoming-service-banner .navbar-expand-lg .navbar-nav .dropdown .dropdown-menu {
@@ -1067,7 +1068,8 @@
      box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
  } */
  
- .upcoming-service-banner .navbar-expand-lg .navbar-nav .dropdown .dropdown-menu::before {
+ .upcoming-service-banner .navbar-expand-lg .navbar-nav .dropdown .dropdown-menu::before,
+ .customer-screen-banner .navbar-expand-lg .navbar-nav .dropdown .dropdown-menu::before {
      position: absolute;
      top: 0;
      content: "";
@@ -1078,11 +1080,13 @@
      right: 34px;
  }
  
- .upcoming-service-banner .notification-icon-smallscreen {
+ .upcoming-service-banner .notification-icon-smallscreen,
+ .customer-screen-banner .notification-icon-smallscreen {
      display: none;
  }
  
- .upcoming-service-banner .navbar-expand-lg .navbar-nav .dropdown .dropdown-menu::after {
+ .upcoming-service-banner .navbar-expand-lg .navbar-nav .dropdown .dropdown-menu::after,
+ .customer-screen-banner .navbar-expand-lg .navbar-nav .dropdown .dropdown-menu::after {
      position: absolute;
      top: 0;
      content: "";
@@ -1098,12 +1102,14 @@
  } */
  
  .upcoming-service-banner .faq-nav .navbar-nav,
- .upcoming-service-banner .faq-nav .navbar-nav .noti-user-icons {
+ .upcoming-service-banner .faq-nav .navbar-nav .noti-user-icons,
+ .customer-screen-banner .faq-nav .navbar-nav .noti-user-icons {
      display: flex;
      align-items: center;
  }
  
- .upcoming-service-banner .faq-nav .navbar-nav .notification-icon span {
+ .upcoming-service-banner .faq-nav .navbar-nav .notification-icon span,
+ .customer-screen-banner .faq-nav .navbar-nav .notification-icon span {
      position: absolute;
      right: 7%;
      top: 3.5%;
@@ -1115,7 +1121,8 @@
      border-radius: 50%;
  }
  
- .upcoming-service-banner .faq-nav .nav-item {
+ .upcoming-service-banner .faq-nav .nav-item,
+ .customer-screen-banner .faq-nav .nav-item {
      padding: 10px;
      margin-right: 5px;
  }
@@ -1157,12 +1164,14 @@
      margin-bottom: 10px;
  }
  
- .upcoming-service-banner .faq-nav .noti-user-icons .notification-icon {
+ .upcoming-service-banner .faq-nav .noti-user-icons .notification-icon,
+ .customer-screen-banner .faq-nav .noti-user-icons .notification-icon {
      border-left: 1px solid white;
      border-right: 1px solid white;
  }
  
- .upcoming-service-banner .faq-nav .noti-user-icons .user-icon .dropdown-toggle::after {
+ .upcoming-service-banner .faq-nav .noti-user-icons .user-icon .dropdown-toggle::after,
+ .customer-screen-banner .faq-nav .noti-user-icons .user-icon .dropdown-toggle::after {
      display: none !important;
  }
  
@@ -1807,4 +1816,344 @@
  .block-customer .card h5 {
      text-align: center;
      color: #4f4f4f;
+ }
+ /* --------customer-screens--------- */
+ 
+ .customer-screen-banner .navbar-nav {
+     align-items: center;
+ }
+ 
+ .customer-screen-banner .faq-nav .nav-item {
+     padding: 0 10px;
+ }
+ 
+ .customer-screen-banner .navbar-nav .book-now {
+     border: 1px solid #FFFFFF80;
+     height: 40px;
+     width: 120px;
+     border-radius: 40px;
+     background-color: #146371;
+ }
+ 
+ .customer-screen-banner .navbar-nav .book-now .nav-link {
+     text-align: center;
+ }
+ 
+ .tab-sections .dashboard .current-service-req {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     color: #646464;
+ }
+ 
+ .tab-sections .dashboard .current-service-req button {
+     outline: none;
+     border: none;
+     border-radius: 20px;
+     background-color: #1D7A8C;
+     color: white;
+     padding: 8px 10px;
+ }
+ 
+ .tab-sections .dashboard .current-service-req-table {
+     margin-top: 1rem;
+ }
+ 
+ .tab-sections .dashboard .current-service-req-table .table-header,
+ .tab-sections .dashboard .current-service-req-table tbody {
+     text-align: center;
+ }
+ 
+ .tab-sections .dashboard .current-service-req-table .payment-content,
+ .tab-sections .cust-service-history-table .payment-content {
+     color: #1D7A8C;
+     font-size: 22px;
+ }
+ 
+ .dashboard .current-service-req-table .action-buttons .btn-cancel {
+     outline: none;
+     border: none;
+     background-color: #FF6B6B;
+     color: white;
+     width: 80px;
+     padding: 5px;
+     border-radius: 20px;
+ }
+ 
+ .dashboard .current-service-req-table .action-buttons .btn-reschedule {
+     outline: none;
+     border: none;
+     background-color: #146371;
+     color: white;
+     width: 100px;
+     padding: 5px;
+     border-radius: 20px;
+ }
+ 
+ .current-service-req-table .modal-content {
+     display: block;
+     text-align: left;
+ }
+ 
+ .current-service-req-table .modal-content .body-text .payment,
+ .cust-service-history-table #cust-service-history-modal .modal-content .payment {
+     margin-left: 25%;
+ }
+ 
+ .current-service-req-table .modal-content .modal-footer .btn-modal-accept {
+     background-color: #146371;
+     color: white;
+     width: 130px;
+     display: flex;
+     align-items: center;
+     padding: 10x;
+     height: 40px;
+ }
+ 
+ .current-service-req-table .modal-content .modal-footer .btn-modal-accept img {
+     margin-right: 5px;
+ }
+ 
+ .current-service-req-table .modal-content .modal-body .form-group {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+ 
+ .current-service-req-table .modal-header {
+     border-bottom: 0;
+     justify-content: center;
+     padding-bottom: 0;
+ }
+ 
+ .current-service-req-table .modal-header .modal-title,
+ .current-service-req-table .modal-footer {
+     justify-content: center;
+ }
+ 
+ .current-service-req-table .modal-header button,
+ .cust-service-history-table .modal-header button {
+     outline: none;
+     border: none;
+     background: transparent;
+     font-size: 30px;
+     position: absolute;
+     right: 5%;
+ }
+ 
+ .current-service-req-table .modal-footer {
+     border-top: 0;
+     padding-top: 0;
+ }
+ 
+ .current-service-req-table .modal-content .modal-body span {
+     margin: 5px;
+ }
+ 
+ .current-service-req-table .modal-content .modal-body .date-picker,
+ .current-service-req-table .modal-content .modal-body select {
+     margin-top: 0.5rem;
+     border: 1px solid #dee2e6;
+     width: 100%;
+     padding: 10px;
+     margin: 5px;
+ }
+ 
+ .current-service-req-table #reschedule-modal .modal-footer .btn-modal-accept,
+ #cancel-modal .modal-footer .btn-modal-accept {
+     width: 100%;
+     outline: none;
+     border: none;
+     border-radius: 20px;
+     justify-content: center;
+ }
+ 
+ #cancel-modal .modal-content .modal-body textarea {
+     width: 100%;
+     height: 100px;
+     margin-top: 0.5rem;
+ }
+ 
+ #cancel-modal .modal-content .modal-body {
+     padding: 15px;
+ }
+ 
+ #cancel-modal .modal-footer .btn-modal-accept {
+     background-color: #1d7a8c;
+     font-weight: 600;
+ }
+ 
+ .current-service-req-table .sp-content,
+ .cust-service-history-table .sp-content {
+     display: flex;
+     align-items: center;
+ }
+ 
+ .current-service-req-table .sp-content .sp-avatar img,
+ .cust-service-history-table .sp-content .sp-avatar img {
+     width: 60px;
+     border: 1px solid #646464;
+     border-radius: 50%;
+ }
+ 
+ .current-service-req-table .sp-content .sp-name-rating b {
+     margin-right: 50px;
+ }
+ 
+ .cust-service-history-table .sp-content .sp-name-rating b {
+     margin-left: 8px;
+ }
+ 
+ .current-service-req-table .sp-content .sp-rating,
+ .cust-service-history-table .sp-content .sp-rating {
+     margin-left: 5px;
+ }
+ 
+ .current-service-req-table #current-service-modal2 .modal-content {
+     width: 100%;
+ }
+ 
+ .current-service-req-table #current-service-modal2 .modal-body {
+     display: flex;
+     justify-content: space-between;
+ }
+ 
+ .current-service-req-table #current-service-modal2 .modal-sp-details,
+ #cust-service-history-modal2 .modal-sp-details {
+     border-left: 1px solid #dee2e6;
+     padding: 0px 1.5rem;
+ }
+ 
+ #current-service-modal2 .modal-sp-details .sp-content .sp-rating,
+ #cust-service-history-modal2 .modal-sp-details .sp-content .sp-rating {
+     display: flex;
+     align-items: center;
+ }
+ 
+ #current-service-modal2 .sp-content .sp-name-rating b,
+ #cust-service-history-modal2 .sp-content .sp-name-rating b {
+     margin-left: 15px;
+ }
+ 
+ #current-service-modal2 .modal-sp-details .sp-content .sp-avatar img,
+ #cust-service-history-modal2 .modal-sp-details .sp-content .sp-avatar img {
+     width: 80px;
+ }
+ 
+ #current-service-modal2 .modal-sp-details .sp-content .sp-rating img,
+ #cust-service-history-modal2 .modal-sp-details .sp-content .sp-rating img {
+     width: 25px;
+     padding: 2.5px;
+ }
+ 
+ #current-service-modal2 .modal-sp-details .sp-content .sp-name-rating,
+ #cust-service-history-modal2 .modal-sp-details .sp-content .sp-name-rating {
+     margin-left: 15px;
+ }
+ 
+ #current-service-modal2 .modal-sp-details .sp-content .sp-rating,
+ #cust-service-history-modal2 .modal-sp-details .sp-content .sp-rating {
+     margin-left: 11px;
+     padding-bottom: 5px;
+ }
+ 
+ #current-service-modal2 .sp-name-rating span,
+ #cust-service-history-modal2 .sp-name-rating span {
+     margin-left: 15px;
+ }
+ 
+ #current-service-modal2 .modal-footer,
+ #current-service-modal .modal-footer {
+     justify-content: left;
+ }
+ 
+ .cust-service-history-table .table {
+     margin-top: 1rem;
+ }
+ 
+ .cust-service-history-table .status-cancelled {
+     background-color: #FF6B6B;
+     font-size: 12px;
+     text-align: center;
+     font-weight: 600;
+     color: white !important;
+ }
+ 
+ .cust-service-history-table .status-completed {
+     background-color: #67b644;
+     font-size: 12px;
+     text-align: center;
+     font-weight: 600;
+     color: white !important;
+ }
+ 
+ .cust-service-history-table .action-buttons .btn-rate-sp {
+     width: 70px;
+     background-color: #6DA9B5;
+     color: white;
+     outline: none;
+     border: none;
+     border-radius: 20px;
+     padding: 5px;
+ }
+ 
+ .cust-service-history-table #cust-service-history-modal .modal-content {
+     display: block;
+ }
+ 
+ #cust-service-history-modal2 .modal-body {
+     display: flex;
+     justify-content: space-between;
+     width: 100%;
+ }
+ 
+ .cust-service-history-table .service-datetime-icons .modal-content {
+     display: block;
+ }
+ 
+ #rate-sp-modal2 .modal-header {
+     display: block;
+ }
+ 
+ #rate-sp-modal2 .modal-header button {
+     top: 5%;
+ }
+ 
+ #rate-sp-modal2 .modal-body .types-of-rating b {
+     display: block;
+ }
+ 
+ #rate-sp-modal2 .modal-body .cust-rating {
+     display: flex;
+     align-items: center;
+ }
+ 
+ #rate-sp-modal2 .modal-body .stars {
+     margin-left: 0.5rem;
+ }
+ 
+ #rate-sp-modal2 .modal-body .cust-feedback,
+ #rate-sp-modal2 .modal-title {
+     margin-top: 0.5rem;
+ }
+ 
+ #rate-sp-modal2 .modal-body .cust-feedback textarea {
+     width: 100%;
+     height: 60px;
+     resize: none;
+ }
+ 
+ #rate-sp-modal2 .modal-footer {
+     justify-content: left;
+ }
+ 
+ #rate-sp-modal2 .modal-footer .btn-modal-accept {
+     outline: none;
+     border: none;
+     background-color: #1D7A8C;
+     color: white;
+     font-weight: 600;
+     width: 90px;
+     padding: 10px;
+     border-radius: 20px;
  }

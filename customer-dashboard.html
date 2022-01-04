@@ -1,0 +1,1456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="customer-screen-banner">
+        <header>
+            <nav class="faq-nav navbar navbar-expand-lg fixed-top" id="faq-navbar">
+
+                <a class="navbar-brand" href="index.html"><img src="assets/images/logo-small.png" alt="" class="logo" id="faq-nav"></a>
+                <div class="notification-icon-smallscreen">
+                    <nav class="navbar">
+                        <ul class="navbar-nav">
+                            <li class="nav-item notification-icon d-flex">
+                                <span>2</span>
+                                <a class="nav-link" href="#"><img src="assets/images/icon-notification.png" alt=""></a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" id="toggle-icon" onclick="openSideBar()" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"> <i class="fa fa-navicon" ></i></span>
+                </button>
+                <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item text-link book-now">
+                            <a class="nav-link" href="#">Book Now</a>
+                        </li>
+                        <li class="nav-item text-link">
+                            <a class="nav-link" href="#">Prices & Services</a>
+                        </li>
+                        <li class="nav-item text-link">
+                            <a class="nav-link" href="#">Warranty</a>
+                        </li>
+                        <li class="nav-item text-link">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item text-link">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                        <div class="noti-user-icons">
+                            <li class="nav-item notification-icon d-flex">
+                                <span>2</span>
+                                <a class="nav-link" href="#"><img src="assets/images/icon-notification.png" alt=""></a>
+                            </li>
+                            <div class="dropdown user-icon d-flex align-items-center">
+                                <button class="dropdown-toggle d-flex align-items-center" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        <a class="nav-link" href="#"><img src="assets/images/user.png" alt=""></a>
+                                        <a class="nav-link" href="#"><img src="assets/images/sp-arrow-down.png" alt="" class="sp-down-arrow"></a>
+                                    </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <div class="username">
+                                        <p>Welcome, <b>First Customer</b></p>
+                                    </div>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" id="v-pills-dashboard-tab" href="#v-pills-dashboard" data-toggle="pill" role="tab" aria-labelledby="v-pills-dashboard" onclick="removeActive(event)">My Dashborad</a>
+
+                                    <a class="dropdown-item" id="pills-settings-tab" data-toggle="pill" href="#v-pills-my-setting" role="tab" aria-controls="v-pills-my-setting-tab" aria-selected="false" onclick="removeActive(event)">My Setting</a>
+                                    <a class="dropdown-item" href="index.html" data-toggle="modal" data-target="#logout-modal">Logout</a>
+                                </div>
+                            </div>
+                        </div>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <!--logout modal start-->
+        <div class="modal fade logout-modal" id="logout-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle2" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="logout-modal-content">
+                            <div class="logout-green-circle">
+                                <img src="assets/images/ic-check.png" alt="">
+                            </div>
+                            <h5>You have successfully logged out</h5>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-logout-ok" data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--logout modal end-->
+    </section>
+
+    <section class="sidebar" id="sidebar">
+        <div class="username">
+            <p>Welcome, </p>
+            <b>First Customer</b>
+        </div>
+        <nav class="navigation">
+            <div class="nav flex-column nav-tab v-tabs" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                <a class="nav-link" id="v-pills-dashboard-tab" data-toggle="pill" href="#v-pills-dashboard" role="tab" aria-controls="v-pills-dashboard" aria-selected="true" onclick="closeSideBar()">Dashboard</a>
+                <a class="nav-link" id="v-pills-new-service-req-tab" data-toggle="pill" href="#v-pills-new-service-req" role="tab" aria-controls="v-pills-new-service-req" aria-selected="true" onclick="closeSideBar()">New Service Request</a>
+                <a class="nav-link active" id="v-pills-upcoming-ser-tab" data-toggle="pill" href="#v-pills-upcoming-ser" role="tab" aria-controls="v-pills-upcoming-ser" aria-selected="false" onclick="closeSideBar()">Upcoming Services</a>
+                <a class="nav-link" id="v-pills-service-sche-tab" data-toggle="pill" href="#v-pills-service-sche" role="tab" aria-controls="v-pills-service-sche" aria-selected="false" onclick="closeSideBar()">Service Schedule</a>
+                <a class="nav-link" id="v-pills-service-history-tab" data-toggle="pill" href="#v-pills-service-history" role="tab" aria-controls="v-pills-service-history" aria-selected="false" onclick="closeSideBar()">Service History</a>
+                <a class="nav-link" id="v-pills-my-rating-tab" data-toggle="pill" href="#v-pills-my-rating" role="tab" aria-controls="v-pills-my-rating" aria-selected="false" onclick="closeSideBar()">My Ratings</a>
+                <a class="nav-link" id="v-pills-block-cust-tab" data-toggle="pill" href="#v-pills-block-cust" role="tab" aria-controls="v-pills-block-cust" aria-selected="false" onclick="closeSideBar()">Block Customer</a>
+            </div>
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="">Book Now</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Prices.html">Prices & Services</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Warranty</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="">Blog</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </nav>
+    </section>
+
+    <section class="welcome-user">
+        <div class="welcome-text">
+            <h2>Welcome, Vatsal</h2>
+        </div>
+    </section>
+
+    <section class="tab-sections">
+        <div class="container">
+            <div class="row main-content">
+                <div class="col-sm-5 col-md-2 col-lg-3">
+                    <div class="nav flex-column nav-tab v-tabs" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        <a class="nav-link" id="v-pills-dashboard-tab" data-toggle="pill" href="#v-pills-dashboard" role="tab" aria-controls="v-pills-dashboard" aria-selected="true">Dashboard</a>
+                        <a class="nav-link" id="v-pills-service-history-tab" data-toggle="pill" href="#v-pills-service-history" role="tab" aria-controls="v-pills-service-history" aria-selected="true">Service History</a>
+                        <a class="nav-link" id="v-pills-service-sche-tab" data-toggle="pill" href="#v-pills-service-sche" role="tab" aria-controls="v-pills-service-sche" aria-selected="false">Service Schedule</a>
+                        <a class="nav-link" id="v-pills-favourite-pros-tab" data-toggle="pill" href="#v-pills-favourite-pros" role="tab" aria-controls="v-pills-favourite-pros" aria-selected="false">Favourite Pros</a>
+                        <a class="nav-link" id="v-pills-invoices-tab" data-toggle="pill" href="#v-pills-invoices" role="tab" aria-controls="v-pills-invoices" aria-selected="false">Invoices</a>
+                        <a class="nav-link" id="v-pills-notification-tab" data-toggle="pill" href="#v-pills-notification" role="tab" aria-controls="v-pills-notification" aria-selected="false">Notification</a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-12 col-lg-9">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade dashboard" id="v-pills-dashboard" role="tabpanel" aria-labelledby="v-pills-dashboard-tab">
+                            <div class="tab-label">
+                                <!-- <h5>Current Service Request</h5> -->
+                                <a href="#"><img src="assets/images/filter.png" alt=""></a>
+                            </div>
+
+                            <div class="current-service-req">
+                                <h5>Current Service Request</h5>
+                                <button>Add New Service Request</button>
+                            </div>
+
+                            <div class="table-responsive-sm current-service-req-table">
+                                <table class="table">
+                                    <thead class="table-header">
+                                        <tr>
+                                            <th scope="col">Service Id</th>
+                                            <th scope="col">Service Date</th>
+                                            <th scope="col">Service Provider</th>
+                                            <th scope="col">Payment</th>
+                                            <th scope="col">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>123456</td>
+                                            <td>
+                                                <div class="service-info">
+                                                    <div class="service-datetime-icons">
+                                                        <a href="#" data-toggle="modal" data-target="#current-service-modal"><img src="assets/images/calender-icon.png" alt=" "></a>
+                                                        <a href="#" data-toggle="modal" data-target="#current-service-modal"><img src="assets/images/sp-timericon.png" alt=" "></a>
+                                                        <div class="modal fade" id="current-service-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-part">
+                                                                        <div class="modal-header d-block">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <h4 class="modal-title" id="exampleModalLongTitle">Service Details</h4>
+                                                                                <button type="button" class="close ms-auto" data-dismiss="modal" aria-label="Close">
+                                                                                     <span aria-hidden="true" class="close-btn">&times;</span>
+                                                                                </button>
+                                                                            </div>
+                                                                            <p class="modal-datetime">26/12/2021 08:30 - 12:30</p>
+                                                                            <span class="modal-duration"><b>Duration: </b>4.5 Hrs</span>
+                                                                        </div>
+
+                                                                        <div class="modal-body">
+                                                                            <span class="body-text"><b>Service Id:</b> 8803.</span>
+                                                                            <span class="body-text"><b>Extras:</b> Inside oven, Laundry wash & dry</span>
+                                                                            <span class="body-text"><b>Net Amount:</b> <span class="payment">60,75 &euro;</span></span>
+
+                                                                            <div class="customer-details">
+
+                                                                                <span class="body-text"><b>Service Address:</b> Street 54, 53844 Troisdoff</span>
+                                                                                <span class="body-text"><b>Billing Address:</b> Same as cleaning adress</span>
+                                                                                <span class="body-text"><b>Phone:</b> +41 2244889910</span>
+                                                                                <span class="body-text"><b>Email:</b> cust001@yopmail.com</span>
+
+                                                                            </div>
+
+                                                                            <div class="customer-details">
+                                                                                <b>Comments</b>
+                                                                                <p class="mb-0 ">hello</p>
+
+                                                                                <div class="pets">
+                                                                                    <img src="assets/images/included.png" alt=" ">
+                                                                                    <p>I have Pets at home.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-modal-accept">
+                                                                               <img src="assets/images/reschedule-icon-small.png" alt="">Reschedule</button>
+                                                                            <button type="button" class="btn btn-modal-close" data-dismiss="modal"><i class='fa fa-close'></i>Cancel</button>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="service-datetime-texts">
+                                                        <a href="#" data-toggle="modal" data-target="#current-service-modal"><strong>09/04/2018</strong></a>
+                                                        <a href="#" data-toggle="modal" data-target="#current-service-modal">
+                                                            <p>12:00 - 18:00</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+                                                <div class="payment-content">
+                                                    <b>87,50 &euro;</b>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="action-buttons">
+                                                    <button class="btn-reschedule" data-toggle="modal" data-target="#reschedule-modal">Reschedule</button>
+                                                    <div class="modal fade" id="reschedule-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title" id="exampleModalLongTitle">Reschedule Service Request</h5>
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                              </button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <span>Select new date & time</span>
+                                                                    <div class="select-date-time">
+                                                                        <div class="form-group">
+                                                                            <input type="date" name="" id="" class="date-picker">
+                                                                            <select name="" id="">
+                                                                                <option value="">08:00</option>
+                                                                                <option value="">08:30</option>
+                                                                                <option value="">09:00</option>
+                                                                                <option value="">09:30</option>
+                                                                                <option value="">10:00</option>
+                                                                                <option value="">10:30</option>
+                                                                                <option value="">11:00</option>
+                                                                                <option value="">11:30</option>
+                                                                                <option value="">12:00</option>
+                                                                                <option value="">12:30</option>
+                                                                                <option value="">01:00</option>
+                                                                                <option value="">01:30</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn-modal-accept">Update</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn-cancel" data-target="#cancel-modal" data-toggle="modal">Cancel</button>
+                                                    <div class="modal fade" id="cancel-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title" id="exampleModalLongTitle">Cancel Service Request</h5>
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                              </button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <span>Why you want to cancel the service request?</span>
+                                                                    <div class="form-group">
+                                                                        <textarea name=""></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn-modal-accept">Cancel</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>123456</td>
+                                            <td>
+                                                <div class="service-info">
+                                                    <div class="service-datetime-icons">
+                                                        <a href="#" data-toggle="modal" data-target="#current-service-modal2"><img src="assets/images/calender-icon.png" alt=" "></a>
+                                                        <a href="#" data-toggle="modal" data-target="#current-service-modal2"><img src="assets/images/sp-timericon.png" alt=" "></a>
+                                                        <div class="modal fade" id="current-service-modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-part">
+                                                                        <div class="modal-header d-block">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <h4 class="modal-title" id="exampleModalLongTitle">Service Details</h4>
+                                                                                <button type="button" class="close ms-auto" data-dismiss="modal" aria-label="Close">
+                                                                                     <span aria-hidden="true" class="close-btn">&times;</span>
+                                                                                </button>
+                                                                            </div>
+                                                                            <p class="modal-datetime">26/12/2021 08:30 - 12:30</p>
+                                                                            <span class="modal-duration"><b>Duration: </b>4.5 Hrs</span>
+                                                                        </div>
+
+                                                                        <div class="modal-body">
+                                                                            <div class="modal-information">
+                                                                                <span class="body-text"><b>Service Id:</b> 8803.</span>
+                                                                                <span class="body-text"><b>Extras:</b> Inside oven, Laundry wash & dry</span>
+                                                                                <span class="body-text"><b>Net Amount:</b> <span class="payment">60,75 &euro;</span></span>
+
+                                                                                <div class="customer-details">
+
+                                                                                    <span class="body-text"><b>Service Address:</b> Street 54, 53844 Troisdoff</span>
+                                                                                    <span class="body-text"><b>Billing Address:</b> Same as cleaning adress</span>
+                                                                                    <span class="body-text"><b>Phone:</b> +41 2244889910</span>
+                                                                                    <span class="body-text"><b>Email:</b> cust001@yopmail.com</span>
+
+                                                                                </div>
+
+                                                                                <div class="customer-details">
+                                                                                    <b>Comments</b>
+                                                                                    <p class="mb-0 ">hello</p>
+
+                                                                                    <div class="pets">
+                                                                                        <img src="assets/images/included.png" alt=" ">
+                                                                                        <p>I have Pets at home.</p>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="modal-sp-details">
+                                                                                <h4>Service Provider Details</h4>
+                                                                                <div class="sp-content">
+                                                                                    <div class="sp-avatar">
+                                                                                        <img src="assets/images/avatar-hat.png" alt="">
+                                                                                        <p class="mt-1">16 cleanings</p>
+                                                                                    </div>
+                                                                                    <div class="sp-name-rating">
+                                                                                        <b>John Doe</b>
+                                                                                        <div class="sp-rating">
+                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                            <img src="assets/images/grey-small-star.png" alt="">
+
+                                                                                        </div>
+                                                                                        <span>3.67</span>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="modal-footer">
+                                                                            <button type="button" class="btn btn-modal-accept">
+                                                                               <img src="assets/images/reschedule-icon-small.png" alt="">Reschedule</button>
+                                                                            <button type="button" class="btn btn-modal-close" data-dismiss="modal"><i class='fa fa-close'></i>Cancel</button>
+                                                                        </div>
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="service-datetime-texts">
+                                                        <a href="#" data-toggle="modal" data-target="#current-service-modal2"><strong>09/04/2018</strong></a>
+                                                        <a href="#" data-toggle="modal" data-target="#current-service-modal2">
+                                                            <p>12:00 - 18:00</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="sp-content">
+                                                    <div class="sp-avatar">
+                                                        <img src="assets/images/avatar-hat.png" alt="">
+                                                    </div>
+                                                    <div class="sp-name-rating">
+                                                        <b>John Doe</b>
+                                                        <div class="sp-rating">
+                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                            <img src="assets/images/grey-small-star.png" alt="">
+                                                            <span>3.67</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="payment-content">
+                                                    <b>87,50 &euro;</b>
+                                                </div>
+                                            </td>
+
+                                            <td>
+                                                <div class="action-buttons">
+                                                    <button class="btn-reschedule" data-toggle="modal" data-target="#reschedule-modal">Reschedule</button>
+                                                    <div class="modal fade" id="reschedule-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title" id="exampleModalLongTitle">Reschedule Service Request</h5>
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                              </button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <span>Select new date & time</span>
+                                                                    <div class="select-date-time">
+                                                                        <div class="form-group">
+                                                                            <input type="date" name="" id="" class="date-picker">
+                                                                            <select name="" id="">
+                                                                                <option value="">08:00</option>
+                                                                                <option value="">08:30</option>
+                                                                                <option value="">09:00</option>
+                                                                                <option value="">09:30</option>
+                                                                                <option value="">10:00</option>
+                                                                                <option value="">10:30</option>
+                                                                                <option value="">11:00</option>
+                                                                                <option value="">11:30</option>
+                                                                                <option value="">12:00</option>
+                                                                                <option value="">12:30</option>
+                                                                                <option value="">01:00</option>
+                                                                                <option value="">01:30</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn-modal-accept">Update</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <button class="btn-cancel" data-target="#cancel-modal" data-toggle="modal">Cancel</button>
+                                                    <div class="modal fade" id="cancel-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <h5 class="modal-title" id="exampleModalLongTitle">Cancel Service Request</h5>
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                              </button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <span>Why you want to cancel the service request?</span>
+                                                                    <div class="form-group">
+                                                                        <textarea name=""></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn-modal-accept">Cancel</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="row total-records">
+                                    <div class="col-md-6 col-sm-12 col-lg-6">
+                                        <div class="shown-records">
+                                            <span>Show</span>
+                                            <select name=" " id=" ">
+                                                <option value=" ">10</option>
+                                                <option value=" ">20</option>
+                                                <option value=" ">30</option>
+                                            </select>
+                                            <span>entries total record: <span>1</span></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-sm-12 col-lg-6">
+                                        <div class="navigate-page ">
+                                            <nav aria-label="Page navigation example">
+                                                <ul class="pagination ">
+                                                    <li class="page-item ">
+                                                        <a class="page-link " href="# " aria-label="Previous ">
+                                                            <span aria-hidden="true "><i class="fa fa-step-backward "></i></span>
+                                                            <span class="sr-only ">Previous</span>
+                                                        </a>
+                                                    </li>
+                                                    <li class="page-item "><a class="page-link " href="# "><span><</span></a></li>
+                                                    <li class="page-item "><a class="page-link active " href="# ">1</a></li>
+                                                    <li class="page-item "><a class="page-link " href="# "><span>></span></a></li>
+                                                    <li class="page-item ">
+                                                        <a class="page-link " href="# " aria-label="Next ">
+                                                            <span aria-hidden="true "><i class="fa fa-step-forward "></i></span>
+                                                            <span class="sr-only ">Next</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </nav>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade service-history" id="v-pills-service-history" role="tabpanel" aria-labelledby="v-pills-service-history-tab">
+
+                            <div class="tab-label">
+                                <h5>Service History</h5>
+                                <a href="#"><img src="assets/images/filter.png" alt=""></a>
+                            </div>
+                            <div class="row total-records">
+                                <div class="col-md-12 col-sm-12 col-lg-12">
+                                    <div class="shown-records payment-and-export">
+                                        <h5>Service History</h5>
+                                        <div class="export-btn">
+                                            <button type="button">Export</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="table-responsive-sm cust-service-history-table">
+                                <table class="table">
+                                    <thead class="table-header">
+                                        <tr>
+                                            <th scope="col">Service Id</th>
+                                            <th scope="col">Service Date</th>
+                                            <th scope="col">Service Provider</th>
+                                            <th scope="col">Payment</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Rate SP</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>123456</td>
+                                            <td>
+                                                <div class="service-info">
+                                                    <div class="service-datetime-icons">
+                                                        <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><img src="assets/images/calender-icon.png" alt=" "></a>
+                                                        <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><img src="assets/images/sp-timericon.png" alt=" "></a>
+                                                        <div class="modal fade" id="cust-service-history-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-part">
+                                                                        <div class="modal-header d-block">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <h4 class="modal-title" id="exampleModalLongTitle">Service Details</h4>
+                                                                                <button type="button" class="close ms-auto" data-dismiss="modal" aria-label="Close">
+                                                                                     <span aria-hidden="true" class="close-btn">&times;</span>
+                                                                                </button>
+                                                                            </div>
+                                                                            <p class="modal-datetime">26/12/2021 08:30 - 12:30</p>
+                                                                            <span class="modal-duration"><b>Duration: </b>4.5 Hrs</span>
+                                                                        </div>
+
+                                                                        <div class="modal-body">
+                                                                            <span class="body-text"><b>Service Id:</b> 8803.</span>
+                                                                            <span class="body-text"><b>Extras:</b> Inside oven, Laundry wash & dry</span>
+                                                                            <span class="body-text"><b>Net Amount:</b> <span class="payment">60,75 &euro;</span></span>
+
+                                                                            <div class="customer-details">
+
+                                                                                <span class="body-text"><b>Service Address:</b> Street 54, 53844 Troisdoff</span>
+                                                                                <span class="body-text"><b>Billing Address:</b> Same as cleaning adress</span>
+                                                                                <span class="body-text"><b>Phone:</b> +41 2244889910</span>
+                                                                                <span class="body-text"><b>Email:</b> cust001@yopmail.com</span>
+
+                                                                            </div>
+
+                                                                            <div class="customer-details">
+                                                                                <b>Comments</b>
+                                                                                <p class="mb-0 ">hello</p>
+
+                                                                                <div class="pets">
+                                                                                    <img src="assets/images/included.png" alt=" ">
+                                                                                    <p>I have Pets at home.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="service-datetime-texts">
+                                                        <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><strong>09/04/2018</strong></a>
+                                                        <a href="#" data-toggle="modal" data-target="#cust-service-history-modal">
+                                                            <p>12:00 - 18:00</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+
+                                            </td>
+                                            <td>
+                                                <div class="payment-content">
+                                                    <b>87,50 &euro;</b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="status-completed">
+                                                    <span>Completed</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="action-buttons">
+                                                    <button class="btn-rate-sp" data-toggle="modal" data-target="#rate-sp-modal2">Rate SP</button>
+
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>123456</td>
+                                            <td>
+                                                <div class="service-info">
+                                                    <div class="service-datetime-icons">
+                                                        <a href="#" data-toggle="modal" data-target="#cust-service-history-modal2"><img src="assets/images/calender-icon.png" alt=" "></a>
+                                                        <a href="#" data-toggle="modal" data-target="#cust-service-history-modal2"><img src="assets/images/sp-timericon.png" alt=" "></a>
+                                                        <div class="modal fade" id="cust-service-history-modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-part">
+                                                                        <div class="modal-header d-block">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <h4 class="modal-title" id="exampleModalLongTitle">Service Details</h4>
+                                                                                <button type="button" class="close ms-auto" data-dismiss="modal" aria-label="Close">
+                                                                                     <span aria-hidden="true" class="close-btn">&times;</span>
+                                                                                </button>
+                                                                            </div>
+                                                                            <p class="modal-datetime">26/12/2021 08:30 - 12:30</p>
+                                                                            <span class="modal-duration"><b>Duration: </b>4.5 Hrs</span>
+                                                                        </div>
+
+                                                                        <div class="modal-body">
+                                                                            <div class="modal-information">
+                                                                                <span class="body-text"><b>Service Id:</b> 8803.</span>
+                                                                                <span class="body-text"><b>Extras:</b> Inside oven, Laundry wash & dry</span>
+                                                                                <span class="body-text"><b>Net Amount:</b> <span class="payment">60,75 &euro;</span></span>
+
+                                                                                <div class="customer-details">
+
+                                                                                    <span class="body-text"><b>Service Address:</b> Street 54, 53844 Troisdoff</span>
+                                                                                    <span class="body-text"><b>Billing Address:</b> Same as cleaning adress</span>
+                                                                                    <span class="body-text"><b>Phone:</b> +41 2244889910</span>
+                                                                                    <span class="body-text"><b>Email:</b> cust001@yopmail.com</span>
+
+                                                                                </div>
+
+                                                                                <div class="customer-details">
+                                                                                    <b>Comments</b>
+                                                                                    <p class="mb-0 ">hello</p>
+
+                                                                                    <div class="pets">
+                                                                                        <img src="assets/images/included.png" alt=" ">
+                                                                                        <p>I have Pets at home.</p>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="modal-sp-details">
+                                                                                <h4>Service Provider Details</h4>
+                                                                                <div class="sp-content">
+                                                                                    <div class="sp-avatar">
+                                                                                        <img src="assets/images/avatar-hat.png" alt="">
+                                                                                        <p class="mt-1">16 cleanings</p>
+                                                                                    </div>
+                                                                                    <div class="sp-name-rating">
+                                                                                        <b>John Doe</b>
+                                                                                        <div class="sp-rating">
+                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                            <img src="assets/images/grey-small-star.png" alt="">
+
+                                                                                        </div>
+                                                                                        <span>3.67</span>
+                                                                                    </div>
+                                                                                </div>
+
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="service-datetime-texts">
+                                                        <a href="#" data-toggle="modal" data-target="#cust-service-history-modal2"><strong>09/04/2018</strong></a>
+                                                        <a href="#" data-toggle="modal" data-target="#cust-service-history-modal2">
+                                                            <p>12:00 - 18:00</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="sp-content">
+                                                    <div class="sp-avatar">
+                                                        <img src="assets/images/avatar-hat.png" alt="">
+                                                    </div>
+                                                    <div class="sp-name-rating">
+                                                        <b>John Doe</b>
+                                                        <div class="sp-rating">
+                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                            <img src="assets/images/grey-small-star.png" alt="">
+                                                            <span>3.67</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="payment-content">
+                                                    <b>87,50 &euro;</b>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="status-cancelled">
+                                                    <span>Cancelled</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="action-buttons">
+                                                    <button class="btn-rate-sp" data-toggle="modal" data-target="#rate-sp-modal2">Rate SP</button>
+                                                    <div class="modal fade" id="rate-sp-modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                        <div class="modal-dialog modal-dialog-centered" role="document">
+                                                            <div class="modal-content">
+                                                                <div class="modal-header">
+                                                                    <div class="sp-content">
+                                                                        <div class="sp-avatar">
+                                                                            <img src="assets/images/avatar-hat.png" alt="">
+                                                                        </div>
+                                                                        <div class="sp-name-rating">
+                                                                            <b>John Doe</b>
+                                                                            <div class="sp-rating">
+                                                                                <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                <img src="assets/images/grey-small-star.png" alt="">
+                                                                                <span>3.67</span>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+                                                                    <h5 class="modal-title">Rate your service provider</h5>
+
+                                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                                <span aria-hidden="true">&times;</span>
+                                                              </button>
+                                                                </div>
+                                                                <div class="modal-body">
+                                                                    <div class="cust-rating">
+                                                                        <div class="types-of-rating">
+                                                                            <b>On time arrival</b>
+                                                                            <b>Friendly</b>
+                                                                            <b>Quality of service</b>
+                                                                        </div>
+
+                                                                        <div class="stars">
+                                                                            <div class="rating-stars">
+                                                                                <a href=""><img src="assets/images/yellow-small-star.png" alt=""></a>
+                                                                                <a href=""><img src="assets/images/yellow-small-star.png" alt=""></a>
+                                                                                <a href=""><img src="assets/images/yellow-small-star.png" alt=""></a>
+                                                                                <a href=""><img src="assets/images/yellow-small-star.png" alt=""></a>
+                                                                                <a href=""><img src="assets/images/grey-small-star.png" alt=""></a>
+                                                                            </div>
+                                                                            <div class="rating-stars">
+                                                                                <a href=""><img src="assets/images/yellow-small-star.png" alt=""></a>
+                                                                                <a href=""><img src="assets/images/yellow-small-star.png" alt=""></a>
+                                                                                <a href=""><img src="assets/images/yellow-small-star.png" alt=""></a>
+                                                                                <a href=""><img src="assets/images/yellow-small-star.png" alt=""></a>
+                                                                                <a href=""><img src="assets/images/grey-small-star.png" alt=""></a>
+                                                                            </div>
+                                                                            <div class="rating-stars">
+                                                                                <a href=""><img src="assets/images/yellow-small-star.png" alt=""></a>
+                                                                                <a href=""><img src="assets/images/yellow-small-star.png" alt=""></a>
+                                                                                <a href=""><img src="assets/images/yellow-small-star.png" alt=""></a>
+                                                                                <a href=""><img src="assets/images/yellow-small-star.png" alt=""></a>
+                                                                                <a href=""><img src="assets/images/grey-small-star.png" alt=""></a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="cust-feedback">
+                                                                        <p>Feedback on service provider</p>
+                                                                        <textarea></textarea>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="modal-footer">
+                                                                    <button type="button" class="btn-modal-accept">Submit</button>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="row total-records">
+                                <div class="col-md-6 col-sm-12 col-lg-6">
+                                    <div class="shown-records">
+                                        <span>Show</span>
+                                        <select name=" " id=" ">
+                                            <option value=" ">10</option>
+                                            <option value=" ">20</option>
+                                            <option value=" ">30</option>
+                                        </select>
+                                        <span>entries total record: <span>1</span></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12 col-lg-6">
+                                    <div class="navigate-page ">
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination ">
+                                                <li class="page-item ">
+                                                    <a class="page-link " href="# " aria-label="Previous ">
+                                                        <span aria-hidden="true "><i class="fa fa-step-backward "></i></span>
+                                                        <span class="sr-only ">Previous</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item "><a class="page-link " href="# "><span><</span></a></li>
+                                                <li class="page-item "><a class="page-link active " href="# ">1</a></li>
+                                                <li class="page-item "><a class="page-link " href="# "><span>></span></a></li>
+                                                <li class="page-item ">
+                                                    <a class="page-link " href="# " aria-label="Next ">
+                                                        <span aria-hidden="true "><i class="fa fa-step-forward "></i></span>
+                                                        <span class="sr-only ">Next</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="tab-pane fade" id="v-pills-service-sche" role="tabpanel" aria-labelledby="v-pills-service-sche-tab">
+                            ...
+                        </div>
+
+                        <div class="tab-pane fade my-rating" id="v-pills-favourite-pros" role="tabpanel" aria-labelledby="v-pills-favourite-pros-tab">
+                            <div class="row rating-record">
+                                <div class="tab-label">
+                                    <h5>My Ratings</h5>
+                                </div>
+                                <div class="rating-header">
+                                    <div class="col-md-6 col-sm-6 col-lg-6">
+
+                                        <div class="shown-records">
+                                            <span>Rating</span>
+                                            <select name=" " id=" ">
+                                                <option value=" ">All</option>
+                                                <option value=" ">20</option>
+                                                <option value=" ">30</option>
+                                            </select>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6 col-sm-6 col-lg-6">
+                                        <div class="rating-sorting">
+                                            <span>Sorting</span>
+                                            <img src="assets/images/filter.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="rating-card">
+                                        <div class="rating-card-content">
+                                            <div class="id-name">
+                                                <p>8318</p>
+                                                <b>First Customer</b>
+                                            </div>
+                                            <div class="service-info">
+                                                <a href="#"><img src="assets/images/calender-icon.png" alt=" "><strong>27/06/2019</strong></a>
+                                                <a href="#"><img src="assets/images/sp-timericon.png" alt=" "><span>08:00 - 11:00</span></a>
+                                            </div>
+
+                                            <div class="rating-star">
+                                                <b>ratings</b>
+                                                <div class="stars">
+                                                    <a href="#"><img src="assets/images/yellow-small-star.png" alt=""></a>
+                                                    <a href="#"><img src="assets/images/yellow-small-star.png" alt=""></a>
+                                                    <a href="#"><img src="assets/images/yellow-small-star.png" alt=""></a>
+                                                    <a href="#"><img src="assets/images/yellow-small-star.png" alt=""></a>
+                                                    <a href="#"><img src="assets/images/grey-small-star.png" alt=""></a>
+                                                    <span>Very Good</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="customer-comment">
+                                            <b>Customer Comment</b>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12">
+                                    <div class="rating-card">
+                                        <div class="rating-card-content">
+                                            <div class="id-name">
+                                                <p>8318</p>
+                                                <b>First Customer</b>
+                                            </div>
+                                            <div class="service-info">
+                                                <a href="#"><img src="assets/images/calender-icon.png" alt=" "><strong>27/06/2019</strong></a>
+                                                <a href="#"><img src="assets/images/sp-timericon.png" alt=" "><span>08:00 - 11:00</span></a>
+                                            </div>
+
+                                            <div class="rating-star">
+                                                <b>ratings</b>
+                                                <div class="stars">
+                                                    <a href="#"><img src="assets/images/yellow-small-star.png" alt=""></a>
+                                                    <a href="#"><img src="assets/images/yellow-small-star.png" alt=""></a>
+                                                    <a href="#"><img src="assets/images/yellow-small-star.png" alt=""></a>
+                                                    <a href="#"><img src="assets/images/yellow-small-star.png" alt=""></a>
+                                                    <a href="#"><img src="assets/images/grey-small-star.png" alt=""></a>
+                                                    <span>Very Good</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="customer-comment">
+                                            <b>Customer Comment</b>
+                                            <p>Exellent work done by provider.</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row total-records">
+                                <div class="col-md-6 col-sm-12 col-lg-6">
+                                    <div class="shown-records">
+                                        <span>Show</span>
+                                        <select name=" " id=" ">
+                                            <option value=" ">10</option>
+                                            <option value=" ">20</option>
+                                            <option value=" ">30</option>
+                                        </select>
+                                        <span>entries total record: <span>1</span></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12 col-lg-6">
+                                    <div class="navigate-page ">
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination ">
+                                                <li class="page-item ">
+                                                    <a class="page-link " href="# " aria-label="Previous ">
+                                                        <span aria-hidden="true "><i class="fa fa-step-backward "></i></span>
+                                                        <span class="sr-only ">Previous</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item "><a class="page-link " href="# "><span><</span></a></li>
+                                                <li class="page-item "><a class="page-link active " href="# ">1</a></li>
+                                                <li class="page-item "><a class="page-link " href="# "><span>></span></a></li>
+                                                <li class="page-item ">
+                                                    <a class="page-link " href="# " aria-label="Next ">
+                                                        <span aria-hidden="true "><i class="fa fa-step-forward "></i></span>
+                                                        <span class="sr-only ">Next</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="v-pills-invoices" role="tabpanel" aria-labelledby="v-pills-invoices-tab">
+                            <div class="block-customer">
+                                <div class="tab-label">
+                                    <h5>Block Customer</h5>
+                                </div>
+                                <div class="card">
+                                    <div class="card-image">
+                                    </div>
+                                    <h5>First Customer</h5>
+                                    <div class="btn-block">
+                                        <button type="button">Block</button>
+                                    </div>
+                                </div>
+                                <div class="card">
+                                    <div class="card-image">
+
+                                    </div>
+                                    <h5>First Customer</h5>
+                                    <div class="btn-block">
+                                        <button type="button">Block</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row total-records">
+                                <div class="col-md-6 col-sm-12 col-lg-6">
+                                    <div class="shown-records">
+                                        <span>Show</span>
+                                        <select name=" " id=" ">
+                                            <option value=" ">10</option>
+                                            <option value=" ">20</option>
+                                            <option value=" ">30</option>
+                                        </select>
+                                        <span>entries total record: <span>1</span></span>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6 col-sm-12 col-lg-6">
+                                    <div class="navigate-page ">
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination ">
+                                                <li class="page-item ">
+                                                    <a class="page-link " href="# " aria-label="Previous ">
+                                                        <span aria-hidden="true "><i class="fa fa-step-backward "></i></span>
+                                                        <span class="sr-only ">Previous</span>
+                                                    </a>
+                                                </li>
+                                                <li class="page-item "><a class="page-link " href="# "><span><</span></a></li>
+                                                <li class="page-item "><a class="page-link active " href="# ">1</a></li>
+                                                <li class="page-item "><a class="page-link " href="# "><span>></span></a></li>
+                                                <li class="page-item ">
+                                                    <a class="page-link " href="# " aria-label="Next ">
+                                                        <span aria-hidden="true "><i class="fa fa-step-forward "></i></span>
+                                                        <span class="sr-only ">Next</span>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="v-pills-notification" role="tabpanel" aria-labelledby="v-pills-notification-tab">
+                            ...
+                        </div>
+
+                        <div class="tab-pane fade my-setting" id="v-pills-my-setting" role="tabpanel" aria-labelledby="pills-settings-tab">
+                            <nav>
+                                <div class="nav nav-tabs" id="nav-tab" role="tablistd">
+                                    <a class="nav-item nav-link active" id="nav-my-details-tab" data-toggle="tab" href="#nav-my-details" role="tab" aria-controls="nav-my-details-tab" aria-selected="true">My Details</a>
+                                    <a class="nav-item nav-link" id="nav-change-pass-tab" data-toggle="tab" href="#nav-change-pass" role="tab " aria-controls="nav-change-pass" aria-selected="false">Change Password</a>
+                                </div>
+                            </nav>
+                            <div class="tab-content" id="nav-tabContent">
+                                <div class="tab-pane fade show active" id="nav-my-details" role="tabpanel" aria-labelledby="nav-my-details-tab">
+                                    <div class="row ">
+                                        <div class="col-12 ">
+                                            <div class="account-status">
+                                                <h4>Account Status: <span class="status ">Active</span></h4>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="row ">
+                                        <div class="col-12 ">
+                                            <div class="basic-details ">
+                                                <h5>Basic Details</h5>
+                                                <img src="assets/images/avatar-car.png " alt=" " id="active-avatar">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="details ">
+                                        <div class="row ">
+                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces ">
+                                                <form action=" ">
+                                                    <div class="form-group ">
+                                                        <label for="firstname ">First name</label>
+                                                        <input type="email " class="form-control form-control-lg " id="firstname ">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces ">
+                                                <form action=" ">
+                                                    <div class="form-group ">
+                                                        <label for="lastname ">Last name</label>
+                                                        <input type="email " class="form-control form-control-lg " id="lastname ">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces ">
+                                                <form action=" ">
+                                                    <div class="form-group ">
+                                                        <label for="email ">E-mail address</label>
+                                                        <input type="email " class="form-control form-control-lg " id="email " value="abc@yopmail.com " disabled>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <div class="row ">
+                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces ">
+                                                <div class="sp-reg-form ">
+                                                    <form action=" ">
+                                                        <label for="phone ">Phone number</label>
+                                                        <div class="input-group-prepend ">
+                                                            <div class="input-group-text ">+91</div>
+                                                            <input type="tel " class="form-control phone-no " id="phone " placeholder="Phone number " required>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 dob spaces ">
+                                                <label for=" ">Date of birth</label>
+                                                <div class="dob-fields ">
+                                                    <form action=" " class="day ">
+                                                        <div class="form-group ">
+                                                            <select class="form-control-lg date-select " id="date ">
+                                                                        <option>01</option>
+                                                                        <option>02</option>
+                                                                        <option>03</option>
+                                                                        <option>04</option>
+                                                                        <option>05</option>
+                                                                        <option>06</option>
+                                                                        <option>07</option>
+                                                                        <option>08</option>
+                                                                        <option>09</option>
+                                                                        <option>10</option>
+                                                                        <option>11</option>
+                                                                        <option>12</option>
+                                                                        <option>13</option>
+                                                                        <option>14</option>
+                                                                        <option>15</option>
+                                                                        <option>16</option>
+                                                                        <option>17</option>
+                                                                        <option>18</option>
+                                                                        <option>19</option>
+                                                                        <option>20</option>
+                                                                        <option>21</option>
+                                                                        <option>22</option>
+                                                                        <option>23</option>
+                                                                        <option>24</option>
+                                                                        <option>25</option>
+                                                                        <option>26</option>
+                                                                        <option>27</option>
+                                                                        <option>28</option>
+                                                                        <option>29</option>
+                                                                        <option>30</option>
+                                                                        <option>31</option>
+                                                                </select>
+                                                        </div>
+                                                    </form>
+                                                    <form action=" " class="month ">
+                                                        <div class="form-group ">
+                                                            <select class="form-control-lg " id="month ">
+                                                                    <option>January</option>
+                                                                    <option>February</option>
+                                                                    <option>March</option>
+                                                                    <option>April</option>
+                                                                    <option>May</option>
+                                                                    <option>June</option>
+                                                                    <option>July</option>
+                                                                    <option>August</option>
+                                                                    <option>September</option>
+                                                                    <option>October</option>
+                                                                    <option>November</option>
+                                                                    <option>December</option>
+                                                                  </select>
+                                                        </div>
+                                                    </form>
+                                                    <form action=" " class="year">
+                                                        <div class="form-group">
+                                                            <select class="form-control-lg" id="year">
+                                                                    <option>1982</option>
+                                                                    <option>1983</option>
+                                                                    <option>1984</option>
+                                                                    <option>1985</option>
+                                                                    <option>1986</option>
+                                                                    <option>1987</option>
+                                                                    <option>1988</option>
+                                                                    <option>1989</option>
+                                                                    <option>1990</option>
+                                                                    <option>1991</option>
+                                                                    <option>1992</option>
+                                                                    <option>1993</option>
+                                                                    <option>1994</option>
+                                                                    <option>1995</option>
+                                                                    <option>1996</option>
+                                                                    <option>1997</option>
+                                                                    <option>1998</option>
+                                                                    <option>1999</option>
+                                                                    <option>2000</option>
+                                                                    <option>2001</option>
+                                                                    <option>2002</option>
+                                                                    <option>2003</option>
+                                                                    <option>2004</option>
+                                                                    <option>2005</option>
+                                                                    <option>2006</option>
+                                                                    <option>2007</option>
+                                                                    <option>2008</option>
+                                                                    <option>2009</option>
+                                                                    <option>2010</option>
+                                                                    <option>2011</option>
+                                                                    <option>2012</option>
+                                                                    <option>2013</option>
+                                                                    <option>2014</option>
+                                                                    <option>2015</option>
+                                                                    <option>2016</option>
+                                                                    <option>2017</option>
+                                                                    <option>2018</option>
+                                                                    <option>2019</option>
+                                                                    <option>2020</option>
+                                                                    <option>2021</option>
+                                                                    <option>2022</option>  
+                                                            </select>
+                                                        </div>
+                                                    </form>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces">
+                                                <form action=" ">
+                                                    <div class="form-group nation">
+                                                        <label for="nationality ">Nationality</label>
+                                                        <select class="form-control-lg " id="nationality ">
+                                                            <option>German</option>
+                                                            <option>Indian</option>
+                                                        </select>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <div class="row ">
+                                            <div class="col-md-12 gender spaces">
+                                                <label for=" ">Gender</label>
+                                                <form action=" ">
+                                                    <div class="form-group ">
+                                                        <div class="form-check form-check-inline ">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sp-male " value="option1" checked>
+                                                            <label class="form-check-label" for="sp-male">Male</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sp-female " value="option2">
+                                                            <label class="form-check-label" for="sp-female">Femal</label>
+                                                        </div>
+                                                        <div class="form-check form-check-inline">
+                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sp-other " value="option3">
+                                                            <label class="form-check-label" for="sp-other">Rather not to say</label>
+                                                        </div>
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <div class="row select-avatar ">
+                                            <div class="col-md-12 spaces ">
+                                                <label for=" ">Select Avatar</label>
+                                                <div class="avatar ">
+                                                    <img src="assets/images/avatar-car.png " alt=" " class="selected active " id="avatar-car " onclick="changeAvatar(event); ">
+                                                    <img src="assets/images/avatar-female.png " alt=" " class="selected " id="avatar-female " onclick="changeAvatar(event); ">
+                                                    <img src="assets/images/avatar-hat.png " alt=" " class="selected " id="avatar-hat " onclick="changeAvatar(event); ">
+                                                    <img src="assets/images/avatar-iron.png " alt=" " class="selected " id="avatar-iron " onclick="changeAvatar(event); ">
+                                                    <img src="assets/images/avatar-male.png " alt=" " class="selected " id="avatar-male " onclick="changeAvatar(event); ">
+                                                    <img src="assets/images/avatar-ship.png " alt=" " class="selected " id="avatar-ship " onclick="changeAvatar(event); ">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row ">
+                                        <div class="col-12 ">
+                                            <div class="my-address basic-details ">
+                                                <h5>My Adddress</h5>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="address-field details ">
+                                        <div class="row ">
+                                            <div class="col-md-4 col-sm-12 spaces ">
+                                                <form action=" ">
+                                                    <div class="form-group ">
+                                                        <label for="streetname ">Street name</label>
+                                                        <input type="text " class="form-control form-control-lg " id="streetname ">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-md-4 col-sm-12 spaces ">
+                                                <form action=" ">
+                                                    <div class="form-group ">
+                                                        <label for="housenumber ">House number</label>
+                                                        <input type="tel " class="form-control form-control-lg " id="housenumber ">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                            <div class="col-md-4 col-sm-12 spaces ">
+                                                <form action=" ">
+                                                    <div class="form-group ">
+                                                        <label for="postal-code ">Postal Code</label>
+                                                        <input type="tel " class="form-control form-control-lg " id="postal-code ">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="row ">
+                                            <div class="col-md-4 col-sm-12 spaces ">
+                                                <form action=" ">
+                                                    <div class="form-group city-input ">
+                                                        <label for="city ">City</label>
+                                                        <input type="text " class="form-control form-control-lg " id="city ">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="col-4 ">
+                                            <div class="outline ">
+                                                <hr>
+                                            </div>
+                                        </div>
+
+                                        <div class="row ">
+                                            <div class="btn-setting-save ">
+                                                <button type="button ">Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="tab-pane fade" id="nav-change-pass" role="tabpanel" aria-labelledby="nav-change-pass-tab">
+                                    <div class="change-password ">
+                                        <div class="row details ">
+                                            <div class="col-md-4 col-sm-12 spaces ">
+                                                <form action=" ">
+                                                    <div class="form-group ">
+                                                        <label for="old-pass ">Old password</label>
+                                                        <input type="password " class="form-control form-control-lg " id="old-pass ">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="row details ">
+                                            <div class="col-md-4 col-sm-12 spaces ">
+                                                <form action=" ">
+                                                    <div class="form-group ">
+                                                        <label for="new-pass ">New password</label>
+                                                        <input type="password " class="form-control form-control-lg " id="new-pass ">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                        <div class="row details ">
+                                            <div class="col-md-4 col-sm-12 spaces ">
+                                                <form action=" ">
+                                                    <div class="form-group ">
+                                                        <label for="confirm-pass ">Confirm password</label>
+                                                        <input type="password " class="form-control form-control-lg " id="confirm-pass ">
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+
+                                        <div class="row address-field ">
+                                            <div class="btn-setting-save ">
+                                                <button type="button ">Save</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-fluid footer-section faq-footer upcoming-service-footer">
+        <footer>
+            <div class="footer-content ">
+                <a href="index.html " target="blank "><img src="assets/images/footer-logo.png " alt=" "></a>
+                <nav class="nav footer-nav justify-content-center ">
+                    <a class="nav-link " href="index.html " target="blank ">Home</a>
+                    <a class="nav-link " href="about.html " target="blank ">About</a>
+                    <a class="nav-link " href="# " target="blank ">Testimonials</a>
+                    <a class="nav-link " href="FAQ 's.html" target="blank">faqs</a>
+                    <a class="nav-link " href="# ">Insurance Policy</a>
+                    <a class="nav-link " href="# ">Impressum</a>
+                </nav>
+                <div class="footer-icon">
+                    <i class="fa fa-facebook fb-icon "></i>
+                    <i class="fa fa-instagram insta-icon "></i>
+                </div>
+
+            </div>
+            <p class="text-center copyrights">©2018 Helperland. All rights reserved. &nbsp;&nbsp;&nbsp;<a href="">Terms and Conditions</a> <span>&nbsp;|&nbsp;</span> <a href="">Privacy Policy</a> </p>
+        </footer>
+    </div>
+    <script src="assets/js/main.js"></script>
+    <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js "></script>
+</body>
+
+<script>
+    $('#logout-modal').on('hidden.bs.modal', function(e) {
+        window.location.href = 'index.html';
+    });
+</script>
+
+</html>

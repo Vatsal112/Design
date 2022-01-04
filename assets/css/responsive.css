@@ -66,17 +66,17 @@
         text-align: left;
     }
     /* for navbar-notification icon*/
-    .upcoming-service-banner .notification-icon-smallscreen {
+    .upcoming-service-banner .notification-icon-smallscreen,
+    .customer-screen-banner .notification-icon-smallscreen {
         display: block;
-    }
-    .upcoming-service-banner .notification-icon-smallscreen {
         border-left: 1px solid #dee2e6;
         border-right: 1px solid #dee2e6;
     }
     .upcoming-service-banner .navbar-brand {
         padding-top: 0;
     }
-    .upcoming-service-banner .faq-nav .navbar-nav .notification-icon span {
+    .upcoming-service-banner .faq-nav .navbar-nav .notification-icon span,
+    .customer-screen-banner .faq-nav .navbar-nav .notification-icon span {
         position: absolute;
         right: 7.5%;
         top: 3%;
@@ -92,7 +92,8 @@
 @media (min-width:992px) and (max-width: 1199px) {}
 
 @media screen and (min-width: 992px) {
-    .upcoming-service-banner .navbar-expand-lg .navbar-nav .dropdown-menu {
+    .upcoming-service-banner .navbar-expand-lg .navbar-nav .dropdown-menu,
+    .customer-screen-banner .navbar-expand-lg .navbar-nav .dropdown-menu {
         position: absolute;
         top: 140%;
         right: 10px;
