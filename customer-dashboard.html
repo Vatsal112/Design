@@ -1111,30 +1111,15 @@
                             <nav>
                                 <div class="nav nav-tabs" id="nav-tab" role="tablistd">
                                     <a class="nav-item nav-link active" id="nav-my-details-tab" data-toggle="tab" href="#nav-my-details" role="tab" aria-controls="nav-my-details-tab" aria-selected="true">My Details</a>
-                                    <a class="nav-item nav-link" id="nav-change-pass-tab" data-toggle="tab" href="#nav-change-pass" role="tab " aria-controls="nav-change-pass" aria-selected="false">Change Password</a>
+                                    <a class="nav-item nav-link" id="nav-change-pass-tab" data-toggle="tab" href="#nav-my-address" role="tab" aria-controls="nav-my-address" aria-selected="false">My Address</a>
+                                    <a class="nav-item nav-link" id="nav-change-pass-tab" data-toggle="tab" href="#nav-change-pass" role="tab" aria-controls="nav-change-pass" aria-selected="false">Change Password</a>
                                 </div>
                             </nav>
                             <div class="tab-content" id="nav-tabContent">
                                 <div class="tab-pane fade show active" id="nav-my-details" role="tabpanel" aria-labelledby="nav-my-details-tab">
-                                    <div class="row ">
-                                        <div class="col-12 ">
-                                            <div class="account-status">
-                                                <h4>Account Status: <span class="status ">Active</span></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row ">
-                                        <div class="col-12 ">
-                                            <div class="basic-details ">
-                                                <h5>Basic Details</h5>
-                                                <img src="assets/images/avatar-car.png " alt=" " id="active-avatar">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="details ">
-                                        <div class="row ">
-                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces ">
+                                    <div class="details">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces">
                                                 <form action=" ">
                                                     <div class="form-group ">
                                                         <label for="firstname ">First name</label>
@@ -1142,7 +1127,7 @@
                                                     </div>
                                                 </form>
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces ">
+                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces">
                                                 <form action=" ">
                                                     <div class="form-group ">
                                                         <label for="lastname ">Last name</label>
@@ -1150,7 +1135,7 @@
                                                     </div>
                                                 </form>
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces ">
+                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces">
                                                 <form action=" ">
                                                     <div class="form-group ">
                                                         <label for="email ">E-mail address</label>
@@ -1160,19 +1145,19 @@
                                             </div>
                                         </div>
 
-                                        <div class="row ">
-                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces ">
-                                                <div class="sp-reg-form ">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces">
+                                                <div class="sp-reg-form">
                                                     <form action=" ">
-                                                        <label for="phone ">Phone number</label>
+                                                        <label for="phone">Phone number</label>
                                                         <div class="input-group-prepend ">
                                                             <div class="input-group-text ">+91</div>
-                                                            <input type="tel " class="form-control phone-no " id="phone " placeholder="Phone number " required>
+                                                            <input type="tel " class="form-control phone-no" id="phone" placeholder="Phone number" required>
                                                         </div>
                                                     </form>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 dob spaces ">
+                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 dob spaces">
                                                 <label for=" ">Date of birth</label>
                                                 <div class="dob-fields ">
                                                     <form action=" " class="day ">
@@ -1279,113 +1264,29 @@
                                                     </form>
                                                 </div>
                                             </div>
-
-                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces">
-                                                <form action=" ">
-                                                    <div class="form-group nation">
-                                                        <label for="nationality ">Nationality</label>
-                                                        <select class="form-control-lg " id="nationality ">
-                                                            <option>German</option>
-                                                            <option>Indian</option>
-                                                        </select>
-                                                    </div>
-                                                </form>
-                                            </div>
                                         </div>
 
-                                        <div class="row ">
-                                            <div class="col-md-12 gender spaces">
-                                                <label for=" ">Gender</label>
-                                                <form action=" ">
-                                                    <div class="form-group ">
-                                                        <div class="form-check form-check-inline ">
-                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sp-male " value="option1" checked>
-                                                            <label class="form-check-label" for="sp-male">Male</label>
-                                                        </div>
-                                                        <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sp-female " value="option2">
-                                                            <label class="form-check-label" for="sp-female">Femal</label>
-                                                        </div>
-                                                        <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sp-other " value="option3">
-                                                            <label class="form-check-label" for="sp-other">Rather not to say</label>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-
-                                        <div class="row select-avatar ">
-                                            <div class="col-md-12 spaces ">
-                                                <label for=" ">Select Avatar</label>
-                                                <div class="avatar ">
-                                                    <img src="assets/images/avatar-car.png " alt=" " class="selected active " id="avatar-car " onclick="changeAvatar(event); ">
-                                                    <img src="assets/images/avatar-female.png " alt=" " class="selected " id="avatar-female " onclick="changeAvatar(event); ">
-                                                    <img src="assets/images/avatar-hat.png " alt=" " class="selected " id="avatar-hat " onclick="changeAvatar(event); ">
-                                                    <img src="assets/images/avatar-iron.png " alt=" " class="selected " id="avatar-iron " onclick="changeAvatar(event); ">
-                                                    <img src="assets/images/avatar-male.png " alt=" " class="selected " id="avatar-male " onclick="changeAvatar(event); ">
-                                                    <img src="assets/images/avatar-ship.png " alt=" " class="selected " id="avatar-ship " onclick="changeAvatar(event); ">
+                                        <div class="row">
+                                            <div class="col-md-12 col-sm-12">
+                                                <div class="preferred-lang">
+                                                    <p>My Preferred Language</p>
+                                                </div>
+                                                <div class="form-group language-select">
+                                                    <select name="" id="">
+                                                        <option value="">English</option>
+                                                        <option value="">Hindi</option>
+                                                    </select>
+                                                </div>
+                                                <div class="btn-save">
+                                                    <button type="button">Save</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row ">
-                                        <div class="col-12 ">
-                                            <div class="my-address basic-details ">
-                                                <h5>My Adddress</h5>
-                                            </div>
-                                        </div>
-                                    </div>
+                                </div>
 
-                                    <div class="address-field details ">
-                                        <div class="row ">
-                                            <div class="col-md-4 col-sm-12 spaces ">
-                                                <form action=" ">
-                                                    <div class="form-group ">
-                                                        <label for="streetname ">Street name</label>
-                                                        <input type="text " class="form-control form-control-lg " id="streetname ">
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="col-md-4 col-sm-12 spaces ">
-                                                <form action=" ">
-                                                    <div class="form-group ">
-                                                        <label for="housenumber ">House number</label>
-                                                        <input type="tel " class="form-control form-control-lg " id="housenumber ">
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="col-md-4 col-sm-12 spaces ">
-                                                <form action=" ">
-                                                    <div class="form-group ">
-                                                        <label for="postal-code ">Postal Code</label>
-                                                        <input type="tel " class="form-control form-control-lg " id="postal-code ">
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <div class="row ">
-                                            <div class="col-md-4 col-sm-12 spaces ">
-                                                <form action=" ">
-                                                    <div class="form-group city-input ">
-                                                        <label for="city ">City</label>
-                                                        <input type="text " class="form-control form-control-lg " id="city ">
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <div class="col-4 ">
-                                            <div class="outline ">
-                                                <hr>
-                                            </div>
-                                        </div>
+                                <div class="tab-pane fade" id="nav-my-address" role="tabpanel" aria-labelledby="nav-my-address-tab">
 
-                                        <div class="row ">
-                                            <div class="btn-setting-save ">
-                                                <button type="button ">Save</button>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="tab-pane fade" id="nav-change-pass" role="tabpanel" aria-labelledby="nav-change-pass-tab">
                                     <div class="change-password ">

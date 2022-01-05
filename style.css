@@ -1687,7 +1687,8 @@
      border-radius: 50%;
  }
  
- .my-setting .address-field .btn-setting-save button {
+ .my-setting .address-field .btn-setting-save button,
+ .my-setting .details .btn-save button {
      outline: none;
      border: 1px solid #1D7A8C;
      background-color: #1D7A8C;
@@ -2222,4 +2223,28 @@
      border-radius: 20px;
      background-color: #1D7A8C;
      color: white;
+ }
+ 
+ .my-setting .details .preferred-lang {
+     border-top: 1px solid #dee2e6;
+     margin-top: 10px;
+ }
+ 
+ .my-setting .details .preferred-lang p {
+     margin-top: 0.5rem;
+     font-weight: bold;
+ }
+ 
+ .my-setting .details .language-select select {
+     width: 90px;
+     color: #646464;
+     height: 40px;
+     border: 1px solid #dee2e6;
+     margin-top: 0.5rem;
+     padding: 0 4px;
+     border-radius: 0.3rem;
+ }
+ 
+ .my-setting .details .btn-save {
+     margin-top: 1rem;
  }
