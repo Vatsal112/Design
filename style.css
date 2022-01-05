@@ -1308,6 +1308,7 @@
  
  .tab-content .service-info {
      display: flex;
+     white-space: nowrap;
  }
  
  .tab-content .service-datetime-icons img {
@@ -1335,7 +1336,8 @@
  }
  
  .tab-content .btn-cancel button,
- .block-customer .card .btn-block button {
+ .block-customer .card .btn-block button,
+ .favourite-sp .card .btn-block button {
      width: 80px;
      height: 34px;
      background-color: #FF6B6B;
@@ -1348,7 +1350,7 @@
  
  .sidebar {
      height: 100vh;
-     width: 20rem;
+     width: 18rem;
      position: fixed;
      top: 10%;
      right: -100%;
@@ -1370,9 +1372,20 @@
      padding-top: 10px;
  }
  
- .sidebar .username {
+ .sidebar .username,
+ .sidebar .sidebar-social-icons {
      padding-left: 15px;
      padding-bottom: 10px;
+ }
+ 
+ .sidebar .sidebar-social-icons i {
+     font-size: 18px;
+     padding: 5px;
+ }
+ 
+ .sidebar .sidebar-social-icons {
+     text-align: center;
+     margin-top: 1rem;
  }
  
  .sidebar .navbar-nav {
@@ -1478,7 +1491,8 @@
      color: white;
  }
  
- .service-datetime-icons .modal-content {
+ .service-datetime-icons #service-info-modal2 .modal-content,
+ .service-datetime-icons #service-info-modal .modal-content {
      display: flex;
      flex-direction: row;
      align-items: center;
@@ -1522,6 +1536,10 @@
  
  .navigate-page .pagination .page-item i {
      font-size: 10px;
+ }
+ 
+ .navigate-page .pagination .page-item .next-icon img {
+     transform: rotate(180deg);
  }
  
  .navigate-page .pagination .page-item .page-link {
@@ -1786,18 +1804,17 @@
      border: 1px solid #dee2e6;
  }
  
- .block-customer .card .card-image {
-     border: 1px solid #a1a4a7;
-     border-radius: 50%;
-     width: 100px;
-     height: 100px;
+ .block-customer .card .card-image,
+ .favourite-sp .card .card-image {
      text-align: center;
-     background-image: url(assets/images/cap.png);
-     background-size: 50%;
-     padding: 10px;
-     background-repeat: no-repeat;
-     background-position: center;
-     margin: 1rem auto;
+ }
+ 
+ .block-customer .card .card-image img,
+ .favourite-sp .card .card-image img {
+     border: 1px solid #9BA0A3;
+     border-radius: 50%;
+     margin-top: 1rem;
+     margin-bottom: 0.5rem;
  }
  
  .block-customer .card {
@@ -1805,15 +1822,18 @@
      margin: 10px;
  }
  
- .block-customer {
+ .block-customer,
+ .favourite-sp {
      display: flex;
  }
  
- .block-customer .card .btn-block {
+ .block-customer .card .btn-block,
+ .favourite-sp .card .btn-block {
      margin: 1rem auto;
  }
  
- .block-customer .card h5 {
+ .block-customer .card h5,
+ .favourite-sp .card h5 {
      text-align: center;
      color: #4f4f4f;
  }
@@ -1868,6 +1888,7 @@
  .tab-sections .cust-service-history-table .payment-content {
      color: #1D7A8C;
      font-size: 22px;
+     white-space: nowrap;
  }
  
  .dashboard .current-service-req-table .action-buttons .btn-cancel {
@@ -1987,6 +2008,7 @@
  .cust-service-history-table .sp-content {
      display: flex;
      align-items: center;
+     white-space: nowrap;
  }
  
  .current-service-req-table .sp-content .sp-avatar img,
@@ -2007,10 +2029,6 @@
  .current-service-req-table .sp-content .sp-rating,
  .cust-service-history-table .sp-content .sp-rating {
      margin-left: 5px;
- }
- 
- .current-service-req-table #current-service-modal2 .modal-content {
-     width: 100%;
  }
  
  .current-service-req-table #current-service-modal2 .modal-body {
@@ -2074,6 +2092,7 @@
  .cust-service-history-table .status-cancelled {
      background-color: #FF6B6B;
      font-size: 12px;
+     width: 100px;
      text-align: center;
      font-weight: 600;
      color: white !important;
@@ -2081,7 +2100,17 @@
  
  .cust-service-history-table .status-completed {
      background-color: #67b644;
+     width: 100px;
      font-size: 12px;
+     text-align: center;
+     font-weight: 600;
+     color: white !important;
+ }
+ 
+ .cust-service-history-table .status-refund {
+     background-color: orangered;
+     font-size: 12px;
+     width: 100px;
      text-align: center;
      font-weight: 600;
      color: white !important;
@@ -2156,4 +2185,41 @@
      width: 90px;
      padding: 10px;
      border-radius: 20px;
+ }
+ 
+ .favourite-sp .card {
+     width: 35%;
+     margin: 10px;
+ }
+ 
+ .favourite-sp .rating-stars {
+     text-align: center;
+ }
+ 
+ .favourite-sp .card p {
+     margin-top: 0.7rem;
+     color: #646464;
+ }
+ 
+ .favourite-sp .favourite-pro-btns {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     margin: 1rem 0;
+ }
+ 
+ .favourite-sp .favourite-pro-btns .btn-block {
+     margin: 0 5px;
+ }
+ 
+ .favourite-sp .favourite-pro-btns .btn-remove button {
+     outline: none;
+     margin: 0 5px;
+     border: none;
+     width: 80px;
+     height: 34px;
+     padding: 5px;
+     border-radius: 20px;
+     background-color: #1D7A8C;
+     color: white;
  }

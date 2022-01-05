@@ -50,8 +50,8 @@
     .tab-sections .col-sm-5 {
         width: 0;
     }
-    .service-datetime-icons .modal-content {
-        display: flex;
+    .service-datetime-icons #service-info-modal2 .modal-content,
+    .service-datetime-icons #service-info-modal .modal-content {
         flex-direction: column;
         align-items: center;
         justify-content: center;
@@ -87,9 +87,33 @@
         background-color: red;
         border-radius: 50%;
     }
+    /*customer dashboard pages */
+    .tab-sections .main-content .cust-dashboard,
+    .tab-sections .main-content .sp-dashboard {
+        width: 100%;
+        margin-left: 4%;
+    }
+    /*customers service history modal */
+    .cust-service-history-table #cust-service-history-modal2 .modal-body {
+        display: block;
+    }
+    .cust-service-history-table #cust-service-history-modal2 .modal-sp-details,
+    .current-service-req-table #current-service-modal2 .modal-sp-details {
+        border-top: 1px solid #dee2e6;
+        border-left: none;
+        margin: 1rem 0;
+        padding-top: 10px;
+    }
+    .current-service-req-table #current-service-modal2 .modal-body {
+        display: block;
+    }
 }
 
-@media (min-width:992px) and (max-width: 1199px) {}
+@media (min-width:992px) and (max-width: 1199px) {
+    .tab-sections .nav-tab {
+        width: 220px;
+    }
+}
 
 @media screen and (min-width: 992px) {
     .upcoming-service-banner .navbar-expand-lg .navbar-nav .dropdown-menu,
@@ -140,10 +164,11 @@
     .tab-sections .tab-content .table-header {
         height: 0;
         display: none;
-        height: 0;
     }
     .upcoming-service-table tbody tr,
-    .tab-sections .new-service tr {
+    .tab-sections .new-service tr,
+    .tab-sections .current-service-req-table tr,
+    .tab-sections .cust-service-history-table tr {
         margin-bottom: 40px;
     }
     .tab-sections table {
@@ -153,13 +178,17 @@
     }
     .tab-sections .upcoming-service-table tr td,
     .tab-sections .new-service tr td,
-    .tab-sections .service-history-table tr td {
+    .tab-sections .service-history-table tr td,
+    .tab-sections .current-service-req-table tr td,
+    .tab-sections .cust-service-history-table tr td {
         display: block;
         padding: 15px;
     }
     .tab-sections .upcoming-service-table tr,
     .tab-sections .new-service tr,
-    .tab-sections .service-history-table tr {
+    .tab-sections .service-history-table tr,
+    .tab-sections .current-service-req-table tr,
+    .tab-sections .cust-service-history-table tr {
         box-shadow: 0 0 6px rgb(0 0 0 / 25%);
     }
     .block-customer {
@@ -167,6 +196,40 @@
     }
     .block-customer .card {
         margin: 1rem auto;
+        width: 50%;
+    }
+    .tab-sections .current-service-req-table .service-info,
+    .current-service-req-table .sp-content,
+    .tab-sections .cust-service-history-table .service-info,
+    .tab-sections .cust-service-history-table .sp-content {
+        align-items: center;
+    }
+    .cust-service-history-table #cust-service-history-modal2 .modal-body {
+        display: block;
+    }
+    .cust-service-history-table #cust-service-history-modal2 .modal-content,
+    .current-service-req-table #current-service-modal2 .modal-content {
+        text-align: left;
+    }
+    .tab-sections .dashboard .current-service-req-table tbody {
+        text-align: left;
+    }
+    .current-service-req-table #current-service-modal2 .modal-sp-details {
+        border-top: 1px solid #dee2e6;
+        border-left: none;
+        margin: 1rem 0;
+        padding-top: 10px;
+    }
+    .cust-service-history-table .sp-content .sp-name-rating b,
+    .current-service-req-table .sp-content .sp-name-rating b {
+        margin-left: 10px;
+    }
+    .my-rating .favourite-sp {
+        display: block;
+    }
+    .my-rating .favourite-sp .card {
+        margin-left: auto;
+        margin-right: auto;
         width: 50%;
     }
 }
@@ -566,6 +629,14 @@
     }
     .service-datetime-icons .modal-content {
         flex-direction: column;
+    }
+    /* customer dashboard */
+    .tab-sections .dashboard .current-service-req {
+        display: block;
+        text-align: center;
+    }
+    .tab-sections .dashboard .current-service-req button {
+        margin: 0.5rem 0;
     }
 }
 
