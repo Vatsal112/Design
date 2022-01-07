@@ -1408,12 +1408,16 @@
      background: transparent;
  }
  
- .service-datetime-icons .modal-header .close-btn {
+ .service-datetime-icons .modal-header .close-btn,
+ #edit-addr-modal .modal-header .close-btn,
+ #add-addr-modal .modal-header .close-btn,
+ #delete-addr-modal .modal-header .close-btn {
      font-size: 28px;
      font-weight: 500;
      position: absolute;
      right: 3%;
      top: 3%;
+     cursor: pointer;
  }
  
  .service-datetime-icons .modal-header .modal-datetime {
@@ -1687,7 +1691,8 @@
      border-radius: 50%;
  }
  
- .my-setting .address-field .btn-setting-save button {
+ .my-setting .address-field .btn-setting-save button,
+ .my-setting .details .btn-save button {
      outline: none;
      border: 1px solid #1D7A8C;
      background-color: #1D7A8C;
@@ -2222,4 +2227,145 @@
      border-radius: 20px;
      background-color: #1D7A8C;
      color: white;
+ }
+ 
+ .my-setting .details .preferred-lang {
+     border-top: 1px solid #dee2e6;
+     margin-top: 10px;
+ }
+ 
+ .my-setting .details .preferred-lang p {
+     margin-top: 0.5rem;
+     font-weight: bold;
+ }
+ 
+ .my-setting .details .language-select select {
+     width: 90px;
+     color: #646464;
+     height: 40px;
+     border: 1px solid #dee2e6;
+     margin-top: 0.5rem;
+     padding: 0 4px;
+     border-radius: 0.3rem;
+ }
+ 
+ .my-setting .details .btn-save {
+     margin-top: 1rem;
+ }
+ 
+ .my-setting .address-table .table .table-header {
+     background-color: #F9F9F9;
+ }
+ 
+ .my-setting .address-table table {
+     padding: 0.5rem 1rem;
+ }
+ 
+ .my-setting .address-table .table thead>tr>th {
+     vertical-align: middle;
+     border-bottom: 2px solid hsl(0, 0%, 87%);
+ }
+ 
+ .my-setting .address-table .add-new-addr-btn button {
+     outline: none;
+     border: none;
+     background-color: #146371;
+     color: white;
+     width: 150px;
+     padding: 10px;
+     border-radius: 25px;
+ }
+ 
+ .my-setting .address-table table>:not(caption)>*>* {
+     padding: 0.5rem 2.5rem;
+ }
+ 
+ #edit-addr-modal .modal-header,
+ #add-addr-modal .modal-header,
+ #delete-addr-modal .modal-header {
+     border-bottom: 0;
+     color: #646464;
+ }
+ 
+ #edit-addr-modal .modal-body .edit-details .address-fields,
+ #edit-addr-modal .modal-body .edit-details .postalcode-city,
+ #add-addr-modal .modal-body .edit-details .address-fields,
+ #add-addr-modal .modal-body .edit-details .postalcode-city {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+ }
+ 
+ #edit-addr-modal .modal-body,
+ #add-addr-modal .modal-body,
+ #delete-addr-modal .modal-body {
+     margin-top: 0;
+     padding-top: 0;
+     color: #646464;
+ }
+ 
+ #edit-addr-modal .modal-body .city select,
+ #add-addr-modal .modal-body .city select {
+     display: block;
+     height: 39px;
+     width: 210px;
+     border: 1px solid #dee2e6;
+     border-radius: 0.3rem;
+     color: #646464;
+ }
+ 
+ #edit-addr-modal label,
+ #add-addr-modal label {
+     padding-top: 10px;
+ }
+ 
+ .edit-details .edit-phone input {
+     height: 46px;
+ }
+ 
+ .edit-details .edit-phone .input-group-prepend {
+     display: flex;
+     align-items: center;
+     width: 210px;
+     margin-top: 0;
+ }
+ 
+ .edit-details .edit-phone .input-group-prepend .input-group-text {
+     height: 46px;
+     margin-top: 13px;
+     border-bottom-right-radius: 0px;
+     border-top-right-radius: 0px;
+     margin-top: 0;
+ }
+ 
+ #edit-addr-modal .modal-footer,
+ #add-addr-modal .modal-footer {
+     border-top: 0;
+     justify-content: center;
+     padding: 0;
+ }
+ 
+ #edit-addr-modal .modal-footer .btn-edit,
+ #add-addr-modal .modal-footer .btn-edit {
+     width: 100%;
+     outline: none;
+     border: none;
+     background-color: #146371;
+     color: white;
+     text-align: center;
+     padding: 10px;
+     margin-top: 1rem;
+     border-radius: 20px;
+     font-weight: 700;
+ }
+ 
+ #delete-addr-modal .modal-body .btn-delete button {
+     outline: none;
+     border: none;
+     background-color: #1D7A8C;
+     color: white;
+     font-weight: 700;
+     padding: 10px 15px;
+     margin-top: 10px;
+     border-radius: 20px;
  }

@@ -1111,30 +1111,15 @@
                             <nav>
                                 <div class="nav nav-tabs" id="nav-tab" role="tablistd">
                                     <a class="nav-item nav-link active" id="nav-my-details-tab" data-toggle="tab" href="#nav-my-details" role="tab" aria-controls="nav-my-details-tab" aria-selected="true">My Details</a>
-                                    <a class="nav-item nav-link" id="nav-change-pass-tab" data-toggle="tab" href="#nav-change-pass" role="tab " aria-controls="nav-change-pass" aria-selected="false">Change Password</a>
+                                    <a class="nav-item nav-link" id="nav-change-pass-tab" data-toggle="tab" href="#nav-my-address" role="tab" aria-controls="nav-my-address" aria-selected="false">My Address</a>
+                                    <a class="nav-item nav-link" id="nav-change-pass-tab" data-toggle="tab" href="#nav-change-pass" role="tab" aria-controls="nav-change-pass" aria-selected="false">Change Password</a>
                                 </div>
                             </nav>
                             <div class="tab-content" id="nav-tabContent">
                                 <div class="tab-pane fade show active" id="nav-my-details" role="tabpanel" aria-labelledby="nav-my-details-tab">
-                                    <div class="row ">
-                                        <div class="col-12 ">
-                                            <div class="account-status">
-                                                <h4>Account Status: <span class="status ">Active</span></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="row ">
-                                        <div class="col-12 ">
-                                            <div class="basic-details ">
-                                                <h5>Basic Details</h5>
-                                                <img src="assets/images/avatar-car.png " alt=" " id="active-avatar">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="details ">
-                                        <div class="row ">
-                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces ">
+                                    <div class="details">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces">
                                                 <form action=" ">
                                                     <div class="form-group ">
                                                         <label for="firstname ">First name</label>
@@ -1142,7 +1127,7 @@
                                                     </div>
                                                 </form>
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces ">
+                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces">
                                                 <form action=" ">
                                                     <div class="form-group ">
                                                         <label for="lastname ">Last name</label>
@@ -1150,7 +1135,7 @@
                                                     </div>
                                                 </form>
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces ">
+                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces">
                                                 <form action=" ">
                                                     <div class="form-group ">
                                                         <label for="email ">E-mail address</label>
@@ -1160,19 +1145,19 @@
                                             </div>
                                         </div>
 
-                                        <div class="row ">
-                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces ">
-                                                <div class="sp-reg-form ">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces">
+                                                <div class="sp-reg-form">
                                                     <form action=" ">
-                                                        <label for="phone ">Phone number</label>
+                                                        <label for="phone">Phone number</label>
                                                         <div class="input-group-prepend ">
                                                             <div class="input-group-text ">+91</div>
-                                                            <input type="tel " class="form-control phone-no " id="phone " placeholder="Phone number " required>
+                                                            <input type="tel " class="form-control phone-no" id="phone" placeholder="Phone number" required>
                                                         </div>
                                                     </form>
                                                 </div>
                                             </div>
-                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 dob spaces ">
+                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 dob spaces">
                                                 <label for=" ">Date of birth</label>
                                                 <div class="dob-fields ">
                                                     <form action=" " class="day ">
@@ -1279,122 +1264,214 @@
                                                     </form>
                                                 </div>
                                             </div>
-
-                                            <div class="col-sm-12 col-md-6 col-lg-6 col-xl-4 spaces">
-                                                <form action=" ">
-                                                    <div class="form-group nation">
-                                                        <label for="nationality ">Nationality</label>
-                                                        <select class="form-control-lg " id="nationality ">
-                                                            <option>German</option>
-                                                            <option>Indian</option>
-                                                        </select>
-                                                    </div>
-                                                </form>
-                                            </div>
                                         </div>
 
-                                        <div class="row ">
-                                            <div class="col-md-12 gender spaces">
-                                                <label for=" ">Gender</label>
-                                                <form action=" ">
-                                                    <div class="form-group ">
-                                                        <div class="form-check form-check-inline ">
-                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sp-male " value="option1" checked>
-                                                            <label class="form-check-label" for="sp-male">Male</label>
-                                                        </div>
-                                                        <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sp-female " value="option2">
-                                                            <label class="form-check-label" for="sp-female">Femal</label>
-                                                        </div>
-                                                        <div class="form-check form-check-inline">
-                                                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="sp-other " value="option3">
-                                                            <label class="form-check-label" for="sp-other">Rather not to say</label>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-
-                                        <div class="row select-avatar ">
-                                            <div class="col-md-12 spaces ">
-                                                <label for=" ">Select Avatar</label>
-                                                <div class="avatar ">
-                                                    <img src="assets/images/avatar-car.png " alt=" " class="selected active " id="avatar-car " onclick="changeAvatar(event); ">
-                                                    <img src="assets/images/avatar-female.png " alt=" " class="selected " id="avatar-female " onclick="changeAvatar(event); ">
-                                                    <img src="assets/images/avatar-hat.png " alt=" " class="selected " id="avatar-hat " onclick="changeAvatar(event); ">
-                                                    <img src="assets/images/avatar-iron.png " alt=" " class="selected " id="avatar-iron " onclick="changeAvatar(event); ">
-                                                    <img src="assets/images/avatar-male.png " alt=" " class="selected " id="avatar-male " onclick="changeAvatar(event); ">
-                                                    <img src="assets/images/avatar-ship.png " alt=" " class="selected " id="avatar-ship " onclick="changeAvatar(event); ">
+                                        <div class="row">
+                                            <div class="col-md-12 col-sm-12">
+                                                <div class="preferred-lang">
+                                                    <p>My Preferred Language</p>
+                                                </div>
+                                                <div class="form-group language-select">
+                                                    <select name="" id="">
+                                                        <option value="">English</option>
+                                                        <option value="">Hindi</option>
+                                                    </select>
+                                                </div>
+                                                <div class="btn-save">
+                                                    <button type="button">Save</button>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="row ">
-                                        <div class="col-12 ">
-                                            <div class="my-address basic-details ">
-                                                <h5>My Adddress</h5>
+                                </div>
+
+                                <div class="tab-pane fade" id="nav-my-address" role="tabpanel" aria-labelledby="nav-my-address-tab">
+                                    <div class="address-table">
+                                        <div class="table-responsive-sm">
+                                            <table class="table">
+                                                <thead class="table-header">
+                                                    <tr>
+                                                        <th scope="col">Addresses</th>
+                                                        <th scope="col">Actions</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="address-phone-data">
+                                                            <b>Address: </b><span>Koenigstrasse 112, 99879 Tambach-Dietharz</span><br>
+                                                            <b>Phone number: </b><span>8844775532</span>
+                                                        </td>
+                                                        <td>
+                                                            <a data-toggle="modal" data-target="#edit-addr-modal"><img src="assets/images/edit-icon.png" alt=""></a>
+                                                            <a data-toggle="modal" data-target="#delete-addr-modal"><img src="assets/images/delete-icon.png" alt=""></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="address-phone-data">
+                                                            <b>Address: </b><span>Koenigstrasse 112, 99879 Tambach-Dietharz</span><br>
+                                                            <b>Phone number: </b><span>8844775532</span>
+                                                        </td>
+                                                        <td>
+                                                            <a data-toggle="modal" data-target="#edit-addr-modal"><img src="assets/images/edit-icon.png" alt=""></a>
+                                                            <a data-toggle="modal" data-target="#delete-addr-modal"><img src="assets/images/delete-icon.png" alt=""></a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="address-phone-data">
+                                                            <b>Address: </b><span>Koenigstrasse 112, 99879 Tambach-Dietharz</span><br>
+                                                            <b>Phone number: </b><span>8844775532</span>
+                                                        </td>
+                                                        <td>
+                                                            <a data-toggle="modal" data-target="#edit-addr-modal"><img src="assets/images/edit-icon.png" alt=""></a>
+                                                            <a data-toggle="modal" data-target="#delete-addr-modal"><img src="assets/images/delete-icon.png" alt=""></a>
+                                                        </td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+
+                                        <div class="add-new-addr-btn">
+                                            <button type="button" data-toggle="modal" data-target="#add-addr-modal">Add New Address</button>
+                                        </div>
+
+                                        <div class="modal fade" id="edit-addr-modal" tabindex="-1" role="dialog" aria-labelledby="edit-addr-modal" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title" id="exampleModalLongTitle">Edit Address</h4>
+
+                                                        <span aria-hidden="true" class="close-btn" data-dismiss="modal">&times;</span>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="edit-details">
+                                                            <div class="address-fields">
+                                                                <div class="street-name">
+                                                                    <label for="street">Street Name</label>
+                                                                    <input type="text" name="" id="street" class="form-control" value="Koenigstrasse">
+                                                                </div>
+                                                                <div class="house-no">
+                                                                    <label for="house">House Number</label>
+                                                                    <input type="text" name="" id="house" class="form-control" value="112">
+                                                                </div>
+                                                            </div>
+                                                            <div class="postalcode-city">
+                                                                <div class="postalcode">
+                                                                    <label for="postalcode">Postal Code</label>
+                                                                    <input type="tel" name="" id="postalcode" class="form-control" value="99897">
+                                                                </div>
+                                                                <div class="city">
+                                                                    <label for="city">City</label>
+                                                                    <select name="" id="city">
+                                                                        <option value="">Tambach-Dietharz</option>
+                                                                        <option value="">Tambach-Dietharz</option>
+                                                                        <option value="">Tambach-Dietharz</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="edit-phone">
+                                                                <form action=" ">
+                                                                    <label for="phone">Phone number</label>
+                                                                    <div class="input-group-prepend">
+
+                                                                        <div class="input-group-text ">+91</div>
+                                                                        <input type="tel " class="form-control phone-no" id="phone" placeholder="Phone number" value="8844775532" required>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+
+                                                            <button type="button" class="btn-edit">Edit</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="modal fade" id="add-addr-modal" tabindex="-1" role="dialog" aria-labelledby="add-addr-modal" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title" id="exampleModalLongTitle">Add New Address</h4>
+
+                                                        <span aria-hidden="true" class="close-btn" data-dismiss="modal">&times;</span>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <div class="edit-details">
+                                                            <div class="address-fields">
+                                                                <div class="street-name">
+                                                                    <label for="street">Street Name</label>
+                                                                    <input type="text" name="" id="street" class="form-control">
+                                                                </div>
+                                                                <div class="house-no">
+                                                                    <label for="house">House Number</label>
+                                                                    <input type="text" name="" id="house" class="form-control">
+                                                                </div>
+                                                            </div>
+                                                            <div class="postalcode-city">
+                                                                <div class="postalcode">
+                                                                    <label for="postalcode">Postal Code</label>
+                                                                    <input type="tel" name="" id="postalcode" class="form-control">
+                                                                </div>
+                                                                <div class="city">
+                                                                    <label for="city">City</label>
+                                                                    <select name="" id="city">
+                                                                        <option value="">Tambach-Dietharz</option>
+                                                                        <option value="">Tambach-Dietharz</option>
+                                                                        <option value="">Tambach-Dietharz</option>
+                                                                    </select>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="edit-phone">
+                                                                <form action=" ">
+                                                                    <label for="phone">Phone number</label>
+                                                                    <div class="input-group-prepend">
+
+                                                                        <div class="input-group-text ">+91</div>
+                                                                        <input type="tel " class="form-control phone-no" id="phone" placeholder="Phone number" required>
+                                                                    </div>
+                                                                </form>
+                                                            </div>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                            <button type="button" class="btn-edit">Add</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="modal fade" id="delete-addr-modal" tabindex="-1" role="dialog" aria-labelledby="delete-addr-modal" aria-hidden="true">
+                                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                                <div class="modal-content">
+                                                    <div class="modal-header">
+                                                        <h4 class="modal-title" id="exampleModalLongTitle">Delete Address</h4>
+
+                                                        <span aria-hidden="true" class="close-btn" data-dismiss="modal">&times;</span>
+                                                    </div>
+                                                    <div class="modal-body">
+                                                        <p>Are you sure you want to delete this address?</p>
+
+                                                        <div class="btn-delete">
+                                                            <button type="button">Delete</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <div class="address-field details ">
-                                        <div class="row ">
-                                            <div class="col-md-4 col-sm-12 spaces ">
-                                                <form action=" ">
-                                                    <div class="form-group ">
-                                                        <label for="streetname ">Street name</label>
-                                                        <input type="text " class="form-control form-control-lg " id="streetname ">
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="col-md-4 col-sm-12 spaces ">
-                                                <form action=" ">
-                                                    <div class="form-group ">
-                                                        <label for="housenumber ">House number</label>
-                                                        <input type="tel " class="form-control form-control-lg " id="housenumber ">
-                                                    </div>
-                                                </form>
-                                            </div>
-                                            <div class="col-md-4 col-sm-12 spaces ">
-                                                <form action=" ">
-                                                    <div class="form-group ">
-                                                        <label for="postal-code ">Postal Code</label>
-                                                        <input type="tel " class="form-control form-control-lg " id="postal-code ">
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <div class="row ">
-                                            <div class="col-md-4 col-sm-12 spaces ">
-                                                <form action=" ">
-                                                    <div class="form-group city-input ">
-                                                        <label for="city ">City</label>
-                                                        <input type="text " class="form-control form-control-lg " id="city ">
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
-                                        <div class="col-4 ">
-                                            <div class="outline ">
-                                                <hr>
-                                            </div>
-                                        </div>
-
-                                        <div class="row ">
-                                            <div class="btn-setting-save ">
-                                                <button type="button ">Save</button>
-                                            </div>
-                                        </div>
-                                    </div>
                                 </div>
                                 <div class="tab-pane fade" id="nav-change-pass" role="tabpanel" aria-labelledby="nav-change-pass-tab">
-                                    <div class="change-password ">
-                                        <div class="row details ">
+                                    <div class="change-password">
+                                        <div class="row details">
                                             <div class="col-md-4 col-sm-12 spaces ">
                                                 <form action=" ">
-                                                    <div class="form-group ">
+                                                    <div class="form-group">
                                                         <label for="old-pass ">Old password</label>
-                                                        <input type="password " class="form-control form-control-lg " id="old-pass ">
+                                                        <input type="password" class="form-control form-control-lg " id="old-pass ">
                                                     </div>
                                                 </form>
                                             </div>
@@ -1432,7 +1509,6 @@
                     </div>
                 </div>
             </div>
-        </div>
     </section>
 
     <div class="container-fluid footer-section faq-footer upcoming-service-footer">

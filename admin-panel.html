@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+
+    <link rel="stylesheet" href="assets/css/admin-panel.css">
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <section class="panel-header">
+        <header>
+            <nav class="navbar navbar-expand-md">
+                <a href="index.html" class="navbar-brand">helperland</a>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#"><img src="assets/images/user.png" alt="">James Smith</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-toggle="modal" data-target="#logout-modal"><img src="assets/images/logout.png" alt=""></a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <div class="modal fade logout-modal" id="logout-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle2" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-body">
+                        <div class="logout-modal-content">
+                            <div class="logout-green-circle">
+                                <img src="assets/images/ic-check.png" alt="">
+                            </div>
+                            <h5>You have successfully logged out</h5>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn-logout-ok" data-dismiss="modal">Ok</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="admin-sidemenu">
+        <div class="container-fluid">
+            <div class="sidebar">
+                <div class="nav flex-column nav-tab v-tabs" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-user-manage-tab" data-toggle="pill" href="#v-pills-user-manage" role="tab" aria-controls="v-pills-user-manage" aria-selected="true">User Management</a>
+                    <a class="nav-link" id="v-pills-service-request-tab" data-toggle="pill" href="#v-pills-service-request" role="tab" aria-controls="v-pills-service-request" aria-selected="true">Service Request</a>
+                </div>
+            </div>
+            <div class="sidebar-content">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-user-manage" role="tabpanel" aria-labelledby="v-pills-user-manage-tab">
+                        <div class="add-new-user">
+                            <h3>User Management</h3>
+
+                        </div>
+
+                        <div class="filters">
+                            <div class="inputs">
+                                <div class="form-control">
+                                    <select name="" id="" class="form-group">
+                                        <option value="">User name</option>
+                                        <option value="">abc</option>
+                                        <option value="">def</option>
+                                    </select>
+                                    <select name="" id="" class="form-group">
+                                        <option value="">User Role</option>
+                                        <option value="">service provider</option>
+                                        <option value="">customer</option>
+                                    </select>
+
+                                    <div class="sp-reg-form ">
+                                        <form action=" ">
+                                            <div class="input-group-prepend ">
+                                                <div class="input-group-text ">+91</div>
+                                                <input type="tel " class="form-control phone-no" id="phone " placeholder="Phone number " required>
+                                            </div>
+                                        </form>
+                                    </div>
+                                    <input type="email" name="" id="" placeholder="Email" class="email">
+
+                                    <input type="tel" name="" id="" placeholder="Zipcode" class="zipcode">
+                                    <div class="dates d-flex align-items-center">
+                                        <input type="text" class="from-date" placeholder="From Date" onfocus="(this.type='date')">
+                                        <input type="text" name="" id="" placeholder="To Date" onfocus="(this.type='date')">
+                                    </div>
+                                    <div class="filter-btns">
+                                        <div class="search-btn">
+                                            <button type="button">Search</button>
+                                        </div>
+                                        <div class="clear-btn">
+                                            <button type="button">Clear</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="btn-export">
+                            <button>Export</button>
+                        </div>
+                        <div class="users-table">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class="table-header">
+                                        <tr>
+                                            <th scope="col">User Name</th>
+                                            <th scope="col">Role</th>
+                                            <th scope="col">Date of Registration</th>
+                                            <th scope="col">User Type</th>
+                                            <th scope="col">Phone</th>
+                                            <th scope="col">Postal Code</th>
+                                            <th scope="col">Status</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Larry Watson</td>
+                                            <td>Inquiry Manager</td>
+                                            <td><img src="assets/images/calender-icon.png" alt="">
+                                                <b>09/04/2019</b></td>
+                                            <td>Customer</td>
+                                            <td>2355661147</td>
+                                            <td></td>
+                                            <td>
+                                                <div class="status-active">
+                                                    <span>Active</span>
+                                                </div>
+                                            </td>
+                                            <td class="action-btn">
+                                                <a href=""></a>
+                                                <div class="dropdown">
+                                                    <a href="" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/admin-dots.png"></a>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item" href="#">Edit</a>
+                                                        <a class="dropdown-item" href="#">Deactivate</a>
+                                                        <a class="dropdown-item" href="#">Service History</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Larry Watson</td>
+                                            <td>Inquiry Manager</td>
+                                            <td><img src="assets/images/calender-icon.png" alt="">
+                                                <b>09/04/2019</b></td>
+                                            <td>Customer</td>
+                                            <td>2355661147</td>
+                                            <td></td>
+                                            <td>
+                                                <div class="status-active">
+                                                    <span>Active</span>
+                                                </div>
+                                            </td>
+                                            <td class="action-btn">
+                                                <a href=""></a>
+                                                <div class="dropdown">
+                                                    <a href="" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/admin-dots.png"></a>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item" href="#">Edit</a>
+                                                        <a class="dropdown-item" href="#">Deactivate</a>
+                                                        <a class="dropdown-item" href="#">Service History</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Larry Watson</td>
+                                            <td>Inquiry Manager</td>
+                                            <td><img src="assets/images/calender-icon.png" alt="">
+                                                <b>09/04/2019</b></td>
+                                            <td>Customer</td>
+                                            <td>2355661147</td>
+                                            <td></td>
+                                            <td>
+                                                <div class="status-inactive">
+                                                    <span>Inactive</span>
+                                                </div>
+                                            </td>
+                                            <td class="action-btn">
+                                                <a href=""></a>
+                                                <div class="dropdown">
+                                                    <a href="" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/admin-dots.png"></a>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item" href="#">Edit</a>
+                                                        <a class="dropdown-item" href="#">Deactivate</a>
+                                                        <a class="dropdown-item" href="#">Service History</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Larry Watson</td>
+                                            <td>Inquiry Manager</td>
+                                            <td><img src="assets/images/calender-icon.png" alt="">
+                                                <b>09/04/2019</b></td>
+                                            <td>Customer</td>
+                                            <td>2355661147</td>
+                                            <td></td>
+                                            <td>
+                                                <div class="status-inactive">
+                                                    <span>Inactive</span>
+                                                </div>
+                                            </td>
+                                            <td class="action-btn">
+                                                <a href=""></a>
+                                                <div class="dropdown">
+                                                    <a href="" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/admin-dots.png"></a>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item" href="#">Edit</a>
+                                                        <a class="dropdown-item" href="#">Deactivate</a>
+                                                        <a class="dropdown-item" href="#">Service History</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Larry Watson</td>
+                                            <td>Inquiry Manager</td>
+                                            <td><img src="assets/images/calender-icon.png" alt="">
+                                                <b>09/04/2019</b></td>
+                                            <td>Customer</td>
+                                            <td>2355661147</td>
+                                            <td></td>
+                                            <td>
+                                                <div class="status-inactive">
+                                                    <span>Inactive</span>
+                                                </div>
+                                            </td>
+                                            <td class="action-btn">
+                                                <a href=""></a>
+                                                <div class="dropdown">
+                                                    <a href="" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/admin-dots.png"></a>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item" href="#">Edit</a>
+                                                        <a class="dropdown-item" href="#">Deactivate</a>
+                                                        <a class="dropdown-item" href="#">Service History</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Larry Watson</td>
+                                            <td>Inquiry Manager</td>
+                                            <td><img src="assets/images/calender-icon.png" alt="">
+                                                <b>09/04/2019</b></td>
+                                            <td>Customer</td>
+                                            <td>2355661147</td>
+                                            <td></td>
+                                            <td>
+                                                <div class="status-inactive">
+                                                    <span>Inactive</span>
+                                                </div>
+                                            </td>
+                                            <td class="action-btn">
+                                                <a href=""></a>
+                                                <div class="dropdown">
+                                                    <a href="" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/admin-dots.png"></a>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item" href="#">Edit</a>
+                                                        <a class="dropdown-item" href="#">Deactivate</a>
+                                                        <a class="dropdown-item" href="#">Service History</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Larry Watson</td>
+                                            <td>Inquiry Manager</td>
+                                            <td><img src="assets/images/calender-icon.png" alt="">
+                                                <b>09/04/2019</b></td>
+                                            <td>Customer</td>
+                                            <td>2355661147</td>
+                                            <td></td>
+                                            <td>
+                                                <div class="status-inactive">
+                                                    <span>Inactive</span>
+                                                </div>
+                                            </td>
+                                            <td class="action-btn">
+                                                <a href=""></a>
+                                                <div class="dropdown">
+                                                    <a href="" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/admin-dots.png"></a>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item" href="#">Edit</a>
+                                                        <a class="dropdown-item" href="#">Deactivate</a>
+                                                        <a class="dropdown-item" href="#">Service History</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Larry Watson</td>
+                                            <td>Inquiry Manager</td>
+                                            <td><img src="assets/images/calender-icon.png" alt="">
+                                                <b>09/04/2019</b></td>
+                                            <td>Customer</td>
+                                            <td>2355661147</td>
+                                            <td></td>
+                                            <td>
+                                                <div class="status-inactive">
+                                                    <span>Inactive</span>
+                                                </div>
+                                            </td>
+                                            <td class="action-btn">
+                                                <a href=""></a>
+                                                <div class="dropdown">
+                                                    <a href="" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/admin-dots.png"></a>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item" href="#">Edit</a>
+                                                        <a class="dropdown-item" href="#">Deactivate</a>
+                                                        <a class="dropdown-item" href="#">Service History</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>
+                                                <div class="shown-records">
+                                                    <span>Show</span>
+                                                    <select name="" id="">
+                                                            <option value="">10</option>
+                                                            <option value="">20</option>
+                                                            <option value="">50</option>
+                                                        </select>
+                                                    <span>entries</span>
+                                                </div>
+                                            </td>
+                                            <td colspan="7">
+                                                <nav aria-label="Page navigation example">
+                                                    <ul class="pagination justify-content-end">
+                                                        <li class="page-item">
+                                                            <a class="page-link" href="#" tabindex="-1"><img src="assets/images/polygon-1-copy-5.png" alt=""></a>
+                                                        </li>
+                                                        <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                                        <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                                        <li class="page-item">
+                                                            <a class="page-link next-icon" href="#"><img src="assets/images/polygon-1-copy-5.png" alt=""></a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </td>
+                                        </tr>
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade service-req" id="v-pills-service-request" role="tabpanel" aria-labelledby="v-pills-service-request">
+                        <h3>Service Request</h3>
+                        <div class="filters">
+                            <div class="inputs">
+                                <div class="form-control">
+                                    <input type="tel" placeholder="Service ID" class="s_id form-control">
+                                    <input type="tel" name="" id="" placeholder="Zipcode" class="zipcode">
+                                    <input type="email" name="" id="" placeholder="Email" class="email">
+                                    <select name="" id="" class="form-group">
+                                        <option value="">Select Customer</option>
+                                        <option value="">service provider</option>
+                                        <option value="">admin</option>
+                                    </select>
+                                    <select name="" id="" class="form-group">
+                                        <option value="">Select Service provider</option>
+                                        <option value="">Customer</option>
+                                        <option value="">admin</option>
+                                    </select>
+
+                                    <select name="" id="" class="form-group">
+                                        <option value="">Status</option>
+                                        <option value="">Active</option>
+                                        <option value="">Inactive</option>
+                                    </select>
+                                    <select name="" id="" class="form-group">
+                                        <option value="">SP payment Status</option>
+                                        <option value="">Active</option>
+                                        <option value="">Inactive</option>
+                                    </select>
+                                    <div class="issue-checkbox">
+                                        <input type="checkbox" name="" id="hasissue">
+                                        <label for="hasissue">Has Issue</label>
+                                    </div>
+
+                                    <div class="dates d-flex align-items-center">
+                                        <input type="text" class="from-date" placeholder="From Date" onfocus="(this.type='date')">
+                                        <input type="text" name="" id="" placeholder="To Date" onfocus="(this.type='date')">
+                                    </div>
+
+                                    <div class="filter-btns">
+                                        <div class="search-btn">
+                                            <button type="button">Search</button>
+                                        </div>
+                                        <div class="clear-btn">
+                                            <button type="button">Clear</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="service-req-table">
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead class="table-header">
+                                        <tr>
+                                            <th scope="col">Service ID
+                                            </th>
+                                            <th scope="col">Service date</th>
+                                            <th scope="col">Customer Details</th>
+                                            <th scope="col">Service Provider
+                                            </th>
+                                            <th scope="col">Amount</th>
+                                            <th scope="col">Discount
+                                            </th>
+                                            <th scope="col">Status
+                                            </th>
+                                            <th scope="col">Payment Status</th>
+                                            <th scope="col">Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>123456</td>
+                                            <td>
+                                                <div class="service-info">
+                                                    <div class="service-datetime-icons">
+                                                        <a href="#" data-toggle="modal" data-target="#current-service-modal"><img src="assets/images/calender-icon.png" alt=" "></a>
+                                                        <a href="#" data-toggle="modal" data-target="#current-service-modal"><img src="assets/images/sp-timericon.png" alt=" "></a>
+                                                        <div class="modal fade" id="current-service-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-part">
+                                                                        <div class="modal-header d-block">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <h4 class="modal-title" id="exampleModalLongTitle">Service Details</h4>
+                                                                                <button type="button" class="close ms-auto" data-dismiss="modal" aria-label="Close">
+                                                                                     <span aria-hidden="true" class="close-btn">&times;</span>
+                                                                                </button>
+                                                                            </div>
+                                                                            <p class="modal-datetime">26/12/2021 08:30 - 12:30</p>
+                                                                            <span class="modal-duration"><b>Duration: </b>4.5 Hrs</span>
+                                                                        </div>
+
+                                                                        <div class="modal-body">
+                                                                            <div class="modal-information">
+                                                                                <span class="body-text"><b>Service Id:</b> 8803.</span>
+                                                                                <span class="body-text"><b>Extras:</b> Inside oven, Laundry wash & dry</span>
+                                                                                <span class="body-text"><b>Net Amount:</b> <span class="payment">60,75 &euro;</span></span>
+
+                                                                                <div class="customer-details">
+
+                                                                                    <span class="body-text"><b>Service Address:</b> Street 54, 53844 Troisdoff</span>
+                                                                                    <span class="body-text"><b>Billing Address:</b> Same as cleaning adress</span>
+                                                                                    <span class="body-text"><b>Phone:</b> +41 2244889910</span>
+                                                                                    <span class="body-text"><b>Email:</b> cust001@yopmail.com</span>
+
+                                                                                </div>
+
+                                                                                <div class="customer-details">
+                                                                                    <b>Comments</b>
+                                                                                    <p class="mb-0 ">hello</p>
+
+                                                                                    <div class="pets">
+                                                                                        <img src="assets/images/included.png" alt=" ">
+                                                                                        <p>I have Pets at home.</p>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="modal-sp-details">
+                                                                                <h4>Service Provider Details</h4>
+                                                                                <div class="sp-content">
+                                                                                    <div class="sp-avatar">
+                                                                                        <img src="assets/images/avatar-hat.png" alt="">
+                                                                                        <p class="mt-2">16 cleanings</p>
+                                                                                    </div>
+                                                                                    <div class="sp-name-rating">
+                                                                                        <b>John Doe</b>
+                                                                                        <div class="sp-rating">
+                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                            <img src="assets/images/grey-small-star.png" alt="">
+
+                                                                                        </div>
+                                                                                        <span>3.67</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="service-datetime-texts">
+                                                        <a href="#" data-toggle="modal" data-target="#current-service-modal"><strong>09/04/2018</strong></a>
+                                                        <a href="#" data-toggle="modal" data-target="#current-service-modal">
+                                                            <p>12:00 - 18:00</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="td-address">
+                                                <a href="#" data-toggle="modal" data-target="#current-service-modal">
+                                                    <p>David Bough</p>
+                                                    <div class="service-info">
+                                                        <div class="service-home-icon">
+                                                            <img src="assets/images/home-icon.png" alt=" ">
+                                                        </div>
+                                                        <div class="service-address-texts">
+                                                            <p>Musterstrabe 5,12345 Bonn</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <div class="sp-content">
+                                                    <div class="sp-avatar">
+                                                        <img src="assets/images/avatar-hat.png" alt="">
+                                                    </div>
+                                                    <div class="sp-name-rating">
+                                                        <b>John Doe</b>
+                                                        <div class="sp-rating">
+                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                            <img src="assets/images/grey-small-star.png" alt="">
+                                                            <span>3.67</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="payment-content">
+                                                    <b>87,50 &euro;</b>
+                                                </div>
+                                            </td>
+
+                                            <td></td>
+                                            <td>
+                                                <div class="service-status-change-sp">
+                                                    <span>Change Service Provider</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="payment-status">
+                                                    <span>Not Applicable</span>
+                                                </div>
+                                            </td>
+                                            <td class="action-btn">
+                                                <a href=""></a>
+                                                <div class="dropdown">
+                                                    <a href="" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/admin-dots.png"></a>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item" data-toggle="modal" data-target="#edit-reschedule-modal">Edit & Reschedule</a>
+                                                        <a class="dropdown-item" href="#">Cancel SR by Cust</a>
+                                                        <a class="dropdown-item" href="#">Inquiry</a>
+                                                        <a class="dropdown-item" href="#">History Log</a>
+                                                        <a class="dropdown-item" href="#">Download Invoice</a>
+                                                        <a class="dropdown-item" href="#">Other Transactions</a>
+                                                    </div>
+                                                </div>
+
+                                                <div class="modal fade" id="edit-reschedule-modal" tabindex="-1" role="dialog" aria-labelledby="edit-reschedule-modal" aria-hidden="true">
+                                                    <div class="modal-dialog modal-dialog-centered" role="document">
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <h4 class="modal-title" id="exampleModalLongTitle">Edit Service Request</h4>
+                                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                            <span aria-hidden="true">&times;</span>
+                                                          </button>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="date-time-fields">
+                                                                    <div class="input-date">
+                                                                        <label for="date">Date</label>
+                                                                        <input type="date" name="" id="date" class="form-control" value="2019-04-09">
+                                                                    </div>
+                                                                    <div class="input-time">
+                                                                        <label for="time">Time</label>
+                                                                        <select name="" id="" class="form-group">
+                                                                        <option value="">12:30</option>
+                                                                        <option value="">01:00</option>
+                                                                        <option value="">01:30</option>
+                                                                        <option value="">02:00</option>
+                                                                        <option value="">02:30</option>
+                                                                        <option value="">03:00</option>
+                                                                    </select>
+                                                                    </div>
+                                                                </div>
+
+
+                                                                <div class="service-address">
+                                                                    <b>Service Address</b>
+                                                                    <div class="address-fields">
+                                                                        <div class="street-name">
+                                                                            <label for="street">Street Name</label>
+                                                                            <input type="text" name="" id="street" class="form-control">
+                                                                        </div>
+                                                                        <div class="house-no">
+                                                                            <label for="house">House Number</label>
+                                                                            <input type="text" name="" id="house" class="form-control">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="postalcode-city">
+                                                                        <div class="postalcode">
+                                                                            <label for="postalcode">Postal Code</label>
+                                                                            <input type="tel" name="" id="street" class="form-control">
+                                                                        </div>
+                                                                        <div class="city">
+                                                                            <label for="city">City</label>
+                                                                            <select name="" id="city">
+                                                                                <option value="">Tambach-Dietharz</option>
+                                                                                <option value="">Tambach-Dietharz</option>
+                                                                                <option value="">Tambach-Dietharz</option>
+                                                                            </select>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="service-address">
+                                                                        <b>Invoice Address</b>
+                                                                        <div class="address-fields">
+                                                                            <div class="street-name">
+                                                                                <label for="street">Street Name</label>
+                                                                                <input type="text" name="" id="street" class="form-control">
+                                                                            </div>
+                                                                            <div class="house-no">
+                                                                                <label for="house">House Number</label>
+                                                                                <input type="text" name="" id="house" class="form-control">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="postalcode-city">
+                                                                            <div class="postalcode">
+                                                                                <label for="postalcode">Postal Code</label>
+                                                                                <input type="tel" name="" id="street" class="form-control">
+                                                                            </div>
+                                                                            <div class="city">
+                                                                                <label for="city">City</label>
+                                                                                <select name="" id="city">
+                                                                                    <option value="">Tambach-Dietharz</option>
+                                                                                    <option value="">Tambach-Dietharz</option>
+                                                                                    <option value="">Tambach-Dietharz</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+                                                                    <div class="reschedule-reason">
+                                                                        <b>Why do you want to reschedule service request?</b>
+                                                                        <textarea name="" id="" class="form-control" placeholder="Why do you want to reschedule service request?"></textarea>
+                                                                        <b>Call center EMP notes</b>
+                                                                        <textarea name="" id="" class="form-control" placeholder="Call center EMP notes"></textarea>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn-update">Update</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>123456</td>
+                                            <td>
+                                                <div class="service-info">
+                                                    <div class="service-datetime-icons">
+                                                        <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><img src="assets/images/calender-icon.png" alt=" "></a>
+                                                        <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><img src="assets/images/sp-timericon.png" alt=" "></a>
+                                                        <div class="modal fade" id="cust-service-history-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-part">
+                                                                        <div class="modal-header d-block">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <h4 class="modal-title" id="exampleModalLongTitle">Service Details</h4>
+                                                                                <button type="button" class="close ms-auto" data-dismiss="modal" aria-label="Close">
+                                                                                     <span aria-hidden="true" class="close-btn">&times;</span>
+                                                                                </button>
+                                                                            </div>
+                                                                            <p class="modal-datetime">26/12/2021 08:30 - 12:30</p>
+                                                                            <span class="modal-duration"><b>Duration: </b>4.5 Hrs</span>
+                                                                        </div>
+
+                                                                        <div class="modal-body">
+                                                                            <span class="body-text"><b>Service Id:</b> 8803.</span>
+                                                                            <span class="body-text"><b>Extras:</b> Inside oven, Laundry wash & dry</span>
+                                                                            <span class="body-text"><b>Net Amount:</b> <span class="payment">60,75 &euro;</span></span>
+
+                                                                            <div class="customer-details">
+
+                                                                                <span class="body-text"><b>Service Address:</b> Street 54, 53844 Troisdoff</span>
+                                                                                <span class="body-text"><b>Billing Address:</b> Same as cleaning adress</span>
+                                                                                <span class="body-text"><b>Phone:</b> +41 2244889910</span>
+                                                                                <span class="body-text"><b>Email:</b> cust001@yopmail.com</span>
+
+                                                                            </div>
+
+                                                                            <div class="customer-details">
+                                                                                <b>Comments</b>
+                                                                                <p class="mb-0 ">hello</p>
+
+                                                                                <div class="pets">
+                                                                                    <img src="assets/images/included.png" alt=" ">
+                                                                                    <p>I have Pets at home.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="service-datetime-texts">
+                                                        <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><strong>09/04/2018</strong></a>
+                                                        <a href="#" data-toggle="modal" data-target="#cust-service-history-modal">
+                                                            <p>12:00 - 18:00</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="td-address">
+                                                <a href="#" data-toggle="modal" data-target="#cust-service-history-modal">
+                                                    <p>David Bough</p>
+                                                    <div class="service-info">
+                                                        <div class="service-home-icon">
+                                                            <img src="assets/images/home-icon.png" alt=" ">
+                                                        </div>
+                                                        <div class="service-address-texts">
+                                                            <p>Musterstrabe 5,12345 Bonn</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td>
+                                                <div class="payment-content">
+                                                    <b>87,50 &euro;</b>
+                                                </div>
+                                            </td>
+
+                                            <td></td>
+                                            <td>
+                                                <div class="service-status">
+                                                    <span>New</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="payment-status">
+                                                    <span>UnSettled</span>
+                                                </div>
+                                            </td>
+                                            <td class="action-btn">
+                                                <a href=""></a>
+                                                <div class="dropdown">
+                                                    <a href="" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/admin-dots.png"></a>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item" href="#">Edit & Reschedule</a>
+                                                        <a class="dropdown-item" href="#">Cancel SR by Cust</a>
+                                                        <a class="dropdown-item" href="#">Inquiry</a>
+                                                        <a class="dropdown-item" href="#">History Log</a>
+                                                        <a class="dropdown-item" href="#">Download Invoice</a>
+                                                        <a class="dropdown-item" href="#">Other Transactions</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>123456</td>
+                                            <td>
+                                                <div class="service-info">
+                                                    <div class="service-datetime-icons">
+                                                        <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><img src="assets/images/calender-icon.png" alt=" "></a>
+                                                        <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><img src="assets/images/sp-timericon.png" alt=" "></a>
+                                                        <div class="modal fade" id="cust-service-history-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-part">
+                                                                        <div class="modal-header d-block">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <h4 class="modal-title" id="exampleModalLongTitle">Service Details</h4>
+                                                                                <button type="button" class="close ms-auto" data-dismiss="modal" aria-label="Close">
+                                                                                     <span aria-hidden="true" class="close-btn">&times;</span>
+                                                                                </button>
+                                                                            </div>
+                                                                            <p class="modal-datetime">26/12/2021 08:30 - 12:30</p>
+                                                                            <span class="modal-duration"><b>Duration: </b>4.5 Hrs</span>
+                                                                        </div>
+
+                                                                        <div class="modal-body">
+                                                                            <span class="body-text"><b>Service Id:</b> 8803.</span>
+                                                                            <span class="body-text"><b>Extras:</b> Inside oven, Laundry wash & dry</span>
+                                                                            <span class="body-text"><b>Net Amount:</b> <span class="payment">60,75 &euro;</span></span>
+
+                                                                            <div class="customer-details">
+
+                                                                                <span class="body-text"><b>Service Address:</b> Street 54, 53844 Troisdoff</span>
+                                                                                <span class="body-text"><b>Billing Address:</b> Same as cleaning adress</span>
+                                                                                <span class="body-text"><b>Phone:</b> +41 2244889910</span>
+                                                                                <span class="body-text"><b>Email:</b> cust001@yopmail.com</span>
+
+                                                                            </div>
+
+                                                                            <div class="customer-details">
+                                                                                <b>Comments</b>
+                                                                                <p class="mb-0 ">hello</p>
+
+                                                                                <div class="pets">
+                                                                                    <img src="assets/images/included.png" alt=" ">
+                                                                                    <p>I have Pets at home.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="service-datetime-texts">
+                                                        <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><strong>09/04/2018</strong></a>
+                                                        <a href="#" data-toggle="modal" data-target="#cust-service-history-modal">
+                                                            <p>12:00 - 18:00</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="td-address">
+                                                <a href="#" data-toggle="modal" data-target="#cust-service-history-modal">
+                                                    <p>David Bough</p>
+                                                    <div class="service-info">
+                                                        <div class="service-home-icon">
+                                                            <img src="assets/images/home-icon.png" alt=" ">
+                                                        </div>
+                                                        <div class="service-address-texts">
+                                                            <p>Musterstrabe 5,12345 Bonn</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td>
+                                                <div class="payment-content">
+                                                    <b>87,50 &euro;</b>
+                                                </div>
+                                            </td>
+
+                                            <td></td>
+                                            <td>
+                                                <div class="service-status-cancel">
+                                                    <span>Cancel</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="payment-status">
+                                                    <span>Not Applicable</span>
+                                                </div>
+                                            </td>
+                                            <td class="action-btn">
+                                                <a href=""></a>
+                                                <div class="dropdown">
+                                                    <a href="" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/admin-dots.png"></a>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item" href="#">Edit & Reschedule</a>
+                                                        <a class="dropdown-item" href="#">Cancel SR by Cust</a>
+                                                        <a class="dropdown-item" href="#">Inquiry</a>
+                                                        <a class="dropdown-item" href="#">History Log</a>
+                                                        <a class="dropdown-item" href="#">Download Invoice</a>
+                                                        <a class="dropdown-item" href="#">Other Transactions</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>123456</td>
+                                            <td>
+                                                <div class="service-info">
+                                                    <div class="service-datetime-icons">
+                                                        <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><img src="assets/images/calender-icon.png" alt=" "></a>
+                                                        <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><img src="assets/images/sp-timericon.png" alt=" "></a>
+                                                        <div class="modal fade" id="cust-service-history-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-part">
+                                                                        <div class="modal-header d-block">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <h4 class="modal-title" id="exampleModalLongTitle">Service Details</h4>
+                                                                                <button type="button" class="close ms-auto" data-dismiss="modal" aria-label="Close">
+                                                                                     <span aria-hidden="true" class="close-btn">&times;</span>
+                                                                                </button>
+                                                                            </div>
+                                                                            <p class="modal-datetime">26/12/2021 08:30 - 12:30</p>
+                                                                            <span class="modal-duration"><b>Duration: </b>4.5 Hrs</span>
+                                                                        </div>
+
+                                                                        <div class="modal-body">
+                                                                            <span class="body-text"><b>Service Id:</b> 8803.</span>
+                                                                            <span class="body-text"><b>Extras:</b> Inside oven, Laundry wash & dry</span>
+                                                                            <span class="body-text"><b>Net Amount:</b> <span class="payment">60,75 &euro;</span></span>
+
+                                                                            <div class="customer-details">
+
+                                                                                <span class="body-text"><b>Service Address:</b> Street 54, 53844 Troisdoff</span>
+                                                                                <span class="body-text"><b>Billing Address:</b> Same as cleaning adress</span>
+                                                                                <span class="body-text"><b>Phone:</b> +41 2244889910</span>
+                                                                                <span class="body-text"><b>Email:</b> cust001@yopmail.com</span>
+
+                                                                            </div>
+
+                                                                            <div class="customer-details">
+                                                                                <b>Comments</b>
+                                                                                <p class="mb-0 ">hello</p>
+
+                                                                                <div class="pets">
+                                                                                    <img src="assets/images/included.png" alt=" ">
+                                                                                    <p>I have Pets at home.</p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="service-datetime-texts">
+                                                        <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><strong>09/04/2018</strong></a>
+                                                        <a href="#" data-toggle="modal" data-target="#cust-service-history-modal">
+                                                            <p>12:00 - 18:00</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="td-address">
+                                                <a href="#" data-toggle="modal" data-target="#cust-service-history-modal">
+                                                    <p>David Bough</p>
+                                                    <div class="service-info">
+                                                        <div class="service-home-icon">
+                                                            <img src="assets/images/home-icon.png" alt=" ">
+                                                        </div>
+                                                        <div class="service-address-texts">
+                                                            <p>Musterstrabe 5,12345 Bonn</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td></td>
+                                            <td>
+                                                <div class="payment-content">
+                                                    <b>87,50 &euro;</b>
+                                                </div>
+                                            </td>
+
+                                            <td></td>
+                                            <td>
+                                                <div class="service-status-pending">
+                                                    <span>Pending</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="payment-status">
+                                                    <span>Not Applicable</span>
+                                                </div>
+                                            </td>
+                                            <td class="action-btn">
+                                                <a href=""></a>
+                                                <div class="dropdown">
+                                                    <a href="" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/admin-dots.png"></a>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item" href="#">Edit & Reschedule</a>
+                                                        <a class="dropdown-item" href="#">Cancel SR by Cust</a>
+                                                        <a class="dropdown-item" href="#">Inquiry</a>
+                                                        <a class="dropdown-item" href="#">History Log</a>
+                                                        <a class="dropdown-item" href="#">Download Invoice</a>
+                                                        <a class="dropdown-item" href="#">Other Transactions</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+
+                                        </tr>
+                                        <tr>
+                                            <td>123456</td>
+                                            <td>
+                                                <div class="service-info">
+                                                    <div class="service-datetime-icons">
+                                                        <a href="#" data-toggle="modal" data-target="#current-service-modal"><img src="assets/images/calender-icon.png" alt=" "></a>
+                                                        <a href="#" data-toggle="modal" data-target="#current-service-modal"><img src="assets/images/sp-timericon.png" alt=" "></a>
+                                                        <div class="modal fade" id="current-service-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-part">
+                                                                        <div class="modal-header d-block">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <h4 class="modal-title" id="exampleModalLongTitle">Service Details</h4>
+                                                                                <button type="button" class="close ms-auto" data-dismiss="modal" aria-label="Close">
+                                                                                     <span aria-hidden="true" class="close-btn">&times;</span>
+                                                                                </button>
+                                                                            </div>
+                                                                            <p class="modal-datetime">26/12/2021 08:30 - 12:30</p>
+                                                                            <span class="modal-duration"><b>Duration: </b>4.5 Hrs</span>
+                                                                        </div>
+
+                                                                        <div class="modal-body">
+                                                                            <div class="modal-information">
+                                                                                <span class="body-text"><b>Service Id:</b> 8803.</span>
+                                                                                <span class="body-text"><b>Extras:</b> Inside oven, Laundry wash & dry</span>
+                                                                                <span class="body-text"><b>Net Amount:</b> <span class="payment">60,75 &euro;</span></span>
+
+                                                                                <div class="customer-details">
+
+                                                                                    <span class="body-text"><b>Service Address:</b> Street 54, 53844 Troisdoff</span>
+                                                                                    <span class="body-text"><b>Billing Address:</b> Same as cleaning adress</span>
+                                                                                    <span class="body-text"><b>Phone:</b> +41 2244889910</span>
+                                                                                    <span class="body-text"><b>Email:</b> cust001@yopmail.com</span>
+
+                                                                                </div>
+
+                                                                                <div class="customer-details">
+                                                                                    <b>Comments</b>
+                                                                                    <p class="mb-0 ">hello</p>
+
+                                                                                    <div class="pets">
+                                                                                        <img src="assets/images/included.png" alt=" ">
+                                                                                        <p>I have Pets at home.</p>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="modal-sp-details">
+                                                                                <h4>Service Provider Details</h4>
+                                                                                <div class="sp-content">
+                                                                                    <div class="sp-avatar">
+                                                                                        <img src="assets/images/avatar-hat.png" alt="">
+                                                                                        <p class="mt-2">16 cleanings</p>
+                                                                                    </div>
+                                                                                    <div class="sp-name-rating">
+                                                                                        <b>John Doe</b>
+                                                                                        <div class="sp-rating">
+                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                            <img src="assets/images/grey-small-star.png" alt="">
+
+                                                                                        </div>
+                                                                                        <span>3.67</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="service-datetime-texts">
+                                                        <a href="#" data-toggle="modal" data-target="#current-service-modal"><strong>09/04/2018</strong></a>
+                                                        <a href="#" data-toggle="modal" data-target="#current-service-modal">
+                                                            <p>12:00 - 18:00</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="td-address">
+                                                <a href="#" data-toggle="modal" data-target="#current-service-modal">
+                                                    <p>David Bough</p>
+                                                    <div class="service-info">
+                                                        <div class="service-home-icon">
+                                                            <img src="assets/images/home-icon.png" alt=" ">
+                                                        </div>
+                                                        <div class="service-address-texts">
+                                                            <p>Musterstrabe 5,12345 Bonn</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <div class="sp-content">
+                                                    <div class="sp-avatar">
+                                                        <img src="assets/images/avatar-hat.png" alt="">
+                                                    </div>
+                                                    <div class="sp-name-rating">
+                                                        <b>John Doe</b>
+                                                        <div class="sp-rating">
+                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                            <img src="assets/images/grey-small-star.png" alt="">
+                                                            <span>3.67</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="payment-content">
+                                                    <b>87,50 &euro;</b>
+                                                </div>
+                                            </td>
+
+                                            <td></td>
+                                            <td>
+                                                <div class="service-status">
+                                                    <span>New</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="payment-status">
+                                                    <span>Not Applicable</span>
+                                                </div>
+                                            </td>
+                                            <td class="action-btn">
+                                                <a href=""></a>
+                                                <div class="dropdown">
+                                                    <a href="" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/admin-dots.png"></a>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item" href="#">Edit & Reschedule</a>
+                                                        <a class="dropdown-item" href="#">Cancel SR by Cust</a>
+                                                        <a class="dropdown-item" href="#">Inquiry</a>
+                                                        <a class="dropdown-item" href="#">History Log</a>
+                                                        <a class="dropdown-item" href="#">Download Invoice</a>
+                                                        <a class="dropdown-item" href="#">Other Transactions</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>123456</td>
+                                            <td>
+                                                <div class="service-info">
+                                                    <div class="service-datetime-icons">
+                                                        <a href="#" data-toggle="modal" data-target="#current-service-modal"><img src="assets/images/calender-icon.png" alt=" "></a>
+                                                        <a href="#" data-toggle="modal" data-target="#current-service-modal"><img src="assets/images/sp-timericon.png" alt=" "></a>
+                                                        <div class="modal fade" id="current-service-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                                                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                                                <div class="modal-content">
+                                                                    <div class="modal-part">
+                                                                        <div class="modal-header d-block">
+                                                                            <div class="d-flex align-items-center">
+                                                                                <h4 class="modal-title" id="exampleModalLongTitle">Service Details</h4>
+                                                                                <button type="button" class="close ms-auto" data-dismiss="modal" aria-label="Close">
+                                                                                     <span aria-hidden="true" class="close-btn">&times;</span>
+                                                                                </button>
+                                                                            </div>
+                                                                            <p class="modal-datetime">26/12/2021 08:30 - 12:30</p>
+                                                                            <span class="modal-duration"><b>Duration: </b>4.5 Hrs</span>
+                                                                        </div>
+
+                                                                        <div class="modal-body">
+                                                                            <div class="modal-information">
+                                                                                <span class="body-text"><b>Service Id:</b> 8803.</span>
+                                                                                <span class="body-text"><b>Extras:</b> Inside oven, Laundry wash & dry</span>
+                                                                                <span class="body-text"><b>Net Amount:</b> <span class="payment">60,75 &euro;</span></span>
+
+                                                                                <div class="customer-details">
+
+                                                                                    <span class="body-text"><b>Service Address:</b> Street 54, 53844 Troisdoff</span>
+                                                                                    <span class="body-text"><b>Billing Address:</b> Same as cleaning adress</span>
+                                                                                    <span class="body-text"><b>Phone:</b> +41 2244889910</span>
+                                                                                    <span class="body-text"><b>Email:</b> cust001@yopmail.com</span>
+
+                                                                                </div>
+
+                                                                                <div class="customer-details">
+                                                                                    <b>Comments</b>
+                                                                                    <p class="mb-0 ">hello</p>
+
+                                                                                    <div class="pets">
+                                                                                        <img src="assets/images/included.png" alt=" ">
+                                                                                        <p>I have Pets at home.</p>
+                                                                                    </div>
+
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="modal-sp-details">
+                                                                                <h4>Service Provider Details</h4>
+                                                                                <div class="sp-content">
+                                                                                    <div class="sp-avatar">
+                                                                                        <img src="assets/images/avatar-hat.png" alt="">
+                                                                                        <p class="mt-2">16 cleanings</p>
+                                                                                    </div>
+                                                                                    <div class="sp-name-rating">
+                                                                                        <b>John Doe</b>
+                                                                                        <div class="sp-rating">
+                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                                                            <img src="assets/images/grey-small-star.png" alt="">
+
+                                                                                        </div>
+                                                                                        <span>3.67</span>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                    </div>
+
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="service-datetime-texts">
+                                                        <a href="#" data-toggle="modal" data-target="#current-service-modal"><strong>09/04/2018</strong></a>
+                                                        <a href="#" data-toggle="modal" data-target="#current-service-modal">
+                                                            <p>12:00 - 18:00</p>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td class="td-address">
+                                                <a href="#" data-toggle="modal" data-target="#current-service-modal">
+                                                    <p>David Bough</p>
+                                                    <div class="service-info">
+                                                        <div class="service-home-icon">
+                                                            <img src="assets/images/home-icon.png" alt=" ">
+                                                        </div>
+                                                        <div class="service-address-texts">
+                                                            <p>Musterstrabe 5,12345 Bonn</p>
+                                                        </div>
+                                                    </div>
+                                                </a>
+                                            </td>
+                                            <td>
+                                                <div class="sp-content">
+                                                    <div class="sp-avatar">
+                                                        <img src="assets/images/avatar-hat.png" alt="">
+                                                    </div>
+                                                    <div class="sp-name-rating">
+                                                        <b>John Doe</b>
+                                                        <div class="sp-rating">
+                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                            <img src="assets/images/yellow-small-star.png" alt="">
+                                                            <img src="assets/images/grey-small-star.png" alt="">
+                                                            <span>3.67</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="payment-content">
+                                                    <b>87,50 &euro;</b>
+                                                </div>
+                                            </td>
+
+                                            <td></td>
+                                            <td>
+                                                <div class="service-status">
+                                                    <span>New</span>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="payment-status">
+                                                    <span>Not Applicable</span>
+                                                </div>
+                                            </td>
+                                            <td class="action-btn">
+                                                <a href=""></a>
+                                                <div class="dropdown">
+                                                    <a href="" class="dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/admin-dots.png"></a>
+                                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                                        <a class="dropdown-item" href="#">Edit & Reschedule</a>
+                                                        <a class="dropdown-item" href="#">Cancel SR by Cust</a>
+                                                        <a class="dropdown-item" href="#">Inquiry</a>
+                                                        <a class="dropdown-item" href="#">History Log</a>
+                                                        <a class="dropdown-item" href="#">Download Invoice</a>
+                                                        <a class="dropdown-item" href="#">Other Transactions</a>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                </table>
+                                <div class="row service-req-pagination">
+                                    <div class="col shown-records">
+                                        <span>Show</span>
+                                        <select name="" id="">
+                                                <option value="">10</option>
+                                                <option value="">20</option>
+                                                <option value="">50</option>
+                                            </select>
+                                        <span>entries</span>
+                                    </div>
+                                    <div class="col">
+                                        <nav aria-label="Page navigation example">
+                                            <ul class="pagination justify-content-end">
+                                                <li class="page-item">
+                                                    <a class="page-link" href="#" tabindex="-1"><img src="assets/images/polygon-1-copy-5.png" alt=""></a>
+                                                </li>
+                                                <li class="page-item"><a class="page-link active" href="#">1</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">2</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">3</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">4</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">5</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">6</a></li>
+                                                <li class="page-item"><a class="page-link" href="#">7</a></li>
+                                                <li class="page-item">
+                                                    <a class="page-link next-icon" href="#"><img src="assets/images/polygon-1-copy-5.png" alt=""></a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/main.js"></script>
+    <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js "></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js "></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js "></script>
+</body>
+<script>
+    $('#logout-modal').on('hidden.bs.modal', function(e) {
+        window.location.href = 'index.html';
+    });
+</script>
+
+</html>
