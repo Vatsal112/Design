@@ -30,6 +30,7 @@
      overflow-x: hidden;
      max-width: 100%;
      min-height: 100%;
+     position: relative;
  }
  
  .logo {
@@ -63,6 +64,9 @@
      border-radius: 40px;
      margin-right: 10px;
  }
+ /* .main-screen .navbar {
+     right: 2%;
+ } */
  
  .navbar .navbar-toggler-icon {
      height: auto;
@@ -80,6 +84,15 @@
  
  .dropdown-toggle:hover {
      color: yellow !important;
+ }
+ 
+ .main-screen .banner-svgs {
+     position: absolute;
+     bottom: 10%;
+     display: flex;
+     justify-content: center;
+     text-align: center;
+     width: 100%;
  }
  
  .svgs {
@@ -103,7 +116,7 @@
  
  .main-text {
      color: white;
-     margin-top: 14rem;
+     margin-top: 13rem;
      margin-left: 3rem;
  }
  
@@ -144,14 +157,18 @@
      border: 1px solid white;
      font-size: 18px;
      border-radius: 54px;
+     position: absolute;
+     left: 50%;
+     top: 50%;
+     transform: translate(-50%, -50%);
  }
  
- .svgs {
+ .banner-svgs .svgs {
      height: 105px !important;
      width: 150px !important;
  }
  
- .svgs img {
+ .banner-svgs .svgs img {
      width: 42px;
      height: 44px;
  }
@@ -163,6 +180,8 @@
  
  .down-btn {
      width: 100%;
+     position: absolute;
+     bottom: 2%;
      margin-top: 2.5rem;
      text-align: center;
      cursor: pointer;
@@ -268,8 +287,9 @@
      margin-top: 64px;
      /* width: 357px;
     height: 366px; */
-     width: 20rem;
+     width: auto;
      padding-bottom: 10px;
+     margin-left: 10px;
      box-shadow: 0px 0px 30px #E4EBF0;
  }
  
@@ -298,9 +318,8 @@
      border-left: 3px solid rgb(41, 91, 103) !important;
      margin-bottom: 5%;
      margin-top: 10%;
-     width: 21rem;
-     margin-left: auto;
-     margin-right: auto;
+     width: auto;
+     margin-left: 20px;
  }
  
  .community-cardimg img {
@@ -335,13 +354,12 @@
  }
  
  .newsletter {
-     display: flex;
-     flex-wrap: wrap;
      margin: 2% 0 2% 0;
  }
  
  .newsletter-input {
-     margin-left: 10%;
+     margin-left: auto;
+     margin-right: auto;
  }
  
  .newsletter-heading {
@@ -353,8 +371,7 @@
  }
  
  .form-group {
-     margin-left: auto;
-     margin-right: auto;
+     text-align: center;
  }
  
  .newsletter-input .form-group .form-control {
