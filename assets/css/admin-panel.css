@@ -52,7 +52,7 @@ p {
 
 .sidebar {
     background-color: white;
-    width: 15rem;
+    width: 18rem;
     height: 100vh;
     box-shadow: 2px 0px 6px #0000001A;
 }
@@ -109,16 +109,20 @@ p {
     padding: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .filters .inputs .form-control select {
     width: 205px;
     height: 45px;
     border: 1px solid #dee2e6;
-    padding: 0 5px;
+    margin: 5px 10px;
     border-radius: 0.3rem;
     color: #646464;
+}
+
+.filters .inputs .form-control input {
+    margin: 5px 10px;
 }
 
 .sp-reg-form input {
@@ -128,6 +132,10 @@ p {
 .sp-reg-form .input-group-prepend {
     display: flex;
     align-items: center;
+}
+
+.sp-reg-form .input-group-prepend input {
+    margin: 0px !important;
 }
 
 .sp-reg-form .input-group-prepend .input-group-text {
@@ -143,7 +151,8 @@ p {
     margin-top: 0;
 }
 
-.filters .inputs .form-control .zipcode {
+.filters .inputs .form-control .zipcode,
+.filters .inputs .form-control .email {
     width: 160px;
     height: 45px;
     border: 1px solid #dee2e6;
@@ -219,6 +228,21 @@ p {
 .service-req-table .table {
     margin-top: 1rem;
     color: #646464;
+}
+
+.btn-export {
+    display: flex;
+    justify-content: end;
+    margin-top: 1rem;
+}
+
+.btn-export button {
+    outline: none;
+    border: none;
+    background-color: #1FB6FF;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
 }
 
 .table thead>tr>th {
@@ -300,11 +324,7 @@ p {
     margin-top: 0;
 }
 
-.service-req .filters .form-control select {
-    width: 150px;
-}
-
-.service-req .filters .dates input {
+.filters .dates input {
     width: 160px;
     height: 45px;
     border-radius: 0.3rem;
@@ -363,14 +383,25 @@ p {
     background-color: orange;
     color: white;
     padding: 2px 5px;
-    font-size: 14px;
+    font-size: 12px;
 }
 
-.service-req-table .payment-status span {
+.service-req-table .payment-status span,
+.service-status-cancel span,
+.service-status-pending span,
+.service-status-change-sp span {
     background-color: #FF6B6B;
     color: white;
     padding: 2px 5px;
-    font-size: 14px;
+    font-size: 12px;
+}
+
+.service-status-pending span {
+    background-color: #1FB6FF;
+}
+
+.service-status-change-sp span {
+    background-color: gray;
 }
 
 .service-req-table .action-btn img {
@@ -405,7 +436,8 @@ p {
     margin-top: 1rem;
 }
 
-.service-datetime-icons .modal-header button {
+.service-datetime-icons .modal-header button,
+#edit-reschedule-modal .modal-header button {
     font-size: 28px;
     font-weight: 500;
     position: absolute;
@@ -424,4 +456,78 @@ p {
     border-left: 1px solid #dee2e6;
     padding: 0px 1.5rem;
     margin-left: 18%;
+}
+
+#edit-reschedule-modal .modal-header {
+    border-bottom: 0;
+}
+
+#edit-reschedule-modal .modal-body .date-time-fields,
+#edit-reschedule-modal .modal-body .service-address .address-fields,
+#edit-reschedule-modal .modal-body .service-address .postalcode-city {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#edit-reschedule-modal .modal-body {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#edit-reschedule-modal .modal-body .input-time select,
+#edit-reschedule-modal .modal-body .city select {
+    display: block;
+    height: 39px;
+    width: 220px;
+    border: 1px solid #dee2e6;
+    border-radius: 0.3rem;
+}
+
+#edit-reschedule-modal .modal-body .input-date input {
+    width: 220px;
+}
+
+#edit-reschedule-modal .modal-body .service-address input,
+#edit-reschedule-modal .modal-body .service-address .postalcode-city input {
+    width: 220px;
+}
+
+#edit-reschedule-modal .modal-body .service-address,
+#edit-reschedule-modal .modal-body .reschedule-reason {
+    margin-top: 10px;
+}
+
+#edit-reschedule-modal .modal-body label {
+    margin-top: 5px;
+}
+
+#edit-reschedule-modal .modal-body .reschedule-reason textarea {
+    height: 90px;
+    resize: none;
+    margin-top: 5px;
+}
+
+#edit-reschedule-modal .modal-footer {
+    border-top: 0;
+    justify-content: center;
+}
+
+#edit-reschedule-modal .modal-footer .btn-update {
+    border: none;
+    outline: none;
+    background-color: #1FB6FF;
+    color: white;
+    width: 100%;
+    text-align: center;
+    height: 45px;
+    border-radius: 5px;
+}
+
+#edit-reschedule-modal .modal-header button {
+    top: 1%;
+}
+
+.service-req-table .service-req-pagination {
+    padding-bottom: 1rem;
 }
