@@ -18,6 +18,8 @@
 </head>
 
 <body>
+    <!--customer screen banner start-->
+
     <section class="customer-screen-banner">
         <header>
             <nav class="faq-nav navbar navbar-expand-lg fixed-top" id="faq-navbar">
@@ -99,6 +101,9 @@
         </div>
         <!--logout modal end-->
     </section>
+    <!--customer screen banner end-->
+
+    <!--customer screen sidebar for mobile view start-->
 
     <section class="sidebar" id="sidebar">
         <div class="username">
@@ -138,13 +143,18 @@
             </div>
         </nav>
     </section>
+    <!--customer screen sidebar for mobile view end-->
+
+    <!--customer screen welcome area start-->
 
     <section class="welcome-user">
         <div class="welcome-text">
             <h2>Welcome, Vatsal</h2>
         </div>
     </section>
+    <!--customer screen welcome area end-->
 
+    <!--customer screen left vertical tabs-->
     <section class="tab-sections">
         <div class="container">
             <div class="row main-content">
@@ -158,6 +168,8 @@
                         <a class="nav-link" id="v-pills-notification-tab" data-toggle="pill" href="#v-pills-notification" role="tab" aria-controls="v-pills-notification" aria-selected="false">Notification</a>
                     </div>
                 </div>
+
+                <!--customer screen dashboard area start-->
                 <div class="col-sm-12 col-md-10 col-lg-9 cust-dashboard">
                     <div class="tab-content" id="v-pills-tabContent">
                         <div class="tab-pane fade show active dashboard" id="v-pills-dashboard" role="tabpanel" aria-labelledby="v-pills-dashboard-tab">
@@ -165,7 +177,7 @@
                                 <h5>Current Service Request</h5>
                                 <button>Add New Service Request</button>
                             </div>
-
+                            <!--customer screen dashboard table start-->
                             <div class="table-responsive-sm current-service-req-table">
                                 <table class="table">
                                     <thead class="table-header">
@@ -185,6 +197,7 @@
                                                     <div class="service-datetime-icons">
                                                         <a href="#" data-toggle="modal" data-target="#current-service-modal"><img src="assets/images/calender-icon.png" alt=" "></a>
                                                         <a href="#" data-toggle="modal" data-target="#current-service-modal"><img src="assets/images/sp-timericon.png" alt=" "></a>
+                                                        <!--customer screen dashboard modal start-->
                                                         <div class="modal fade" id="current-service-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                                                 <div class="modal-content">
@@ -234,6 +247,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <!--customer screen dashboard modal end-->
                                                     </div>
                                                     <div class="service-datetime-texts">
                                                         <a href="#" data-toggle="modal" data-target="#current-service-modal"><strong>09/04/2018</strong></a>
@@ -537,8 +551,12 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--customer screen dashboard table end-->
 
                         </div>
+                        <!--customer screen dashboard area end-->
+
+                        <!--customer screen service history tab start-->
                         <div class="tab-pane fade service-history" id="v-pills-service-history" role="tabpanel" aria-labelledby="v-pills-service-history-tab">
 
                             <!-- <div class="tab-label">
@@ -556,6 +574,7 @@
                                 </div>
                             </div>
 
+                            <!--customer screen service history table start-->
                             <div class="table-responsive-sm cust-service-history-table">
                                 <table class="table">
                                     <thead class="table-header">
@@ -576,6 +595,7 @@
                                                     <div class="service-datetime-icons">
                                                         <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><img src="assets/images/calender-icon.png" alt=" "></a>
                                                         <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><img src="assets/images/sp-timericon.png" alt=" "></a>
+                                                        <!--customer screen service history modal start-->
                                                         <div class="modal fade" id="cust-service-history-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                                                 <div class="modal-content">
@@ -621,6 +641,8 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <!--customer screen service history modal end-->
+
                                                     </div>
                                                     <div class="service-datetime-texts">
                                                         <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><strong>09/04/2018</strong></a>
@@ -657,6 +679,8 @@
                                                     <div class="service-datetime-icons">
                                                         <a href="#" data-toggle="modal" data-target="#cust-service-history-modal2"><img src="assets/images/calender-icon.png" alt=" "></a>
                                                         <a href="#" data-toggle="modal" data-target="#cust-service-history-modal2"><img src="assets/images/sp-timericon.png" alt=" "></a>
+                                                        <!--customer screen service history modal with sp info start-->
+
                                                         <div class="modal fade" id="cust-service-history-modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                                                 <div class="modal-content">
@@ -728,6 +752,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <!--customer screen service history modal with sp info end-->
                                                     </div>
                                                     <div class="service-datetime-texts">
                                                         <a href="#" data-toggle="modal" data-target="#cust-service-history-modal2"><strong>09/04/2018</strong></a>
@@ -768,6 +793,7 @@
                                             <td>
                                                 <div class="action-buttons">
                                                     <button class="btn-rate-sp" data-toggle="modal" data-target="#rate-sp-modal2">Rate SP</button>
+                                                    <!--customer screen service history rate a sp modal start-->
                                                     <div class="modal fade" id="rate-sp-modal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                         <div class="modal-dialog modal-dialog-centered" role="document">
                                                             <div class="modal-content">
@@ -839,6 +865,7 @@
                                                             </div>
                                                         </div>
                                                     </div>
+                                                    <!--customer screen service history rate a sp modal end-->
                                                 </div>
                                             </td>
                                         </tr>
@@ -849,51 +876,7 @@
                                                     <div class="service-datetime-icons">
                                                         <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><img src="assets/images/calender-icon.png" alt=" "></a>
                                                         <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><img src="assets/images/sp-timericon.png" alt=" "></a>
-                                                        <div class="modal fade" id="cust-service-history-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-part">
-                                                                        <div class="modal-header d-block">
-                                                                            <div class="d-flex align-items-center">
-                                                                                <h4 class="modal-title" id="exampleModalLongTitle">Service Details</h4>
-                                                                                <button type="button" class="close ms-auto" data-dismiss="modal" aria-label="Close">
-                                                                                     <span aria-hidden="true" class="close-btn">&times;</span>
-                                                                                </button>
-                                                                            </div>
-                                                                            <p class="modal-datetime">26/12/2021 08:30 - 12:30</p>
-                                                                            <span class="modal-duration"><b>Duration: </b>4.5 Hrs</span>
-                                                                        </div>
 
-                                                                        <div class="modal-body">
-                                                                            <span class="body-text"><b>Service Id:</b> 8803.</span>
-                                                                            <span class="body-text"><b>Extras:</b> Inside oven, Laundry wash & dry</span>
-                                                                            <span class="body-text"><b>Net Amount:</b> <span class="payment">60,75 &euro;</span></span>
-
-                                                                            <div class="customer-details">
-
-                                                                                <span class="body-text"><b>Service Address:</b> Street 54, 53844 Troisdoff</span>
-                                                                                <span class="body-text"><b>Billing Address:</b> Same as cleaning adress</span>
-                                                                                <span class="body-text"><b>Phone:</b> +41 2244889910</span>
-                                                                                <span class="body-text"><b>Email:</b> cust001@yopmail.com</span>
-
-                                                                            </div>
-
-                                                                            <div class="customer-details">
-                                                                                <b>Comments</b>
-                                                                                <p class="mb-0 ">hello</p>
-
-                                                                                <div class="pets">
-                                                                                    <img src="assets/images/included.png" alt=" ">
-                                                                                    <p>I have Pets at home.</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                     <div class="service-datetime-texts">
                                                         <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><strong>09/04/2018</strong></a>
@@ -926,6 +909,9 @@
                                     </tbody>
                                 </table>
                             </div>
+                            <!--customer screen service history table end-->
+
+                            <!--customer screen pagination start-->
                             <div class="row total-records">
                                 <div class="col-md-6 col-sm-12 col-lg-6">
                                     <div class="shown-records">
@@ -963,13 +949,16 @@
                                     </div>
                                 </div>
                             </div>
+                            <!--customer screen pagination end-->
 
                         </div>
+                        <!--customer screen service history tab end-->
 
                         <div class="tab-pane fade" id="v-pills-service-sche" role="tabpanel" aria-labelledby="v-pills-service-sche-tab">
                             ...
                         </div>
 
+                        <!--customer screen my rating tab content start-->
                         <div class="tab-pane fade my-rating" id="v-pills-favourite-pros" role="tabpanel" aria-labelledby="v-pills-favourite-pros-tab">
                             <div class="tab-label">
                                 <h5>Favourite Pros</h5>
@@ -1063,6 +1052,9 @@
                                 </div>
                             </div>
                         </div>
+                        <!--customer screen my rating tab content end-->
+
+                        <!--customer screen invoices tab start-->
                         <div class="tab-pane fade" id="v-pills-invoices" role="tabpanel" aria-labelledby="v-pills-invoices-tab">
                             <div class="row total-records">
                                 <div class="col-md-6 col-sm-12 col-lg-6">
@@ -1102,20 +1094,25 @@
                                 </div>
                             </div>
                         </div>
+                        <!--customer screen invoices tab end-->
 
                         <div class="tab-pane fade" id="v-pills-notification" role="tabpanel" aria-labelledby="v-pills-notification-tab">
                             ...
                         </div>
 
+                        <!--customer screen dropdown my setting content start-->
                         <div class="tab-pane fade my-setting" id="v-pills-my-setting" role="tabpanel" aria-labelledby="pills-settings-tab">
                             <nav>
+                                <!--customer screen dropdown my setting tabs-->
                                 <div class="nav nav-tabs" id="nav-tab" role="tablistd">
                                     <a class="nav-item nav-link active" id="nav-my-details-tab" data-toggle="tab" href="#nav-my-details" role="tab" aria-controls="nav-my-details-tab" aria-selected="true">My Details</a>
                                     <a class="nav-item nav-link" id="nav-change-pass-tab" data-toggle="tab" href="#nav-my-address" role="tab" aria-controls="nav-my-address" aria-selected="false">My Address</a>
                                     <a class="nav-item nav-link" id="nav-change-pass-tab" data-toggle="tab" href="#nav-change-pass" role="tab" aria-controls="nav-change-pass" aria-selected="false">Change Password</a>
                                 </div>
                             </nav>
+
                             <div class="tab-content" id="nav-tabContent">
+                                <!--customer screen dropdown my setting in My details tab content start-->
                                 <div class="tab-pane fade show active" id="nav-my-details" role="tabpanel" aria-labelledby="nav-my-details-tab">
                                     <div class="details">
                                         <div class="row">
@@ -1284,7 +1281,9 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!--customer screen dropdown my setting in My details tab content end-->
 
+                                <!--customer screen dropdown my setting in My address tab content start-->
                                 <div class="tab-pane fade" id="nav-my-address" role="tabpanel" aria-labelledby="nav-my-address-tab">
                                     <div class="address-table">
                                         <div class="table-responsive-sm">
@@ -1334,6 +1333,7 @@
                                             <button type="button" data-toggle="modal" data-target="#add-addr-modal">Add New Address</button>
                                         </div>
 
+                                        <!--customer screen my address tab edit address modal start-->
                                         <div class="modal fade" id="edit-addr-modal" tabindex="-1" role="dialog" aria-labelledby="edit-addr-modal" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered" role="document">
                                                 <div class="modal-content">
@@ -1388,7 +1388,9 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <!--customer screen my address tab edit address modal end-->
 
+                                        <!--customer screen my address tab add address modal start-->
                                         <div class="modal fade" id="add-addr-modal" tabindex="-1" role="dialog" aria-labelledby="add-addr-modal" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered" role="document">
                                                 <div class="modal-content">
@@ -1442,7 +1444,9 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <!--customer screen my address tab add address modal end-->
 
+                                        <!--customer screen my address tab delete address modal start-->
                                         <div class="modal fade" id="delete-addr-modal" tabindex="-1" role="dialog" aria-labelledby="delete-addr-modal" aria-hidden="true">
                                             <div class="modal-dialog modal-dialog-centered" role="document">
                                                 <div class="modal-content">
@@ -1461,9 +1465,11 @@
                                                 </div>
                                             </div>
                                         </div>
+                                        <!--customer screen my address tab delete address modal end-->
                                     </div>
 
                                 </div>
+                                <!--customer screen dropdown my setting in My address tab content end-->
                                 <div class="tab-pane fade" id="nav-change-pass" role="tabpanel" aria-labelledby="nav-change-pass-tab">
                                     <div class="change-password">
                                         <div class="row details">
@@ -1506,11 +1512,13 @@
                                 </div>
                             </div>
                         </div>
+                        <!--customer screen dropdown my setting content end-->
                     </div>
                 </div>
             </div>
     </section>
 
+    <!--footer start-->
     <div class="container-fluid footer-section faq-footer upcoming-service-footer">
         <footer>
             <div class="footer-content ">
@@ -1532,6 +1540,8 @@
             <p class="text-center copyrights">©2018 Helperland. All rights reserved. &nbsp;&nbsp;&nbsp;<a href="">Terms and Conditions</a> <span>&nbsp;|&nbsp;</span> <a href="">Privacy Policy</a> </p>
         </footer>
     </div>
+    <!--footer end-->
+
     <script src="assets/js/main.js"></script>
     <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js "></script>

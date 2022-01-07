@@ -18,6 +18,8 @@
 </head>
 
 <body>
+
+    <!--Panel Header start-->
     <section class="panel-header">
         <header>
             <nav class="navbar navbar-expand-md">
@@ -32,6 +34,9 @@
                 </ul>
             </nav>
         </header>
+
+
+        <!--Panel logout modal start-->
         <div class="modal fade logout-modal" id="logout-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle2" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
                 <div class="modal-content">
@@ -49,16 +54,26 @@
                 </div>
             </div>
         </div>
+        <!--Panel logout modal end-->
     </section>
+    <!--Panel Header end-->
+
+    <!--Panel side navigation and its content start-->
 
     <section class="admin-sidemenu">
         <div class="container-fluid">
+
+            <!--Panel sidebar start-->
+
             <div class="sidebar">
                 <div class="nav flex-column nav-tab v-tabs" id="v-pills-tab" role="tablist" aria-orientation="vertical">
                     <a class="nav-link active" id="v-pills-user-manage-tab" data-toggle="pill" href="#v-pills-user-manage" role="tab" aria-controls="v-pills-user-manage" aria-selected="true">User Management</a>
                     <a class="nav-link" id="v-pills-service-request-tab" data-toggle="pill" href="#v-pills-service-request" role="tab" aria-controls="v-pills-service-request" aria-selected="true">Service Request</a>
                 </div>
             </div>
+            <!--Panel sidebar end-->
+
+            <!--Panel sidebar content start-->
             <div class="sidebar-content">
                 <div class="tab-content" id="v-pills-tabContent">
                     <div class="tab-pane fade show active" id="v-pills-user-manage" role="tabpanel" aria-labelledby="v-pills-user-manage-tab">
@@ -66,7 +81,7 @@
                             <h3>User Management</h3>
 
                         </div>
-
+                        <!--Panel filters start-->
                         <div class="filters">
                             <div class="inputs">
                                 <div class="form-control">
@@ -107,10 +122,13 @@
                                 </div>
                             </div>
                         </div>
+                        <!--Panel filters end-->
 
                         <div class="btn-export">
                             <button>Export</button>
                         </div>
+
+                        <!--Panel content of user management start-->
                         <div class="users-table">
                             <div class="table-responsive">
                                 <table class="table">
@@ -362,9 +380,17 @@
 
                             </div>
                         </div>
+                        <!--Panel content of user management end-->
+
                     </div>
+
+                    <!--Panel tab of service Request-->
+
                     <div class="tab-pane fade service-req" id="v-pills-service-request" role="tabpanel" aria-labelledby="v-pills-service-request">
                         <h3>Service Request</h3>
+
+                        <!--Panel filters of service request start-->
+
                         <div class="filters">
                             <div class="inputs">
                                 <div class="form-control">
@@ -413,7 +439,9 @@
                                 </div>
                             </div>
                         </div>
+                        <!--Panel filters of service request end-->
 
+                        <!--Panel content of service request start-->
                         <div class="service-req-table">
                             <div class="table-responsive">
                                 <table class="table">
@@ -442,6 +470,9 @@
                                                     <div class="service-datetime-icons">
                                                         <a href="#" data-toggle="modal" data-target="#current-service-modal"><img src="assets/images/calender-icon.png" alt=" "></a>
                                                         <a href="#" data-toggle="modal" data-target="#current-service-modal"><img src="assets/images/sp-timericon.png" alt=" "></a>
+
+                                                        <!--Panel modal of service request start-->
+
                                                         <div class="modal fade" id="current-service-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                                                 <div class="modal-content">
@@ -512,6 +543,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <!--Panel modal of service request end-->
                                                     </div>
                                                     <div class="service-datetime-texts">
                                                         <a href="#" data-toggle="modal" data-target="#current-service-modal"><strong>09/04/2018</strong></a>
@@ -582,6 +614,8 @@
                                                         <a class="dropdown-item" href="#">Other Transactions</a>
                                                     </div>
                                                 </div>
+
+                                                <!--Panel modal of reschedule request start-->
 
                                                 <div class="modal fade" id="edit-reschedule-modal" tabindex="-1" role="dialog" aria-labelledby="edit-reschedule-modal" aria-hidden="true">
                                                     <div class="modal-dialog modal-dialog-centered" role="document">
@@ -681,6 +715,7 @@
                                                         </div>
                                                     </div>
                                                 </div>
+                                                <!--Panel modal of reschedule request end-->
                                             </td>
                                         </tr>
                                         <tr>
@@ -690,6 +725,9 @@
                                                     <div class="service-datetime-icons">
                                                         <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><img src="assets/images/calender-icon.png" alt=" "></a>
                                                         <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><img src="assets/images/sp-timericon.png" alt=" "></a>
+
+                                                        <!--Panel modal of service request start-->
+
                                                         <div class="modal fade" id="cust-service-history-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                                                 <div class="modal-content">
@@ -735,6 +773,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <!--Panel modal of service request start-->
                                                     </div>
                                                     <div class="service-datetime-texts">
                                                         <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><strong>09/04/2018</strong></a>
@@ -798,51 +837,7 @@
                                                     <div class="service-datetime-icons">
                                                         <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><img src="assets/images/calender-icon.png" alt=" "></a>
                                                         <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><img src="assets/images/sp-timericon.png" alt=" "></a>
-                                                        <div class="modal fade" id="cust-service-history-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-part">
-                                                                        <div class="modal-header d-block">
-                                                                            <div class="d-flex align-items-center">
-                                                                                <h4 class="modal-title" id="exampleModalLongTitle">Service Details</h4>
-                                                                                <button type="button" class="close ms-auto" data-dismiss="modal" aria-label="Close">
-                                                                                     <span aria-hidden="true" class="close-btn">&times;</span>
-                                                                                </button>
-                                                                            </div>
-                                                                            <p class="modal-datetime">26/12/2021 08:30 - 12:30</p>
-                                                                            <span class="modal-duration"><b>Duration: </b>4.5 Hrs</span>
-                                                                        </div>
 
-                                                                        <div class="modal-body">
-                                                                            <span class="body-text"><b>Service Id:</b> 8803.</span>
-                                                                            <span class="body-text"><b>Extras:</b> Inside oven, Laundry wash & dry</span>
-                                                                            <span class="body-text"><b>Net Amount:</b> <span class="payment">60,75 &euro;</span></span>
-
-                                                                            <div class="customer-details">
-
-                                                                                <span class="body-text"><b>Service Address:</b> Street 54, 53844 Troisdoff</span>
-                                                                                <span class="body-text"><b>Billing Address:</b> Same as cleaning adress</span>
-                                                                                <span class="body-text"><b>Phone:</b> +41 2244889910</span>
-                                                                                <span class="body-text"><b>Email:</b> cust001@yopmail.com</span>
-
-                                                                            </div>
-
-                                                                            <div class="customer-details">
-                                                                                <b>Comments</b>
-                                                                                <p class="mb-0 ">hello</p>
-
-                                                                                <div class="pets">
-                                                                                    <img src="assets/images/included.png" alt=" ">
-                                                                                    <p>I have Pets at home.</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                     <div class="service-datetime-texts">
                                                         <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><strong>09/04/2018</strong></a>
@@ -906,51 +901,7 @@
                                                     <div class="service-datetime-icons">
                                                         <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><img src="assets/images/calender-icon.png" alt=" "></a>
                                                         <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><img src="assets/images/sp-timericon.png" alt=" "></a>
-                                                        <div class="modal fade" id="cust-service-history-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-part">
-                                                                        <div class="modal-header d-block">
-                                                                            <div class="d-flex align-items-center">
-                                                                                <h4 class="modal-title" id="exampleModalLongTitle">Service Details</h4>
-                                                                                <button type="button" class="close ms-auto" data-dismiss="modal" aria-label="Close">
-                                                                                     <span aria-hidden="true" class="close-btn">&times;</span>
-                                                                                </button>
-                                                                            </div>
-                                                                            <p class="modal-datetime">26/12/2021 08:30 - 12:30</p>
-                                                                            <span class="modal-duration"><b>Duration: </b>4.5 Hrs</span>
-                                                                        </div>
 
-                                                                        <div class="modal-body">
-                                                                            <span class="body-text"><b>Service Id:</b> 8803.</span>
-                                                                            <span class="body-text"><b>Extras:</b> Inside oven, Laundry wash & dry</span>
-                                                                            <span class="body-text"><b>Net Amount:</b> <span class="payment">60,75 &euro;</span></span>
-
-                                                                            <div class="customer-details">
-
-                                                                                <span class="body-text"><b>Service Address:</b> Street 54, 53844 Troisdoff</span>
-                                                                                <span class="body-text"><b>Billing Address:</b> Same as cleaning adress</span>
-                                                                                <span class="body-text"><b>Phone:</b> +41 2244889910</span>
-                                                                                <span class="body-text"><b>Email:</b> cust001@yopmail.com</span>
-
-                                                                            </div>
-
-                                                                            <div class="customer-details">
-                                                                                <b>Comments</b>
-                                                                                <p class="mb-0 ">hello</p>
-
-                                                                                <div class="pets">
-                                                                                    <img src="assets/images/included.png" alt=" ">
-                                                                                    <p>I have Pets at home.</p>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                     <div class="service-datetime-texts">
                                                         <a href="#" data-toggle="modal" data-target="#cust-service-history-modal"><strong>09/04/2018</strong></a>
@@ -1014,6 +965,7 @@
                                                     <div class="service-datetime-icons">
                                                         <a href="#" data-toggle="modal" data-target="#current-service-modal"><img src="assets/images/calender-icon.png" alt=" "></a>
                                                         <a href="#" data-toggle="modal" data-target="#current-service-modal"><img src="assets/images/sp-timericon.png" alt=" "></a>
+                                                        <!--Panel modal of service request with sp info start-->
                                                         <div class="modal fade" id="current-service-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                                                             <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
                                                                 <div class="modal-content">
@@ -1084,6 +1036,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
+                                                        <!--Panel modal of service request with sp info end-->
                                                     </div>
                                                     <div class="service-datetime-texts">
                                                         <a href="#" data-toggle="modal" data-target="#current-service-modal"><strong>09/04/2018</strong></a>
@@ -1163,76 +1116,7 @@
                                                     <div class="service-datetime-icons">
                                                         <a href="#" data-toggle="modal" data-target="#current-service-modal"><img src="assets/images/calender-icon.png" alt=" "></a>
                                                         <a href="#" data-toggle="modal" data-target="#current-service-modal"><img src="assets/images/sp-timericon.png" alt=" "></a>
-                                                        <div class="modal fade" id="current-service-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                                                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                                                                <div class="modal-content">
-                                                                    <div class="modal-part">
-                                                                        <div class="modal-header d-block">
-                                                                            <div class="d-flex align-items-center">
-                                                                                <h4 class="modal-title" id="exampleModalLongTitle">Service Details</h4>
-                                                                                <button type="button" class="close ms-auto" data-dismiss="modal" aria-label="Close">
-                                                                                     <span aria-hidden="true" class="close-btn">&times;</span>
-                                                                                </button>
-                                                                            </div>
-                                                                            <p class="modal-datetime">26/12/2021 08:30 - 12:30</p>
-                                                                            <span class="modal-duration"><b>Duration: </b>4.5 Hrs</span>
-                                                                        </div>
 
-                                                                        <div class="modal-body">
-                                                                            <div class="modal-information">
-                                                                                <span class="body-text"><b>Service Id:</b> 8803.</span>
-                                                                                <span class="body-text"><b>Extras:</b> Inside oven, Laundry wash & dry</span>
-                                                                                <span class="body-text"><b>Net Amount:</b> <span class="payment">60,75 &euro;</span></span>
-
-                                                                                <div class="customer-details">
-
-                                                                                    <span class="body-text"><b>Service Address:</b> Street 54, 53844 Troisdoff</span>
-                                                                                    <span class="body-text"><b>Billing Address:</b> Same as cleaning adress</span>
-                                                                                    <span class="body-text"><b>Phone:</b> +41 2244889910</span>
-                                                                                    <span class="body-text"><b>Email:</b> cust001@yopmail.com</span>
-
-                                                                                </div>
-
-                                                                                <div class="customer-details">
-                                                                                    <b>Comments</b>
-                                                                                    <p class="mb-0 ">hello</p>
-
-                                                                                    <div class="pets">
-                                                                                        <img src="assets/images/included.png" alt=" ">
-                                                                                        <p>I have Pets at home.</p>
-                                                                                    </div>
-
-                                                                                </div>
-                                                                            </div>
-
-                                                                            <div class="modal-sp-details">
-                                                                                <h4>Service Provider Details</h4>
-                                                                                <div class="sp-content">
-                                                                                    <div class="sp-avatar">
-                                                                                        <img src="assets/images/avatar-hat.png" alt="">
-                                                                                        <p class="mt-2">16 cleanings</p>
-                                                                                    </div>
-                                                                                    <div class="sp-name-rating">
-                                                                                        <b>John Doe</b>
-                                                                                        <div class="sp-rating">
-                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
-                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
-                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
-                                                                                            <img src="assets/images/yellow-small-star.png" alt="">
-                                                                                            <img src="assets/images/grey-small-star.png" alt="">
-
-                                                                                        </div>
-                                                                                        <span>3.67</span>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-
-                                                                    </div>
-
-                                                                </div>
-                                                            </div>
-                                                        </div>
                                                     </div>
                                                     <div class="service-datetime-texts">
                                                         <a href="#" data-toggle="modal" data-target="#current-service-modal"><strong>09/04/2018</strong></a>
@@ -1306,6 +1190,9 @@
                                             </td>
                                         </tr>
                                 </table>
+                                <!--Panel data content end-->
+
+                                <!--Panel pagination start-->
                                 <div class="row service-req-pagination">
                                     <div class="col shown-records">
                                         <span>Show</span>
@@ -1336,6 +1223,7 @@
                                         </nav>
                                     </div>
                                 </div>
+                                <!--Panel pagination end-->
                             </div>
                         </div>
                     </div>
@@ -1343,6 +1231,8 @@
             </div>
         </div>
     </section>
+    <!--Panel end-->
+
 
     <script src="assets/js/main.js"></script>
     <script src=" https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>
