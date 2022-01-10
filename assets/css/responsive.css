@@ -247,6 +247,11 @@
         margin-right: auto;
         width: 50%;
     }
+    /* customer registration*/
+    .create-account-cust .reg-form,
+    .create-account-cust .reg-form .input-group-prepend {
+        width: 100%;
+    }
 }
 
 @media screen and (max-width:600px) {

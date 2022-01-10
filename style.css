@@ -370,7 +370,7 @@
      margin-top: 35%;
  }
  
- .form-group {
+ .form-group #input-email {
      text-align: center;
  }
  
@@ -546,10 +546,11 @@
      align-items: center;
  }
  
- .line {
+ .underline-design .line {
      width: 62px;
      height: 1px;
      background-color: #CCCCCC;
+     margin: 0 10px;
  }
  
  .faq-subtext {
@@ -966,7 +967,8 @@
      height: 46px;
  }
  
- .sp-reg-form .input-group-prepend {
+ .sp-reg-form .input-group-prepend,
+ .create-account-cust .reg-form .input-group-prepend {
      display: flex;
      align-items: center;
  }
@@ -1278,9 +1280,10 @@
      margin-top: 0;
  }
  
- .new-service .shown-records .form-check-input:checked {
-     background-color: #1D7A8C;
-     border-color: #1D7A8C;
+ .new-service .shown-records .form-check-input:checked,
+ #login-modal .modal-body .remember-me .form-check-input:checked {
+     background-color: #1D7A8C !important;
+     border-color: #1D7A8C !important;
  }
  
  .tab-sections .tab-content .table {
@@ -1409,13 +1412,19 @@
      border-top: 1px solid #E4EBF0;
  }
  
- .sidebar .navigation .nav-item {
+ .sidebar .navigation .nav-item,
+ .sidebar .nav-item .nav-link {
      padding-left: 15px;
  }
  
- .sidebar .navigation .nav-link {
+ .sidebar .navigation .nav-link,
+ .sidebar .nav-item .nav-link {
      text-decoration: none;
      color: #424242;
+ }
+ 
+ .sidebar .create-account-customer .navbar-nav {
+     border-top: 0;
  }
  /*---------------*/
  
@@ -1428,7 +1437,9 @@
  .service-datetime-icons .modal-header .close-btn,
  #edit-addr-modal .modal-header .close-btn,
  #add-addr-modal .modal-header .close-btn,
- #delete-addr-modal .modal-header .close-btn {
+ #delete-addr-modal .modal-header .close-btn,
+ #login-modal .modal-header .close-btn,
+ #forget-pass-modal .modal-header .close-btn {
      font-size: 28px;
      font-weight: 500;
      position: absolute;
@@ -1861,15 +1872,18 @@
  }
  /* --------customer-screens--------- */
  
- .customer-screen-banner .navbar-nav {
+ .customer-screen-banner .navbar-nav,
+ .customer-reg-banner .navbar-nav {
      align-items: center;
  }
  
- .customer-screen-banner .faq-nav .nav-item {
+ .customer-screen-banner .faq-nav .nav-item,
+ .customer-reg-banner .faq-nav .nav-item {
      padding: 0 10px;
  }
  
- .customer-screen-banner .navbar-nav .book-now {
+ .customer-screen-banner .navbar-nav .book-now,
+ .customer-reg-banner .navbar-nav .book-now {
      border: 1px solid #FFFFFF80;
      height: 40px;
      width: 120px;
@@ -1877,7 +1891,8 @@
      background-color: #146371;
  }
  
- .customer-screen-banner .navbar-nav .book-now .nav-link {
+ .customer-screen-banner .navbar-nav .book-now .nav-link,
+ .customer-reg-banner .navbar-nav .book-now .nav-link {
      text-align: center;
  }
  
@@ -2299,7 +2314,9 @@
  
  #edit-addr-modal .modal-header,
  #add-addr-modal .modal-header,
- #delete-addr-modal .modal-header {
+ #delete-addr-modal .modal-header,
+ #login-modal .modal-header,
+ #forget-pass-modal .modal-header {
      border-bottom: 0;
      color: #646464;
  }
@@ -2356,14 +2373,18 @@
  }
  
  #edit-addr-modal .modal-footer,
- #add-addr-modal .modal-footer {
+ #add-addr-modal .modal-footer,
+ #login-modal .modal-footer,
+ #forget-pass-modal .modal-footer {
      border-top: 0;
      justify-content: center;
      padding: 0;
  }
  
  #edit-addr-modal .modal-footer .btn-edit,
- #add-addr-modal .modal-footer .btn-edit {
+ #add-addr-modal .modal-footer .btn-edit,
+ #login-modal .modal-body .btn-login button,
+ #forget-pass-modal .modal-body .btn-send button {
      width: 100%;
      outline: none;
      border: none;
@@ -2385,4 +2406,152 @@
      padding: 10px 15px;
      margin-top: 10px;
      border-radius: 20px;
+ }
+ 
+ #login-modal .modal-body .form-group .login-email input,
+ #login-modal .modal-body .form-group .login-password input {
+     height: 40px;
+     border: 1px solid #dedddd;
+     width: 290px;
+     padding: 0px 10px;
+     outline: none;
+     color: #646464;
+ }
+ 
+ #login-modal .modal-content,
+ #forget-pass-modal .modal-content {
+     width: 70%;
+     transform: translate(-50%, -50%);
+     position: absolute;
+     top: 50%;
+     left: 50%;
+ }
+ 
+ #login-modal .modal-body .login-email,
+ #login-modal .modal-body .login-password {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     margin-bottom: 0.8rem;
+ }
+ 
+ #login-modal .modal-body .login-email img,
+ #login-modal .modal-body .login-password img {
+     position: absolute;
+     right: 40px;
+ }
+ 
+ #login-modal .modal-body .remember-me {
+     text-align: left;
+     display: flex;
+     align-items: center;
+     color: #646464;
+ }
+ 
+ #login-modal .modal-body .remember-me input {
+     width: 20px;
+     height: 20px;
+     margin-right: 5px;
+     margin-left: 15px;
+ }
+ 
+ #login-modal .modal-body .btn-login button {
+     background-color: #1D7A8C;
+ }
+ 
+ #login-modal .modal-body .btn-login {
+     padding: 0 10px;
+ }
+ 
+ #login-modal .modal-footer .create-account {
+     text-align: center;
+ }
+ 
+ #login-modal .modal-footer a,
+ #forget-pass-modal .modal-footer a {
+     text-decoration: none;
+     color: #1D7A8C;
+ }
+ 
+ #login-modal .modal-footer {
+     padding-bottom: 10px;
+     color: #646464;
+ }
+ /* customer-registration page */
+ 
+ .customer-reg-banner .navbar .rounded-btn {
+     width: auto;
+     background-color: #146371;
+ }
+ 
+ .create-account-cust {
+     margin-top: 5rem;
+ }
+ 
+ .create-account-cust .faq-heading {
+     color: #646464;
+ }
+ 
+ .create-account-cust .reg-form {
+     width: 630px;
+     margin: 0 auto;
+     margin-top: 1rem;
+ }
+ 
+ .create-account-cust .reg-form .form-group {
+     padding: 10px;
+ }
+ 
+ .create-account-cust .reg-form .form-group input,
+ .create-account-cust .reg-form .input-group-prepend .input-group-text {
+     height: 47px;
+ }
+ 
+ .create-account-cust .reg-form .form-group .form-check-input {
+     height: 20px;
+     width: 20px;
+     margin-left: 0px;
+ }
+ 
+ .create-account-cust .reg-form .form-group .form-check-input:checked {
+     background-color: #146371;
+ }
+ 
+ .create-account-cust .form-group .form-check-label,
+ .create-account-cust .already-account {
+     color: #646464;
+ }
+ 
+ .create-account-cust .form-group .form-check-label a,
+ .create-account-cust .already-account a {
+     text-decoration: none;
+     color: #1d7a8c;
+     font-weight: 500;
+ }
+ 
+ .create-account-cust .reg-form .btn-reg {
+     margin-top: 1rem;
+     text-align: center;
+ }
+ 
+ .create-account-cust .reg-form .btn-reg button {
+     outline: none;
+     border: none;
+     background-color: #1D7A8C;
+     color: white;
+     width: 150px;
+     height: 45px;
+     font-weight: 700;
+     border-radius: 40px;
+     font-size: 18px;
+ }
+ 
+ .customer-reg-footer {
+     position: relative;
+     bottom: 0;
+     top: 9%;
+ }
+ 
+ #forget-pass-modal .modal-footer a {
+     padding-bottom: 20px;
  }

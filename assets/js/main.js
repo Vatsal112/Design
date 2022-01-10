@@ -26,6 +26,13 @@ let openSideBar = () => {
         open = false;
         document.getElementById("sidebar").classList.remove("active");
     }
+    var cust_nav = document.getElementById("cust-nav");
+
+    // if (window.screen.width < 990) {
+    //     cust_nav.style.display = "block";
+    // } else {
+    //     cust_nav.style.display = "none";
+    // }
 
 }
 
