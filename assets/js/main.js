@@ -68,7 +68,6 @@ let closeSideBar = () => {
     document.getElementById("sidebar").classList.remove("active");
 }
 
-
 function initMap() {
     // The location of Uluru
     const uluru = { lat: 51.165691, lng: 10.451526 };

@@ -358,6 +358,24 @@ p {
     display: block;
 }
 
+
+/* */
+
+.dates input[type="date"] {
+    position: relative;
+    padding-left: 15px;
+    text-align: center;
+}
+
+.dates input[type="date"]::-webkit-calendar-picker-indicator {
+    background-image: url(../images/admin-calendar-blue.png);
+    position: absolute;
+    left: -15px;
+}
+
+
+/* */
+
 .service-req-table .service-datetime-texts a,
 .service-req-table .td-address a {
     text-decoration: none;
