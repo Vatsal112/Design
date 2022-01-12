@@ -600,16 +600,19 @@ body {
     padding: 1rem 0px !important;
 }
 
-.tab-pane .accordian .btn::before {
-    content: url("assets/images/down-arrow(1).png");
+
+/* 
+.tab-pane .accordian .faq-cards .btn::before {
+    content: url("./assets/images/down-arrow(1).png");
     float: left;
+    background-color: #67b644;
     margin-right: 10px;
 }
 
-.tab-pane .accordian .btn.collapsed:before {
-    content: url(assets/images/right-arrow.png);
+.tab-pane .accordian .faq-cards .btn.collapsed::before {
+    content: url(./assets/images/right-arrow.png);
     margin-right: 10px;
-}
+} */
 
 .btn-link {
     text-decoration: none !important;
@@ -2594,7 +2597,7 @@ body {
 /* book now page*/
 
 .booking-tabs {
-    width: 750px;
+    width: 730px;
 }
 
 .booking-tabs .nav-tabs {
@@ -2609,8 +2612,8 @@ body {
     border-top-right-radius: 0;
     border: 0;
     height: 67px;
-    display: table-cell;
-    vertical-align: middle;
+    display: flex;
+    align-items: center;
     color: #646464;
     text-align: center;
     font-size: 18px;
@@ -2643,7 +2646,8 @@ body {
 }
 
 .tab-content .setup-service-content span,
-.tab-content .service-schedule-content span {
+.tab-content .service-schedule-content span,
+.tab-content .your-details-content span {
     color: #4f4f4f;
     font-weight: 600;
 }
@@ -2722,12 +2726,6 @@ body {
     margin-left: 2rem;
 }
 
-.tab-content .service-schedule-content .extra-services {
-    margin-top: 1.5rem;
-    border-top: 1px solid #dee2e6;
-    padding-top: 1.5rem;
-}
-
 .service-schedule-content .extra-services .services {
     justify-content: space-between;
     margin-top: 1rem;
@@ -2755,7 +2753,8 @@ body {
     background-position: center;
 }
 
-.service-schedule-content .extra-services .services #check2 {
+.service-schedule-content .extra-services .services #check2,
+.service-schedule-content .extra-services .services #check2:checked {
     background: url(assets/images/fridge.png);
     background-repeat: no-repeat;
     background-position: center;
@@ -2816,7 +2815,9 @@ body {
     margin-top: 10px;
 }
 
-.tab-content .service-schedule-content .comments {
+.tab-content .service-schedule-content .comments,
+.tab-content .service-schedule-content .pets-checkbox,
+.tab-content .service-schedule-content .extra-services {
     border-top: 1px solid #dee2e6;
     margin-top: 1.5rem;
     padding-top: 1.5rem;
@@ -2832,18 +2833,16 @@ body {
     border: 1px solid #c8c8c8;
 }
 
-.tab-content .service-schedule-content .pets-checkbox {
-    margin-top: 0.5rem;
-    border-bottom: 1px solid #dee2e6;
-    padding-bottom: 1.5rem;
-}
-
-.tab-content .service-schedule-content .btn-continue {
+.tab-content .service-schedule-content .btn-continue,
+.tab-content .your-details-content .btn-continue {
     text-align: right;
-    padding-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-top: 1px solid #dee2e6;
+    margin-top: 1rem;
 }
 
-.tab-content .service-schedule-content .btn-continue button {
+.tab-content .service-schedule-content .btn-continue button,
+.tab-content .your-details-content .btn-continue button {
     outline: none;
     border: none;
     background-color: #1D7A8C;
@@ -2852,13 +2851,14 @@ body {
     width: 141px;
     text-align: center;
     border-radius: 46px;
-    margin-top: 1.5rem;
+    margin-top: 1rem;
     font-weight: bold;
     letter-spacing: 0.5px;
 }
 
 .book-service .main-content {
     display: flex;
+    justify-content: space-between;
 }
 
 .book-service .main-content .payment-summary {
@@ -2873,6 +2873,7 @@ body {
     display: table-cell;
     vertical-align: middle;
     padding: 0 15px;
+    font-size: 18px;
 }
 
 .main-content .payment-summary .payment-card,
@@ -2885,8 +2886,179 @@ body {
     margin-top: 0.8rem;
 }
 
-.main-content .payment-summary .payment-card .card-body .service-info {
+.main-content .payment-summary .payment-card .card-body .service-info,
+.main-content .payment-summary .payment-card .list-group-item,
+.main-content .payment-summary .payment-card .list-group .service-info {
     display: flex;
     align-items: center;
     justify-content: space-between;
+}
+
+.main-content .payment-summary .payment-card .card-body .total-required-time {
+    border-top: 1px solid #dee2e6;
+    margin-top: 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.main-content .payment-summary .payment-card .list-group-item {
+    border: 0;
+    padding: 0.3rem 1rem;
+}
+
+.main-content .payment-summary .payment-card .list-group-item .payment-txt,
+.main-content .payment-summary .payment-card .list-group-item .payment-amt {
+    color: #1d7a8c;
+}
+
+.main-content .payment-summary .payment-card .list-group-item .payment-amt {
+    font-size: 42px;
+}
+
+.main-content .payment-summary .payment-card .list-group-item .effective-amt {
+    font-size: 20px;
+}
+
+.main-content .payment-summary .payment-card .list-group .effective-price {
+    margin-top: -20px;
+}
+
+.main-content .payment-summary .payment-card .list-2 {
+    border-bottom: 0;
+}
+
+.main-content .payment-summary .payment-card .card-body .will-save a {
+    text-decoration: none;
+    color: #646464;
+    font-size: 14px;
+    padding-left: 1rem;
+}
+
+.main-content .payment-summary .payment-card .card-body .will-save a span {
+    color: red;
+}
+
+.main-content .payment-summary .payment-card .card-bottom-body {
+    padding: 0;
+}
+
+.main-content .payment-summary .payment-card .card-bottom-body .card-footer {
+    margin-top: 1rem;
+}
+
+.main-content .payment-summary .payment-card .card-bottom-body .card-footer a {
+    padding-left: 0.3rem;
+    text-decoration: none;
+    color: #646464;
+}
+
+.main-content .payment-summary .payment-card .card-bottom-body .card-footer img {
+    margin-right: 5px;
+}
+
+.main-content .payment-summary .questions {
+    margin: 1rem 0;
+    text-align: center;
+}
+
+.main-content .payment-summary .questions span {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.main-content .payment-summary .questions .accordian a {
+    text-decoration: none;
+    font-size: 14px;
+    color: #4f4f4f;
+    display: block;
+    margin-top: 1rem;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 1rem;
+}
+
+.main-content .payment-summary .questions .accordian .card-body {
+    font-size: 14px;
+    text-align: left;
+}
+
+.main-content .payment-summary .questions .accordian img {
+    margin-right: 5px;
+    transform: rotate(-90deg);
+}
+
+.main-content .payment-summary .for-more-help {
+    text-align: left;
+    margin-top: 1rem;
+}
+
+.main-content .payment-summary .for-more-help a {
+    text-decoration: none;
+    color: #1D7A8C;
+    font-weight: bold;
+    font-weight: 16px;
+}
+
+.main-content .your-details-content .address-radio {
+    display: flex;
+    align-items: center;
+    border: 2px solid #dee2e6;
+    padding: 0.5rem 1rem;
+    margin-top: 1rem
+}
+
+.main-content .your-details-content .address-radio label {
+    display: block;
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+.main-content .your-details-content .address-radio .radio-text {
+    color: #646464;
+    font-weight: normal;
+}
+
+.main-content .your-details-content .add-new-address button {
+    border: 2px solid #1D7A8C;
+    outline: none;
+    width: auto;
+    height: 45px;
+    color: #1D7A8C;
+    background-color: transparent;
+    padding: 0 1rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    border-radius: 45px;
+}
+
+.main-content .your-details-content .favourite-sp,
+.main-content .your-details-content .favourite-sp .fav-sp-info span {
+    margin-top: 1rem;
+    display: block;
+}
+
+.main-content .your-details-content .favourite-sp .fav-sp-info {
+    width: 20%;
+    text-align: center;
+}
+
+.main-content .your-details-content .favourite-sp p {
+    border-top: 1px solid #dee2e6;
+    padding-top: 0.3rem;
+    margin-top: 0.3rem;
+}
+
+.main-content .your-details-content .favourite-sp .fav-sp-info img {
+    margin-top: 1rem;
+    text-align: center;
+    border: 1px solid #646464;
+    border-radius: 50%;
+}
+
+.main-content .your-details-content .favourite-sp .fav-sp-info button {
+    border: 1px solid #dee2e6;
+    color: #646464;
+    outline: none;
+    background: transparent;
+    padding: 0.5rem;
+    width: 60%;
+    margin-top: 0.5rem;
 }

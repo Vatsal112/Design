@@ -82,3 +82,43 @@ function initMap() {
         map: map,
     });
 }
+
+//Change Icon for Booking services
+const setup = document.getElementById("setup-service");
+const your_detail = document.getElementById("your-details");
+const schedule = document.getElementById("schedule");
+const payment = document.getElementById("payment");
+
+// images
+const setup_img = document.getElementById("setup-img");
+const schedule_img = document.getElementById("schedule-img");
+const your_details_img = document.getElementById("detail-img");
+const payment_img = document.getElementById("payment-img");
+
+setup.addEventListener("click", () => {
+    setup_img.setAttribute("src", "assets/images/setup-service-white.png");
+    schedule_img.setAttribute("src", "assets/images/schedule.png");
+    your_details_img.setAttribute("src", "assets/images/details.png");
+    payment_img.setAttribute("src", "assets/images/payment.png");
+})
+
+your_detail.addEventListener("click", () => {
+    your_details_img.setAttribute("src", "assets/images/details-white.png");
+    setup_img.setAttribute("src", "assets/images/setup-service.png");
+    schedule_img.setAttribute("src", "assets/images/schedule.png");
+    payment_img.setAttribute("src", "assets/images/payment.png");
+})
+
+schedule.addEventListener("click", () => {
+    schedule_img.setAttribute("src", "assets/images/schedule-white.png");
+    setup_img.setAttribute("src", "assets/images/setup-service.png");
+    your_details_img.setAttribute("src", "assets/images/details.png");
+    payment_img.setAttribute("src", "assets/images/payment.png");
+})
+
+payment.addEventListener("click", () => {
+    payment_img.setAttribute("src", "assets/images/payment-white.png");
+    setup_img.setAttribute("src", "assets/images/setup-service.png");
+    your_details_img.setAttribute("src", "assets/images/details.png");
+    schedule_img.setAttribute("src", "assets/images/schedule.png");
+})
