@@ -122,3 +122,46 @@ payment.addEventListener("click", () => {
     your_details_img.setAttribute("src", "assets/images/details.png");
     schedule_img.setAttribute("src", "assets/images/schedule.png");
 })
+
+function onlyNumberKey(evt) {
+    // Only ASCII character in that range allowed
+    var ASCIICode = (evt.which) ? evt.which : evt.keyCode
+    if (ASCIICode > 31 && (ASCIICode < 48 || ASCIICode > 57)) {
+        return false;
+    } else {
+        return true;
+    }
+}
+
+function addSlash(e) {
+    let ch = e.target.value;
+    let text = ch.slice(0, 2);
+    let yr = ch.slice(3);
+    console.log(yr);
+    let year = new Date().getFullYear();
+    console.log(year);
+
+    if (text >= 12) {
+        alert("invalid month");
+        e.target.value = "";
+    } else {
+        if (ch.length == 2) {
+            e.target.value = ch + "/";
+        }
+    }
+}
+
+let showAddressDialog = () => {
+    const addressDialog = document.getElementById("address-dialog");
+    const btnNewAddress = document.getElementById("btn-new-address");
+    addressDialog.style.display = "block";
+    btnNewAddress.style.display = "none";
+
+}
+
+let closeAddressDialog = () => {
+    const closeDialog = document.getElementById("address-dialog");
+    const btnNewAddress = document.getElementById("btn-new-address");
+    closeDialog.style.display = "none";
+    btnNewAddress.style.display = "block";
+}

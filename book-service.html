@@ -271,38 +271,11 @@
                                 </div>
 
                                 <div class="add-new-address">
-                                    <button type="button" data-toggle="modal" data-target="#add-addr-modal">+ Add New Address</button>
+                                    <button type="button" onclick="showAddressDialog()" id="btn-new-address">+ Add New Address</button>
                                 </div>
 
-                                <div class="favourite-sp">
-                                    <span>Your Favourite Service Providers</span>
-                                    <p class="radio-text">you can choose your favourite service provider from the below list.</p>
-
-                                    <div class="fav-sp-info">
-                                        <img src="assets/images/avatar-hat.png" alt="">
-                                        <span class="sp-name">Sandip Patel</span>
-                                        <button type="button">Select</button>
-                                    </div>
-                                </div>
-
-                                <div class="btn-continue">
-                                    <button type="button">Continue</button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane fade" id="payment-tab" role="tabpanel" aria-labelledby="payment">...</div>
-                    </div>
-
-                    <div class="modal fade" id="add-addr-modal" tabindex="-1" role="dialog" aria-labelledby="add-addr-modal" aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h4 class="modal-title" id="exampleModalLongTitle">Add New Address</h4>
-
-                                    <span aria-hidden="true" class="close-btn" data-dismiss="modal">&times;</span>
-                                </div>
-                                <div class="modal-body">
-                                    <div class="edit-details">
+                                <div class="add-new-address-content">
+                                    <div class="outer" id="address-dialog">
                                         <div class="address-fields">
                                             <div class="street-name">
                                                 <label for="street">Street Name</label>
@@ -338,9 +311,83 @@
                                                 </div>
                                             </form>
                                         </div>
+
+                                        <div class="btn-save-close">
+                                            <button type="button" class="save">Save</button>
+                                            <button type="button" class="cancel" onclick="closeAddressDialog()">Cancel</button>
+                                        </div>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn-edit">Add</button>
+                                </div>
+
+                                <div class="favourite-sp">
+                                    <span>Your Favourite Service Providers</span>
+                                    <p class="radio-text">you can choose your favourite service provider from the below list.</p>
+
+                                    <div class="fav-sp-info">
+                                        <img src="assets/images/avatar-hat.png" alt="">
+                                        <span class="sp-name">Sandip Patel</span>
+                                        <button type="button">Select</button>
+                                    </div>
+                                </div>
+
+                                <div class="btn-continue">
+                                    <button type="button">Continue</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="payment-tab" role="tabpanel" aria-labelledby="payment">
+                            <div class="payment-tab-content">
+                                <span>Pay securely with helperland payment gateway!</span>
+                                <label for="promo-code">Promo code (optional)</label>
+                                <div class="promo-code">
+                                    <input type="number" name="" id="" id="promo-code" placeholder="promo-code (optional)">
+                                    <button type="button">Apply</button>
+                                </div>
+
+                                <div class="payment-card-input">
+                                    <i class="fa fa-credit-card"></i>
+                                    <input type="tel" name="" id="" placeholder="Card number" class="credit-card-text" maxlength="19">
+                                    <input type="password" placeholder="CVC" maxlength="3" class="card-cvv">
+                                    <input type="text" placeholder="MM / YY" maxlength="7" class="card-date" onkeypress="return onlyNumberKey(event)" onkeyup="addSlash(event)">
+                                </div>
+                                <div class="accepted-cards-img">
+                                    <span>Accepted Cards:</span>
+                                    <div class="card-img">
+                                        <img src="assets/images/visa-icon.png" alt="">
+                                        <img src="assets/images/master-card-icon.png" alt="">
+                                        <img src="assets/images/amrican-exp-icon.png" alt="">
+                                    </div>
+                                </div>
+
+                                <div class="privacy-policy-check">
+                                    <input type="checkbox" name="" id="privacy-check">
+                                    <label for="privacy-check">I accept <a href="">terms and conditions</a>, the <a href="">cancellation policy </a>and the <a href="">privacy policy.</a></label>
+                                </div>
+
+                                <div class="btn-continue">
+                                    <button type="button" data-toggle="modal" data-target="#complete-booking-modal">Complete Booking</button>
+                                </div>
+                            </div>
+                            <div class="modal fade logout-modal" id="complete-booking-modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle2" aria-hidden="true">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-part">
+                                            <div class="modal-header d-block">
+                                                <span aria-hidden="true" class="close-btn" data-dismiss="modal">&times;</span>
+                                            </div>
+                                            <div class="modal-body">
+                                                <div class="logout-modal-content">
+                                                    <div class="logout-green-circle">
+                                                        <img src="assets/images/ic-check.png" alt="">
+                                                    </div>
+                                                    <h5>Booking has been successfully submitted</h5>
+                                                    <p class="text-center">Service Request Id: <span class="s-id" id="s-id">8303</span></p>
+                                                </div>
+                                            </div>
+                                            <div class="modal-footer">
+                                                <button type="button" class="btn-logout-ok" data-dismiss="modal">Ok</button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -414,7 +461,7 @@
                         <span>Questions?</span>
 
                         <div class="accordian">
-                            <a href="#que1" data-toggle="collapse" aria-expanded="false" aria-controls="questions"><img src="assets/images/keyboard-right-arrow-button.png" alt="">Which helperland professional will come to my place?</a>
+                            <a href="#que1" data-toggle="collapse" aria-expanded="false" aria-controls="questions"><img src="assets/images/keyboard-right-arrow-button.png" alt="" class="down">Which helperland professional will come to my place?</a>
                             <div class="collapse" id="que1">
                                 <div class="card card-body">
                                     Anyone
@@ -433,7 +480,7 @@
                                 </div>
                             </div>
                             <a href="#que4" data-toggle="collapse" aria-expanded="false" aria-controls="questions"><img src="assets/images/keyboard-right-arrow-button.png" alt="">Which helperland professional will come to my place?</a>
-                            <div class="collapse" id="que1">
+                            <div class="collapse" id="que4">
                                 <div class="card card-body">
                                     Anyone
                                 </div>
@@ -456,5 +503,22 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js "></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js "></script>
 </body>
+
+<script>
+    $('.credit-card-text').keyup(function() {
+        var inp = $(this).val().split("-").join(""); // remove hyphens
+        if (inp.length > 0) {
+            inp = inp.match(new RegExp('.{1,4}', 'g')).join("-");
+        }
+        $(this).val(inp);
+    });
+
+    $('.accordian').on('show.bs.collapse', function() {
+        $('.down').css('transform', 'rotate(0deg)')
+    });
+    $('.accordian').on('hide.bs.collapse', function() {
+        $('.down').css('transform', 'rotate(-90deg)')
+    });
+</script>
 
 </html>

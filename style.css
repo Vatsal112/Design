@@ -1469,7 +1469,8 @@ body {
 #add-addr-modal .modal-header .close-btn,
 #delete-addr-modal .modal-header .close-btn,
 #login-modal .modal-header .close-btn,
-#forget-pass-modal .modal-header .close-btn {
+#forget-pass-modal .modal-header .close-btn,
+#complete-booking-modal .modal-header .close-btn {
     font-size: 28px;
     font-weight: 500;
     position: absolute;
@@ -1750,7 +1751,9 @@ body {
 }
 
 .my-setting .address-field .btn-setting-save button,
-.my-setting .details .btn-save button {
+.my-setting .details .btn-save button,
+.add-new-address-content .btn-save-close .save,
+.add-new-address-content .btn-save-close .cancel {
     outline: none;
     border: 1px solid #1D7A8C;
     background-color: #1D7A8C;
@@ -2357,7 +2360,9 @@ body {
 #edit-addr-modal .modal-body .edit-details .address-fields,
 #edit-addr-modal .modal-body .edit-details .postalcode-city,
 #add-addr-modal .modal-body .edit-details .address-fields,
-#add-addr-modal .modal-body .edit-details .postalcode-city {
+#add-addr-modal .modal-body .edit-details .postalcode-city,
+.add-new-address-content .outer .address-fields,
+.add-new-address-content .outer .postalcode-city {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -2372,7 +2377,8 @@ body {
 }
 
 #edit-addr-modal .modal-body .city select,
-#add-addr-modal .modal-body .city select {
+#add-addr-modal .modal-body .city select,
+.add-new-address-content .outer .city select {
     display: block;
     height: 39px;
     width: 210px;
@@ -2390,7 +2396,8 @@ body {
     height: 46px;
 }
 
-.edit-details .edit-phone .input-group-prepend {
+.edit-details .edit-phone .input-group-prepend,
+.add-new-address-content .outer .input-group-prepend {
     display: flex;
     align-items: center;
     width: 210px;
@@ -2642,12 +2649,13 @@ body {
 }
 
 .booking-tabs .tab-content {
-    margin-top: 2rem;
+    margin-top: 1.5rem;
 }
 
 .tab-content .setup-service-content span,
 .tab-content .service-schedule-content span,
-.tab-content .your-details-content span {
+.tab-content .your-details-content span,
+.tab-content .payment-tab-content span {
     color: #4f4f4f;
     font-weight: 600;
 }
@@ -2834,7 +2842,8 @@ body {
 }
 
 .tab-content .service-schedule-content .btn-continue,
-.tab-content .your-details-content .btn-continue {
+.tab-content .your-details-content .btn-continue,
+.tab-content .payment-tab-content .btn-continue {
     text-align: right;
     padding-bottom: 1rem;
     border-top: 1px solid #dee2e6;
@@ -2842,7 +2851,8 @@ body {
 }
 
 .tab-content .service-schedule-content .btn-continue button,
-.tab-content .your-details-content .btn-continue button {
+.tab-content .your-details-content .btn-continue button,
+.tab-content .payment-tab-content .btn-continue button {
     outline: none;
     border: none;
     background-color: #1D7A8C;
@@ -3002,7 +3012,8 @@ body {
     align-items: center;
     border: 2px solid #dee2e6;
     padding: 0.5rem 1rem;
-    margin-top: 1rem
+    margin-top: 1rem;
+    border-radius: 0.3rem;
 }
 
 .main-content .your-details-content .address-radio label {
@@ -3016,7 +3027,36 @@ body {
     font-weight: normal;
 }
 
-.main-content .your-details-content .add-new-address button {
+.add-new-address-content .outer {
+    background-color: #f8f8f8;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-radius: 0.3rem;
+    display: none;
+}
+
+.add-new-address-content .outer label {
+    padding-top: 0.4rem;
+}
+
+.add-new-address-content .btn-save-close {
+    margin-top: 1rem;
+}
+
+.add-new-address-content .outer input,
+.add-new-address-content .outer .city select,
+.add-new-address-content .outer .input-group-prepend {
+    width: 320px;
+}
+
+.add-new-address-content .btn-save-close .cancel {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    color: #646464;
+}
+
+.main-content .your-details-content .add-new-address button,
+.main-content .payment-tab-content .promo-code button {
     border: 2px solid #1D7A8C;
     outline: none;
     width: auto;
@@ -3027,6 +3067,12 @@ body {
     font-weight: 600;
     margin-top: 1rem;
     border-radius: 45px;
+}
+
+.main-content .your-details-content .add-new-address button:hover {
+    transition: 0.2s all;
+    background-color: #1D7A8C;
+    color: white;
 }
 
 .main-content .your-details-content .favourite-sp,
@@ -3061,4 +3107,94 @@ body {
     padding: 0.5rem;
     width: 60%;
     margin-top: 0.5rem;
+}
+
+.main-content .payment-tab-content label {
+    display: block;
+    margin-top: 0.3rem;
+}
+
+.main-content .payment-tab-content .promo-code {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 1.5rem;
+}
+
+.main-content .payment-tab-content .promo-code input {
+    padding: 0.5rem;
+    border: 1px solid #dee2e6;
+}
+
+.main-content .payment-tab-content .promo-code button {
+    margin-top: 0.25rem;
+    margin-left: 10px;
+    width: 100px;
+    border-width: 1px;
+}
+
+.main-content .payment-tab-content .payment-card-input {
+    margin-top: 1.5rem;
+    border: 1px solid #dee2e6;
+}
+
+.main-content .payment-tab-content .payment-card-input input {
+    border: none;
+    padding: 0.5rem 1rem;
+    outline: none;
+    width: 200px;
+}
+
+.main-content .payment-tab-content .payment-card-input i,
+.main-content .payment-tab-content .privacy-policy-check label {
+    margin-left: 10px;
+}
+
+.main-content .payment-tab-content .payment-card-input .card-cvv {
+    outline: none;
+    width: 68px;
+    float: right;
+}
+
+.main-content .payment-tab-content .payment-card-input .card-date {
+    width: 100px;
+    float: right;
+}
+
+.main-content .payment-tab-content .payment-card-input .card-date::-webkit-calendar-picker-indicator {
+    display: none;
+}
+
+.main-content .payment-tab-content .accepted-cards-img {
+    margin-top: 1.5rem;
+    text-align: right;
+}
+
+.main-content .payment-tab-content .accepted-cards-img span {
+    font-size: 10px;
+}
+
+.main-content .payment-tab-content .accepted-cards-img .card-img img {
+    width: 45px;
+    height: 25px;
+}
+
+.main-content .payment-tab-content .privacy-policy-check {
+    border-top: 1px solid #dee2e6;
+    padding-top: 1rem;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.main-content .payment-tab-content .privacy-policy-check label a {
+    text-decoration: none;
+    color: #1D7A8C;
+}
+
+.tab-content .payment-tab-content .btn-continue button {
+    width: 200px;
+}
+
+#complete-booking-modal .modal-header {
+    border-bottom: 0;
 }
