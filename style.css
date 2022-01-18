@@ -601,22 +601,30 @@ body {
 }
 
 
-/* 
-.tab-pane .accordian .faq-cards .btn::before {
-    content: url("./assets/images/down-arrow(1).png");
-    float: left;
-    background-color: #67b644;
+/* .tab-pane .accordian .faq-cards .card-header::before {
+    content: url("assets/images/1-green.png");
     margin-right: 10px;
 }
 
-.tab-pane .accordian .faq-cards .btn.collapsed::before {
-    content: url(./assets/images/right-arrow.png);
+.tab-pane .accordian .faq-cards button[aria-expanded="true"]::before {
+    content: url(assets/images/right-arrow.png);
     margin-right: 10px;
 } */
 
+.faq-tab-content button::before {
+    content: url("assets/images/right-arrow.png") !important;
+    float: left;
+    margin-right: 10px;
+}
+
+.faq-tab-content button[aria-expanded="true"]::before {
+    content: url("assets/images/down-arrow(1).png") !important;
+    margin-right: 10px;
+}
+
 .btn-link {
     text-decoration: none !important;
-    color: black !important;
+    color: #646464 !important;
 }
 
 .btn-link:focus {
@@ -913,6 +921,16 @@ body {
     width: 100%;
 }
 
+.about-banner #login-modal .modal-body .remember-me,
+.contact-banner #login-modal .modal-body .remember-me {
+    display: block;
+}
+
+.about-banner #login-modal .modal-body .remember-me label,
+.contact-banner #login-modal .modal-body .remember-me label {
+    margin-left: 40px;
+}
+
 .paragraphs {
     text-align: center;
     margin-left: 50px;
@@ -1163,7 +1181,7 @@ body {
 
 .upcoming-service-banner .faq-nav .nav-item,
 .customer-screen-banner .faq-nav .nav-item {
-    padding: 10px;
+    padding: 0 10px;
     margin-right: 5px;
 }
 
@@ -1289,7 +1307,6 @@ body {
 
 .new-service .shown-records {
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -1470,7 +1487,8 @@ body {
 #delete-addr-modal .modal-header .close-btn,
 #login-modal .modal-header .close-btn,
 #forget-pass-modal .modal-header .close-btn,
-#complete-booking-modal .modal-header .close-btn {
+#complete-booking-modal .modal-header .close-btn,
+#payment-summary-modal .modal-header .close-btn {
     font-size: 28px;
     font-weight: 500;
     position: absolute;
@@ -1570,7 +1588,7 @@ body {
 }
 
 .total-records .shown-records {
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
     color: #4F4F4F;
 }
 
@@ -1909,13 +1927,15 @@ body {
 
 .customer-screen-banner .navbar-nav,
 .customer-reg-banner .navbar-nav,
-.book-service-banner .navbar-nav {
+.book-service-banner .navbar-nav,
+.faq-banner .navbar-nav {
     align-items: center;
 }
 
 .customer-screen-banner .faq-nav .nav-item,
 .customer-reg-banner .faq-nav .nav-item,
-.book-service-banner .faq-nav .nav-item {
+.book-service-banner .faq-nav .nav-item,
+.faq-banner .faq-nav .nav-item {
     padding: 0 10px;
 }
 
@@ -2607,6 +2627,10 @@ body {
     width: 730px;
 }
 
+.booking-tabs .nav {
+    flex-wrap: nowrap;
+}
+
 .booking-tabs .nav-tabs {
     margin-top: 3rem;
     border: 0;
@@ -2629,6 +2653,8 @@ body {
 
 .booking-tabs .nav-tabs .nav-link img {
     margin-right: 5px;
+    height: 32px;
+    width: 32px;
 }
 
 .booking-tabs .nav-tabs .nav-link.active {
@@ -2667,6 +2693,7 @@ body {
 
 .tab-content .setup-service-content .form-group input {
     height: 45px;
+    width: auto;
 }
 
 .tab-content .setup-service-content .form-group button {
@@ -2871,8 +2898,18 @@ body {
     justify-content: space-between;
 }
 
+#payment-summary-modal .modal-header {
+    background-color: #1D7A8C;
+    color: white;
+}
+
 .book-service .main-content .payment-summary {
     margin-top: 3rem;
+    margin-left: 20px;
+}
+
+.book-service .main-content .payment-summary .card {
+    width: 360px;
 }
 
 .book-service .main-content .payment-summary .payment-text {
@@ -2887,44 +2924,67 @@ body {
 }
 
 .main-content .payment-summary .payment-card,
-.main-content .payment-summary .payment-card .card-body .service-time {
+.main-content .payment-summary .payment-card .card-body .service-time,
+#payment-summary-modal .modal-body .service-time {
     color: #4f4f4f;
     font-weight: normal;
 }
 
-.main-content .payment-summary .payment-card .card-body .card-service-duration {
+#payment-summary-modal .modal-header .close-btn {
+    top: 1.5%;
+}
+
+.main-content .payment-summary .payment-card .card-body .card-service-duration,
+#payment-summary-modal .modal-body .card-service-duration {
     margin-top: 0.8rem;
 }
 
 .main-content .payment-summary .payment-card .card-body .service-info,
 .main-content .payment-summary .payment-card .list-group-item,
-.main-content .payment-summary .payment-card .list-group .service-info {
+.main-content .payment-summary .payment-card .list-group .service-info,
+#payment-summary-modal .modal-body .card-service-duration .service-info,
+#payment-summary-modal .modal-body .list-group-item {
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
-.main-content .payment-summary .payment-card .card-body .total-required-time {
+.main-content .payment-summary .payment-card .card-body .total-required-time,
+#payment-summary-modal .modal-body .card-service-duration .total-required-time {
     border-top: 1px solid #dee2e6;
     margin-top: 0.5rem;
     padding-top: 0.5rem;
 }
 
-.main-content .payment-summary .payment-card .list-group-item {
+.main-content .payment-summary .payment-card .list-group-item,
+#payment-summary-modal .modal-body .list-group-item {
     border: 0;
     padding: 0.3rem 1rem;
 }
 
+#payment-summary-modal .modal-body .list-group-item {
+    padding: 0.3rem 0;
+}
+
+#payment-summary-modal .modal-body .list-group .discount {
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 0.3rem;
+}
+
 .main-content .payment-summary .payment-card .list-group-item .payment-txt,
-.main-content .payment-summary .payment-card .list-group-item .payment-amt {
+.main-content .payment-summary .payment-card .list-group-item .payment-amt,
+#payment-summary-modal .modal-body .list-group-item .payment-txt,
+#payment-summary-modal .modal-body .list-group-item .payment-amt {
     color: #1d7a8c;
 }
 
-.main-content .payment-summary .payment-card .list-group-item .payment-amt {
+.main-content .payment-summary .payment-card .list-group-item .payment-amt,
+#payment-summary-modal .modal-body .list-group-item .payment-amt {
     font-size: 42px;
 }
 
-.main-content .payment-summary .payment-card .list-group-item .effective-amt {
+.main-content .payment-summary .payment-card .list-group-item .effective-amt,
+#payment-summary-modal .modal-body .list-group-item .effective-amt {
     font-size: 20px;
 }
 
@@ -2932,18 +2992,28 @@ body {
     margin-top: -20px;
 }
 
+#payment-summary-modal .modal-body .list-group .effective-price {
+    margin-top: -10px;
+}
+
 .main-content .payment-summary .payment-card .list-2 {
     border-bottom: 0;
 }
 
-.main-content .payment-summary .payment-card .card-body .will-save a {
+.main-content .payment-summary .payment-card .card-body .will-save a,
+#payment-summary-modal .modal-body .will-save a {
     text-decoration: none;
     color: #646464;
     font-size: 14px;
     padding-left: 1rem;
 }
 
-.main-content .payment-summary .payment-card .card-body .will-save a span {
+#payment-summary-modal .modal-body .will-save a {
+    padding: 0;
+}
+
+.main-content .payment-summary .payment-card .card-body .will-save a span,
+#payment-summary-modal .modal-body .will-save a span {
     color: red;
 }
 
@@ -2951,31 +3021,37 @@ body {
     padding: 0;
 }
 
-.main-content .payment-summary .payment-card .card-bottom-body .card-footer {
+.main-content .payment-summary .payment-card .card-bottom-body .card-footer,
+#payment-summary-modal .modal-body .card-footer {
     margin-top: 1rem;
 }
 
-.main-content .payment-summary .payment-card .card-bottom-body .card-footer a {
+.main-content .payment-summary .payment-card .card-bottom-body .card-footer a,
+#payment-summary-modal .modal-body .card-footer a {
     padding-left: 0.3rem;
     text-decoration: none;
     color: #646464;
 }
 
-.main-content .payment-summary .payment-card .card-bottom-body .card-footer img {
+.main-content .payment-summary .payment-card .card-bottom-body .card-footer img,
+#payment-summary-modal .modal-body .card-footer img {
     margin-right: 5px;
 }
 
-.main-content .payment-summary .questions {
+.main-content .payment-summary .questions,
+#payment-summary-modal .modal-body .questions {
     margin: 1rem 0;
     text-align: center;
 }
 
-.main-content .payment-summary .questions span {
+.main-content .payment-summary .questions span,
+#payment-summary-modal .modal-body .questions span {
     font-size: 20px;
     font-weight: bold;
 }
 
-.main-content .payment-summary .questions .accordian a {
+.main-content .payment-summary .questions .accordian a,
+#payment-summary-modal .modal-body .questions .accordian a {
     text-decoration: none;
     font-size: 14px;
     color: #4f4f4f;
@@ -2983,19 +3059,32 @@ body {
     margin-top: 1rem;
     border-bottom: 1px solid #dee2e6;
     padding-bottom: 1rem;
+    text-align: left;
 }
 
-.main-content .payment-summary .questions .accordian .card-body {
+
+/* .main-content .questions .accordian a .down {
+    transform: rotate(-90deg);
+} */
+
+.main-content .questions .accordian a::before {
+    content: url(assets/images/right-arrow-dark.png);
+    margin-right: 5px;
+}
+
+.main-content .questions .accordian a[aria-expanded="true"]::before {
+    content: url(assets/images/keyboard-right-arrow-button.png);
+    margin-right: 5px;
+}
+
+.main-content .payment-summary .questions .accordian .card-body,
+#payment-summary-modal .modal-body .questions .accordian .card-body {
     font-size: 14px;
     text-align: left;
 }
 
-.main-content .payment-summary .questions .accordian img {
-    margin-right: 5px;
-    transform: rotate(-90deg);
-}
-
-.main-content .payment-summary .for-more-help {
+.main-content .payment-summary .for-more-help,
+#payment-summary-modal .modal-body .for-more-help {
     text-align: left;
     margin-top: 1rem;
 }
@@ -3134,6 +3223,8 @@ body {
 .main-content .payment-tab-content .payment-card-input {
     margin-top: 1.5rem;
     border: 1px solid #dee2e6;
+    position: relative;
+    white-space: nowrap;
 }
 
 .main-content .payment-tab-content .payment-card-input input {
@@ -3152,11 +3243,14 @@ body {
     outline: none;
     width: 68px;
     float: right;
+    white-space: nowrap;
 }
 
 .main-content .payment-tab-content .payment-card-input .card-date {
     width: 100px;
-    float: right;
+    position: absolute;
+    right: 15%;
+    white-space: nowrap;
 }
 
 .main-content .payment-tab-content .payment-card-input .card-date::-webkit-calendar-picker-indicator {
