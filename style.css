@@ -766,6 +766,10 @@ body {
     margin-top: 43px;
 }
 
+.cleaning-section .container .row {
+    justify-content: space-between;
+}
+
 .cleaning-card .title {
     font-size: 20px;
     font-weight: bold;
@@ -854,7 +858,8 @@ body {
     margin: 0 auto;
 }
 
-.contact-form .form-control {
+.contact-form .form-control,
+.contact-form .input-group-prepend {
     height: 46px;
 }
 
